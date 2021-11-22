@@ -1,0 +1,62 @@
+@import "../../../styles.scss";
+
+.main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+}
+
+aside {
+  background-color: #00BFBF;
+  padding: 20px;
+  float: left;
+  width: 20%;
+  color: #811B6F;
+  font-size: 1.1em;
+}
+
+.nav-item-active {
+  color: white;
+}
+
+section {
+  width: 100%;
+  margin: 0 30px;
+}
+
+h2 {
+  text-align: center;
+  font-family: $main-font;
+  color: $main-blue;
+}
+
+form {
+  margin: 0 30px;
+}
+
+form label,
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+}
+
+form > label {
+  margin-top: 15px;
+}
+
+.first-intermission {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.first-intermission > div {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.clear {
+  /*permet de stopper l'influence du float et remettre les éléments Html dans le flux normal */
+  clear: both;
+}

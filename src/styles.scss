@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Open-sans', sans-serif;
+}
+
+/* COLORS OF APP */
+$main-blue: #0070AD;
+$secondary-blue: #12ABDB;
+$main-grey: #E5E5E5;
+$text-grey: #929292;
+
+/* FONTS */
+$main-font: 'Open-sans', sans-serif;

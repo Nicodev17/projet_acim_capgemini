@@ -1,5 +1,7 @@
 @import "../../../styles.scss";
 
+/* ================= GLOBAL ================= */
+
 .main {
   display: flex;
   justify-content: flex-start;
@@ -7,21 +9,35 @@
   height: 100%;
 }
 
+/* ================= ASIDE = MENU NAVIGATION DE GAUCHE ================= */
+
 aside {
-  background-color: #00BFBF;
-  padding: 20px;
-  float: left;
-  width: 20%;
+  background-color: rgba(112, 204, 233, 1); //ou #012ABDB couleur du pique Cap
+  display: flex;
+  flex-direction: column;
+  width: 15%;
   color: #811B6F;
   font-size: 1.1em;
+  padding: 30px 10px;
 }
 
-.nav-item-active {
-  color: white;
+aside a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 15px;
+  border-left: 3px solid #811B6F;
 }
+
+#active, aside a:focus {
+  color: white;
+  font-weight:600;
+  border-color: white;
+}
+
+/* ================= SECTION = FORMULAIRE ================= */
 
 section {
-  width: 100%;
+  width: 75%;
   margin: 0 30px;
 }
 
@@ -29,6 +45,7 @@ h2 {
   text-align: center;
   font-family: $main-font;
   color: $main-blue;
+  margin-bottom: 40px;
 }
 
 form {
@@ -43,18 +60,62 @@ form textarea {
 }
 
 form > label {
-  margin-top: 15px;
+  margin: 30px 0 10px 0;
 }
+
+/* -------- Première question avec radio button -------- */
 
 .first-intermission {
   display: flex;
   justify-content: flex-start;
 }
 
+.first-intermission > label {
+  width: fit-content;
+}
+
 .first-intermission > div {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
 }
+
+.first-intermission input {
+  margin: 0 5px 0 70px;
+}
+
+/* ================= FLECHES DE NAVIGATION SUR BORD DROIT ================= */
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arrows a {
+  margin: 20px;
+}
+
+.arrow-up {
+  //width: 0;
+  //height: 0;
+  border-bottom-right-radius: 10px 40px;
+  border-bottom-left-radius: 10px 40px;
+  border-right: 24px solid transparent;
+  border-left: 24px solid transparent;
+  border-bottom: 30px solid $main-blue;
+}
+
+.arrow-down {
+  //width: 0;
+  //height: 0;
+  border-top-right-radius: 10px 40px;
+  border-top-left-radius: 10px 40px;
+  border-right: 24px solid transparent;
+  border-left: 24px solid transparent;
+  border-top: 30px solid $main-blue;
+}
+
+/* ================= AUTRE ================= */
 
 .clear {
   /*permet de stopper l'influence du float et remettre les éléments Html dans le flux normal */

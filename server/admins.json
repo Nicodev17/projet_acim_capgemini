@@ -1,0 +1,24 @@
+{
+    "admins": [
+      {
+        "id": 1,
+        "nom": "José",
+        "poste": "Staffing partner"
+      },
+      {
+        "id": 2,
+        "nom": "Florent",
+        "poste": "Staffing partner"
+      },
+      {
+        "id": 3,
+        "nom": "Jean-Michel",
+        "order": "RH"
+      },
+      {
+        "id": 4,
+        "content": "Julien",
+        "order": "RH"
+      }
+    ]
+  }

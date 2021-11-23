@@ -1,0 +1,52 @@
+
+$color: #12ABDB ;
+
+
+body{
+  display: flex;
+
+  height: 30px;
+
+  font-size: 1em;
+  div {
+
+    display: flex;
+    height: 30px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin: 0 0.2em;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color;
+      margin-right: 1em;
+
+      img {
+        filter: invert(56%) sepia(80%) saturate(2012%) hue-rotate(155deg) brightness(93%) contrast(86%);
+      }
+    }
+
+    button {
+      width: 130px;
+      height: 30px;
+      background-color: #590A42;
+      color : #FFFFFF;
+      font-size: 1em;
+      border-radius: 5px;
+      border-color: #590A42;
+      img {
+        filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(123deg) brightness(106%) contrast(100%);
+        margin-right: 0.4em;
+      }
+    }
+  }
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

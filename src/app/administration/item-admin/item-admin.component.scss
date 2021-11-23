@@ -1,12 +1,33 @@
+@import "../../../styles.scss";
+
 * {
   color : #E5E5E5;
 }
 
 
-li {
+.adminCard {
   display: flex;
-  border: black, solid, 2px;
-  background-color: red;
-  justify-content: space-between;
-  align-items: flex-start;
+  width: 300px;
+  height: 160px;
+  border: 2px solid $main-grey;
+  background-color: #ffffff;
+  color : $text-grey;
+  font-family: $main-font;
 }
+
+.circle-profil {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $main-blue;
+  border-radius: 50%;
+}
+
+.circle-profil img {
+  width: 40px;
+  height: auto;
+}
+
+//test de merge par Valentin

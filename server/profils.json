@@ -1,0 +1,24 @@
+{
+    "profils": [
+      {
+        "id": 1,
+        "nom": "Valentin",
+        "poste": "Développeur Java"
+      },
+      {
+        "id": 2,
+        "nom": "Doriane",
+        "poste": "Développeur Kotlin"
+      },
+      {
+        "id": 3,
+        "nom": "Erwan",
+        "poste": "Développeur PHP"
+      },
+      {
+        "id": 4,
+        "nom": "Nicolas",
+        "poste": "Développeur JS"
+      }
+    ]
+  }

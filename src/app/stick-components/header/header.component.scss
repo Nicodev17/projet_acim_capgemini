@@ -20,7 +20,7 @@ h1 {
     font-size: 0.95em;
     font-family: $main-font;
     color: $text-grey;
-    margin-right: 80px;
+    margin-left: 330px;
 }
 
 /* Logo */
@@ -28,4 +28,8 @@ header img {
     width: 200px;
     height: auto;
     margin-left: 80px;
+}
+
+div {
+    margin-right: 80px;
 }

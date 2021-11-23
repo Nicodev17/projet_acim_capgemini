@@ -24,6 +24,7 @@ import { FormCollaboratorSituationComponent } from './form-collaborator/form-col
 import { FormCollaboratorLatestMissionComponent } from './form-collaborator/form-collaborator-latest-mission/form-collaborator-latest-mission.component';
 import { FormCollaboratorNextMissionComponent } from './form-collaborator/form-collaborator-next-mission/form-collaborator-next-mission.component';
 import { FormVideoComponent } from './form-collaborator/form-video/form-video.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,11 +49,13 @@ import { FormVideoComponent } from './form-collaborator/form-video/form-video.co
     FormCollaboratorSituationComponent,
     FormCollaboratorLatestMissionComponent,
     FormCollaboratorNextMissionComponent,
-    FormVideoComponent
+    FormVideoComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

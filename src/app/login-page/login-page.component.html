@@ -3,12 +3,20 @@
         <div class="circle-profil">
             <img src="../../assets/user.png" alt="Logo user">
         </div>
-        <h2>Connexion - outil ACIM</h2>
-        <h3>Test pull Erwan</h3>
+        <h2>Connexion</h2>
     
-        <form action="post">
-            <input type="text" name="identifiant" id="identifiant" placeholder="Identifiant" maxlength="50" required>
-            <input type="password" name="password" id="password" placeholder="Mot de passe" maxlength="30" required>
+        <form action="post" [formGroup]="authRole" (ngSubmit)="onSubmit()">
+            <input type="text" name="identifiant" id="identifiant" placeholder="Identifiant" maxlength="50">
+            <input type="password" name="password" id="password" placeholder="Mot de passe" maxlength="30">
+
+            <!-- Temporaire - Dev uniquement -->
+            <div style="display: flex; flex-direction: row; margin: 10px; color: grey">
+                <label for="role1">Admin</label>
+                <input type="radio" name="role" id="role1" value="admin" formControlName="role" style="margin-right: 20px; cursor: pointer;">
+                <label for="role2">Collaborateur</label>
+                <input type="radio" name="role" id="role2" value="collab" formControlName="role" style="cursor: pointer;">
+            </div>
+
             <input type="submit" value="Se connecter">
             <input type="reset" value="Annuler">
         </form>

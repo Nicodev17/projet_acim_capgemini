@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Admin } from 'src/app/interfaces/admin';
+import { People } from 'src/app/shared/interfaces/people';
 
 @Component({
   selector: 'app-list-admin',
@@ -8,7 +8,7 @@ import { Admin } from 'src/app/interfaces/admin';
 })
 export class ListAdminComponent implements OnInit {
 
-  admins : Admin[] = [];
+  admins : People[] = [];
   constructor() { }
 
   ngOnInit(): void {

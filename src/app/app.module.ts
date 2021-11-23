@@ -25,6 +25,9 @@ import { FormCollaboratorLatestMissionComponent } from './form-collaborator/form
 import { FormCollaboratorNextMissionComponent } from './form-collaborator/form-collaborator-next-mission/form-collaborator-next-mission.component';
 import { FormVideoComponent } from './form-collaborator/form-video/form-video.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardGlobalComponent, HomeComponent } from './home/home.component';
+import { FormGlobalComponent } from './form-global/form-global.component';
+import { ProfilDetailsEditorComponent } from './profil-details-editor/profil-details-editor.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormCollaboratorLatestMissionComponent,
     FormCollaboratorNextMissionComponent,
     FormVideoComponent,
+    DashboardGlobalComponent,
+    HomeComponent,
+    FormGlobalComponent,
+    ProfilDetailsEditorComponent,
 
   ],
   imports: [

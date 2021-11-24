@@ -27,6 +27,9 @@ import { FormVideoComponent } from './form-collaborator/form-video/form-video.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ProfilDetailsEditorComponent } from './profil-details-editor/profil-details-editor.component';
+import { GlobalService } from './shared/services/global.service';
+import { AccessGuardGuard } from './shared/services/access-guard.guard';
+import { AdminGuard } from './shared/services/admin.guard';
 
 @NgModule({
   declarations: [
@@ -61,7 +64,7 @@ import { ProfilDetailsEditorComponent } from './profil-details-editor/profil-det
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [GlobalService, AccessGuardGuard, AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

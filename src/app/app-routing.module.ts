@@ -8,15 +8,17 @@ import { FormEditorComponent } from './form-edition/form-editor/form-editor.comp
 import { ProfilDetailsComponent } from './profil-details/profil-details.component';
 import { ProfilDetailsEditorComponent } from './profil-details-editor/profil-details-editor.component';
 import { FormVideoComponent } from './form-collaborator/form-video/form-video.component';
+import { AccessGuardGuard } from './shared/services/access-guard.guard';
+import { AdminGuard } from './shared/services/admin.guard';
 
 const routes: Routes = [
   {path: "", redirectTo: 'home', pathMatch: 'full'},
   {path: "home", component:HomeComponent},
-  {path: "form", component: FormCollaboratorSituationComponent},
-  {path: "form-editor", component: FormEditorComponent},
-  {path: "list-admin", component: ListAdminComponent},
-  {path: "profil-details", component: ProfilDetailsComponent},
-  {path: "profil-details-editor", component: ProfilDetailsEditorComponent},
+  {path: "form", component: FormCollaboratorSituationComponent, canActivate:[AccessGuardGuard]},
+  {path: "form-editor", component: FormEditorComponent, canActivate:[AdminGuard]},
+  {path: "list-admin", component: ListAdminComponent, canActivate:[AdminGuard]},
+  {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
+  {path: "profil-details-editor", component: ProfilDetailsEditorComponent, canActivate:[AdminGuard]},
   {path: "upload-video", component: FormVideoComponent}
   
 

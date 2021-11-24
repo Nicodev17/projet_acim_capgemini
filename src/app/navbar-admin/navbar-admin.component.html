@@ -1,30 +1,28 @@
-<body>
 
+<div *ngIf="this.isLoggedIn()">
     <!-- faire un ngIf admin/collabo pour affichage des deux premiers liens  -->
-    <div>
-      <a class="links" routerLink='/form'>
-        <img src="../../assets/list-plus.svg" alt="form logo">
-          <p>
-            Gestion du formulaire
-          </p>
+    <div *ngIf="this.isAdmin()">
+        <a class="links" routerLink='/form'>
+            <img src="../../assets/list-plus.svg" alt="form logo">
+            <p>
+                Gestion du formulaire
+            </p>
+        </a>
+    </div>
+    <div *ngIf="this.isAdmin()">
+        <a class="links" routerLink='/list-admin'>
+            <img src="../../assets/key-bold.svg" alt="administration logo">
+            <p>
+                Administration
+            </p>
         </a>
     </div>
     <div>
-      <a class="links" routerLink='/administration'>
-        <img src="../../assets/key.png" alt="administration logo">
-        <p>
-          Administration
-        </p>
-      </a>
+        <button class="links" routerLink='/home'>
+            <img src="../../assets/cards-light.svg" alt="dashboard logo">
+            <p>
+                Dashboard
+            </p>
+        </button>
     </div>
-    <div>
-      <button class="links" routerLink='/home'>
-        <img src="../../assets/cards-light.svg" alt="dashboard logo">
-        <p>
-           Dashboard
-        </p>
-      </button>
-    </div>
-  
-  
-  </body>
+</div>

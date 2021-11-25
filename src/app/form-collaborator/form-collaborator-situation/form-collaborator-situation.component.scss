@@ -12,10 +12,10 @@
 /* ================= ASIDE = MENU NAVIGATION DE GAUCHE ================= */
 
 aside {
-  background-color: rgba(112, 204, 233, 1); //ou #012ABDB couleur du pique Cap
+  background-color: rgba(112, 204, 233, 1); //= secondary-blue avec transparence
   display: flex;
   flex-direction: column;
-  width: 15%;
+  width: 17%;
   color: #811B6F;
   font-size: 1.1em;
   padding: 30px 10px;
@@ -88,21 +88,11 @@ form > label {
 .arrows {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .arrows a {
   margin: 20px;
-}
-
-.arrow-up {
-  //width: 0;
-  //height: 0;
-  border-bottom-right-radius: 10px 40px;
-  border-bottom-left-radius: 10px 40px;
-  border-right: 24px solid transparent;
-  border-left: 24px solid transparent;
-  border-bottom: 30px solid $main-blue;
 }
 
 .arrow-down {

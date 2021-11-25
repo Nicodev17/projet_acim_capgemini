@@ -1,1 +1,53 @@
-<p>form-video works!</p>
+<div class="main">
+
+    <aside>
+
+      <a href="#" id="active">Votre vidéo</a>
+
+    </aside>
+
+    <section>
+      <h2>
+        Vidéo de présentation
+      </h2>
+      <form action="">
+        <!-- <app-item-question *ngFor="let question of questions" [question]="question"></app-item-question> -->
+
+        <div class="first-intermission">
+
+          <label for="question1">Est-ce votre premier passage en intermission ?</label>
+
+          <div>
+            <input type="radio" id="first_inter_yes" name="first_inter" value="yes" checked>
+            <label for="first_inter_yes">Oui</label>
+
+            <input type="radio" id="first_inter_no" name="first_inter" value="no">
+            <label for="first_inter_no">Non</label>
+          </div>
+
+        </div>
+
+        <!-- <question2 *ngIf question1="non"></question2> -->
+        <label for="question2">Comment exprimeriez-vous la relation que vous avez eue avec le management AMS sur votre
+          précédente période d’intermission ?</label>
+
+        <textarea name="message" id="question2" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+
+        <label for="question3">Qu’attendez-vous de la période d’intermission ?</label>
+
+        <textarea name="message" id="question3" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+
+        <div class="button">
+            <input type="submit" value="Envoyer">
+        </div>
+
+      </form>
+    </section>
+
+    <div class="arrows">
+      <a routerLink="/form/latest">
+        <div class="arrow-down"></div>
+      </a>
+    </div>
+
+  </div>

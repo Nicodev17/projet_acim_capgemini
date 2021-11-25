@@ -13,6 +13,11 @@ header {
 
     /* Style */
     background-color: rgb(241, 241, 241);
+    
+    /* Position navbar */
+    div {
+        margin-right: 80px;
+    }
 }
 
 /* Title header */
@@ -20,7 +25,10 @@ h1 {
     font-size: 0.95em;
     font-family: $main-font;
     color: $text-grey;
-    margin-left: 330px;
+    margin-left: 80px;
+    position: absolute;
+    top: 30px;
+    right: 80px;
 }
 
 /* Logo */
@@ -28,8 +36,4 @@ header img {
     width: 200px;
     height: auto;
     margin-left: 80px;
-}
-
-div {
-    margin-right: 80px;
 }

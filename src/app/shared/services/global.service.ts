@@ -1,17 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { User } from '../interfaces/user';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class GlobalService {
+  constructor(private http: HttpClient) { }
 
-  userSubject = new Subject<User>()
+  serverUrlProfils = environment.serverUrlProfils;
+  userSubject = new Subject<User>();
+  arrayProfils: User[] = [];
   user ?: User
-
+  
   constructor() { 
     this.user=undefined
+  }
+
+  getProfils(): Observable<User[]> {
+    return this.http.get<User[]>(this.serverUrlProfils)
   }
 
   login (user : User){
@@ -36,8 +46,6 @@ export class GlobalService {
       return !this.user.right;
     }else{return false;}
   }
-
-  
 }
 
 

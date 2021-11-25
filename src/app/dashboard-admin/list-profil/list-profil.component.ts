@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User} from 'src/app/shared/interfaces/user';
+import { GlobalService } from 'src/app/shared/services/global.service';
 
 @Component({
   selector: 'app-list-profil',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListProfilComponent implements OnInit {
 
-  constructor() { }
+  arrayProfils: User[] = [];
+
+  constructor(private service : GlobalService) {}
 
   ngOnInit(): void {
+    this.service.getProfils().subscribe(resultFromAPI => {
+      this.arrayProfils = resultFromAPI;
+
+      console.log(this.arrayProfils);
+    });
   }
 
 }

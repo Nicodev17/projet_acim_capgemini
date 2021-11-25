@@ -2,22 +2,38 @@
     "profils": [
       {
         "id": 1,
-        "nom": "Valentin",
+        "lastname": "A",
+        "firstname": "Valentin",
+        "right": false,
+        "email": "val@gmail.com",
+        "password": "mdp",
         "poste": "Développeur Java"
       },
       {
         "id": 2,
-        "nom": "Doriane",
+        "lastname": "N",
+        "firstname": "Doriane",
+        "right": false,
+        "email": "dori@gmail.com",
+        "password": "mdp",
         "poste": "Développeur Kotlin"
       },
       {
         "id": 3,
-        "nom": "Erwan",
+        "lastname": "J",
+        "firstname": "Erwan",
+        "right": false,
+        "email": "erwan@gmail.com",
+        "password": "mdp",
         "poste": "Développeur PHP"
       },
       {
         "id": 4,
-        "nom": "Nicolas",
+        "lastname": "S",
+        "firstname": "Nicolas",
+        "right": false,
+        "email": "nico@gmail.com",
+        "password": "mdp",
         "poste": "Développeur JS"
       }
     ]

@@ -1,5 +1,12 @@
 <!-- liste des collaborateurs -->
-<h2>Dashboard</h2>
-
-<!-- Enfant -->
-<app-item-profil></app-item-profil>
+<div class="list-profil-page">
+    <h2>Dashboard</h2>
+    
+    <!-- Enfant -->
+    <div class="grid">
+        <ng-container *ngFor="let $profil of arrayProfils">
+            <app-item-profil [profil]="$profil">
+            </app-item-profil>
+        </ng-container>
+    </div>
+</div>

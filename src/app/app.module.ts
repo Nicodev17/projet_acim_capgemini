@@ -28,6 +28,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ProfilDetailsEditorComponent } from './profil-details-editor/profil-details-editor.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GlobalService } from './shared/services/global.service';
+import { AccessGuardGuard } from './shared/services/access-guard.guard';
+import { AdminGuard } from './shared/services/admin.guard';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GlobalService, AccessGuardGuard, AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

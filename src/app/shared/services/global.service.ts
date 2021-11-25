@@ -12,18 +12,40 @@ export class GlobalService {
   constructor(private http: HttpClient) { }
 
   serverUrlProfils = environment.serverUrlProfils;
-  userSubject = new Subject<User>()
+  userSubject = new Subject<User>();
   arrayProfils: User[] = [];
-
-
-  login (user : User){
-    this.userSubject.next(user)
+  user ?: User
+  
+  constructor() { 
+    this.user=undefined
   }
 
   getProfils(): Observable<User[]> {
     return this.http.get<User[]>(this.serverUrlProfils)
   }
 
+  login (user : User){
+    this.user = user
+    // hhtpClient
+  }
+
+  isLoggedIn () : boolean {
+    if(this.user===undefined){
+      return false;
+    }else{return true;}
+  }
+
+  isAdmin () : boolean {
+    if (this.user!== undefined){
+      return this.user.right;
+    }else{return false;}
+  }
+
+  isUser () : boolean {
+    if (this.user!== undefined){
+      return !this.user.right;
+    }else{return false;}
+  }
 }
 
 

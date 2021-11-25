@@ -47,7 +47,7 @@ export class LoginPageComponent implements OnInit {
     }
 
 
-    this.globalService.login(user2);
+    this.globalService.login(user);
   }
 
   ngOnInit(): void {

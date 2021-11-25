@@ -9,16 +9,14 @@ import { environment } from 'src/environments/environment';
 })
 
 export class GlobalService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.user=undefined
+  }
 
   serverUrlProfils = environment.serverUrlProfils;
   userSubject = new Subject<User>();
   arrayProfils: User[] = [];
   user ?: User
-  
-  constructor() { 
-    this.user=undefined
-  }
 
   getProfils(): Observable<User[]> {
     return this.http.get<User[]>(this.serverUrlProfils)

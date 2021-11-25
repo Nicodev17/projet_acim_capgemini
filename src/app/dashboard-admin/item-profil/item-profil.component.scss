@@ -1,0 +1,11 @@
+@import "../../../styles.scss";
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(243, 243, 243);
+    color: rgb(83, 83, 83);
+    border-radius: 5px;
+    padding: 25px;
+}

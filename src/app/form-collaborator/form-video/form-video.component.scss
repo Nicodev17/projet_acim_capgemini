@@ -90,18 +90,38 @@ form input[type=submit]:hover {
 
 /* -------- Sélection de la video -------- */
 
-.select_video {
+.videoUpload {
+    width: 130px;
+    height: auto;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: $main-blue;
+    color: white;
+    border: 1px solid $main-blue;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    img {
+  width:25px;
+  height:25px;
+  margin-right: 10px;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
 }
 
-.select_video input {
-    margin: 10px 15px 10px 0;
-}
-
-#parcourir {
-    width: 40%;
+.videoUpload:hover {
+    background: $secondary-blue;
+    border: 1px solid $secondary-blue;
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    label {
+        cursor: pointer;
+    }
 }
 
 /* -------- Vidéos -------- */
@@ -139,9 +159,3 @@ form input[type=submit]:hover {
     border-bottom: 30px solid $main-blue;
 }
 
-/* ================= AUTRE ================= */
-
-.clear {
-    /*permet de stopper l'influence du float et remettre les éléments Html dans le flux normal */
-    clear: both;
-}

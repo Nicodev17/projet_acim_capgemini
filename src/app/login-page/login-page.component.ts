@@ -19,7 +19,7 @@ export class LoginPageComponent implements OnInit {
 
   // Traitement du formulaire de connexion à la soumission
   onSubmit() {
-    let roleChoice = this.authRole.value.role;  
+     
     let user = {
       id : 1,
       lastname : "Bouillon",
@@ -37,17 +37,7 @@ export class LoginPageComponent implements OnInit {
       password : "password"
     };
 
-
-    if(roleChoice == "admin") {
-      console.log('role admin choisi');
-      /* ROUTE VERS LE DASHBOARD ADMIN ICI */
-    } else if(roleChoice == "collab") {
-      console.log('role collab choisi');
-      /* ROUTE VERS LE DASHBOARD COLLAB ICI */
-    }
-
-
-    this.globalService.login(user2);
+    this.globalService.login(user);
   }
 
   ngOnInit(): void {

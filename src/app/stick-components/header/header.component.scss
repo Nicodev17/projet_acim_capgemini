@@ -17,10 +17,12 @@ header {
 
 /* Title header */
 h1 {
+    text-align: right;
     font-size: 0.95em;
     font-family: $main-font;
     color: $text-grey;
-    margin-left: 330px;
+    margin-left: 20px;
+    margin-right: 80px;
 }
 
 /* Logo */
@@ -30,6 +32,6 @@ header img {
     margin-left: 80px;
 }
 
-div {
+.navbar-active {
     margin-right: 80px;
 }

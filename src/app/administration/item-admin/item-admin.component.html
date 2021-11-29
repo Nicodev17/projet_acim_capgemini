@@ -1,10 +1,14 @@
-<li>
+<div class=flex>
+  <input type="checkbox" id="check-admin" name="check-admin">
   <div class = "adminCard">
-    <div class="circle-profil">
-      <img src="../../assets/user.png" alt="Logo user">
+    <div class="circle-profil fullgrey-circle">
+      <img src="../../assets/grey_user.png" alt="Logo user">
+    </div>
+    <div class="NameFirstname">
+      <p>{{admin.firstname}} {{admin.lastname}}</p>
+    </div>
+    <div class="Poste">
+      <p>poste</p>
+    </div>
   </div>
-    {{admin.lastname}} {{admin.firstname}}
-    <br>
-    poste
-  </div>
-</li>
+</div>

@@ -1,30 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
-
-  <body>
-    <header>
-      <nav>
-
-      </nav>
-    </header>
-  <main>
-
-    </main>
-    /*
+<div class="list-admin-page">
+  <div class="list-admin-box">
+    <h2>Administration des profils admin</h2>
+    <div class="ajout-admin">
+        <h3>Liste des amins</h3>
+        <input type='button' (click)="onClickOpenFormAddAdmin()" value='Ajouter'>
+    </div>
+    <div class="flex">
+      <!-- Ici sont généré les cartes admin-->
+      <app-item-admin></app-item-admin>
+      <app-item-admin></app-item-admin>
+      <app-item-admin></app-item-admin>
+      <app-item-admin></app-item-admin>
+      <app-item-admin></app-item-admin>
+    </div>
+    <!--
     <ng-container *ngFor="let admin of admins">
       <app-item-admin [admin]="admin"></app-item-admin>
     </ng-container>
-
-    <p>list-admin works!</p>
-  </body>
-</html>
-
-
-
+    -->
+    <div class="deletePart">
+      <div>
+      Sélection : 
+      </div>
+      <div>
+        <input type='button' value="Supprimer admin">
+      </div>
+    </div>
+  </div>
+</div>

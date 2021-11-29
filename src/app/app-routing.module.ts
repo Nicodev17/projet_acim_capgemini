@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
   
 import { FormCollaboratorSituationComponent } from './form-collaborator/form-collaborator-situation/form-collaborator-situation.component';
 import { ListAdminComponent } from './administration/list-admin/list-admin.component';
+import { ItemAdminComponent } from './administration/item-admin/item-admin.component';
 import { HomeComponent } from './home/home.component';
 import { FormEditorComponent } from './form-edition/form-editor/form-editor.component';
 import { ProfilDetailsComponent } from './profil-details/profil-details.component';

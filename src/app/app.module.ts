@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { FormVideoComponent } from './form-collaborator/form-video/form-video.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ProfilDetailsEditorComponent } from './profil-details-editor/profil-details-editor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { GlobalService } from './shared/services/global.service';
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
@@ -64,6 +66,8 @@ import { AdminGuard } from './shared/services/admin.guard';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule, //Pour pouvoir faire un pop-up 
     HttpClientModule
   ],
   providers: [GlobalService, AccessGuardGuard, AdminGuard],

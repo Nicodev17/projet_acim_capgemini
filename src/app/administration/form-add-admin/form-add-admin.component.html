@@ -1,1 +1,21 @@
-<p>form-add-admin works!</p>
+<div class="form-add-admin-page">
+    <p>Ajout d'un administrateur</p>
+    <div class="content">
+        <form>
+            <div class="NomPrenomPart" >
+                <input class="test" type='textbox' placeholder='Nom'>
+                <input class="test" type='textbox' placeholder='Prénom'>
+            </div>
+            <div class="mailPart">
+                <input type='textbox' placeholder='Adresse Mail'>
+            </div>
+            <div class="postePart">
+                <input type='textbox' placeholder='Poste'>
+            </div>
+            <div class="buttonsPosition">
+                <input type='button' (click)="onClickCloseWindow()"value='Annuler'>
+                <input class="btnAjouter" type='button' value='Ajouter'>
+            </div>
+        </form>
+    </div>
+</div>

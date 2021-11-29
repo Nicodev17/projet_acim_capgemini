@@ -1,33 +1,64 @@
 @import "../../../styles.scss";
 
 * {
-  color : #E5E5E5;
+  font-size: 1.0em;
 }
 
-
 .adminCard {
-  display: flex;
-  width: 300px;
-  height: 160px;
-  border: 2px solid $main-grey;
+  display: grid;
+  grid-template-rows: 2fr 0.5fr 3.5fr 4fr;
+  grid-template-columns: 0.4fr 2.2fr 7.4fr;
+  width: 220px;
+  height: 100px;
+  border: 3px solid $main-grey;
   background-color: #ffffff;
-  color : $text-grey;
+  color : $text-darkgrey;
   font-family: $main-font;
 }
 
 .circle-profil {
-  width: 80px;
-  height: 80px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end:  span 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid $main-blue;
+  border: 2px solid $main-grey;
   border-radius: 50%;
+  align-items: center;
 }
 
 .circle-profil img {
-  width: 40px;
+  width: 20px;
   height: auto;
 }
 
-//test de merge par Valentin
+.fullgrey-circle{
+  width: 40px;
+  height: 40px;
+  background: #E5E5E5;
+  border-radius: 50%
+}
+
+.NameFirstname{
+  color : $text-darkgrey;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end:  span 2;
+  padding-left: 10px;
+}
+
+.Poste{
+  color : $text-darkgrey;
+  color : $text-darkgrey;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  padding-left: 10px;
+}
+
+.flex{
+  display:flex
+}

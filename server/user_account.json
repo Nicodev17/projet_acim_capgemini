@@ -1,0 +1,85 @@
+{
+    "user_account": [
+      {
+        "id": 1,
+        "lastname": "Migné",
+        "firstname": "Florent",
+        "email": "flo@gmail.com",
+        "password": "mdp",
+        "job": "Staffing partner",
+        "formstate": "waiting"
+      },
+      {
+        "id": 2,
+        "lastname": "Beauregard",
+        "firstname": "José",
+        "email": "jojo@gmail.com",
+        "password": "mdp",
+        "job": "Staffing partner",
+        "formstate": "ok"
+      },
+      {
+        "id": 3,
+        "lastname": "Dupont",
+        "firstname": "Julien",
+        "email": "juju@gmail.com",
+        "password": "mdp",
+        "job": "RH",
+        "formstate": "not"
+      },
+      {
+        "id": 4,
+        "lastname": "Sartelet",
+        "firstname": "Nicolas",
+        "email": "nico@gmail.com",
+        "password": "mdp",
+        "job": "Développeur JS",
+        "formstate": "ok"
+      },
+      {
+        "id": 5,
+        "lastname": "Dassion",
+        "firstname": "Ninon",
+        "email": "ninon@gmail.com",
+        "password": "mdp",
+        "job": "Développeuse Java",
+        "formstate": "waiting"
+      },
+      {
+        "id": 6,
+        "lastname": "Cover",
+        "firstname": "Harry",
+        "email": "harry@gmail.com",
+        "password": "mdp",
+        "job": "Développeur Java",
+        "formstate": "not"
+      },
+      {
+        "id": 7,
+        "lastname": "Touille",
+        "firstname": "Sacha",
+        "email": "sacha@gmail.com",
+        "password": "mdp",
+        "job": "Développeur PHP",
+        "formstate": "not"
+      },
+      {
+        "id": 8,
+        "lastname": "Depein",
+        "firstname": "Noémie",
+        "email": "nono@gmail.com",
+        "password": "mdp",
+        "job": "Chieuse",
+        "formstate": "ok"
+      },
+      {
+        "id": 9,
+        "lastname": "Bosapin",
+        "firstname": "Edmond",
+        "email": "bobo@gmail.com",
+        "password": "mdp",
+        "job": "Développeur Kotlin",
+        "formstate": "ok"
+      }
+    ]
+  }

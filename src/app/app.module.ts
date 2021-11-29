@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalService } from './shared/services/global.service';
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
+import { SimpleModalModule } from 'ngx-simple-modal';
 
 @NgModule({
   declarations: [
@@ -67,8 +67,8 @@ import { AdminGuard } from './shared/services/admin.guard';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatDialogModule, //Pour pouvoir faire un pop-up 
-    HttpClientModule
+    HttpClientModule,
+    SimpleModalModule
   ],
   providers: [GlobalService, AccessGuardGuard, AdminGuard],
   bootstrap: [AppComponent]

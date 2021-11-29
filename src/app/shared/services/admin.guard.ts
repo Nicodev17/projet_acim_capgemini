@@ -9,8 +9,7 @@ import { GlobalService } from './global.service';
 })
 export class AdminGuard implements CanActivate {
   
-  constructor(private globalService:GlobalService,
-    private router:Router){}
+  constructor(private globalService:GlobalService, private router:Router){}
   
   canActivate(
     route: ActivatedRouteSnapshot,

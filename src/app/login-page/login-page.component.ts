@@ -20,7 +20,6 @@ export class LoginPageComponent implements OnInit {
   // Traitement du formulaire de connexion à la soumission
   onSubmit() {
     let roleChoice = this.authRole.value.role;
-
     let user = {
       id : 1,
       lastname : "Bouillon",
@@ -40,7 +39,6 @@ export class LoginPageComponent implements OnInit {
       formstate : "ok"
     };
 
-
     if(roleChoice == "admin") {
       console.log('role admin choisi');
       this.globalService.login(user);
@@ -48,7 +46,6 @@ export class LoginPageComponent implements OnInit {
       console.log('role collab choisi');
       this.globalService.login(user2);
     }
-  
   }
 
   ngOnInit(): void {

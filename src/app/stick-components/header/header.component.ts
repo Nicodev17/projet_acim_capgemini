@@ -16,6 +16,8 @@ export class HeaderComponent implements OnInit {
 
   isAdmin () : boolean {
     return this.globalService.isAdmin();
+  isLoggedIn() : boolean {
+    return this.globalService.isLoggedIn();
   }
 
   ngOnInit(): void {

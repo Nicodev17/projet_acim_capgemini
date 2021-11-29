@@ -10,11 +10,18 @@ export class HeaderComponent implements OnInit {
 
   constructor(private globalService : GlobalService) { }
 
+  isNotLogged() : boolean {
+    return !this.globalService.isLoggedIn();
+  }
+
+  isAdmin () : boolean {
+    return this.globalService.isAdmin();
   isLoggedIn() : boolean {
     return this.globalService.isLoggedIn();
   }
 
   ngOnInit(): void {
+
   }
 
 }

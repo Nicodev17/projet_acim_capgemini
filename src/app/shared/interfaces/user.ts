@@ -6,5 +6,5 @@ export interface User {
   right : boolean ;
   email : string;
   password : string;
-
+  formstate : string;
 }

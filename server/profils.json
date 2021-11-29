@@ -2,23 +2,83 @@
     "profils": [
       {
         "id": 1,
-        "nom": "Valentin",
-        "poste": "Développeur Java"
+        "lastname": "Ancel",
+        "firstname": "Valentin",
+        "right": false,
+        "email": "val@gmail.com",
+        "password": "mdp",
+        "job": "Développeur Java",
+        "formstate": "waiting"
       },
       {
         "id": 2,
-        "nom": "Doriane",
-        "poste": "Développeur Kotlin"
+        "lastname": "Narbeburu",
+        "firstname": "Doriane",
+        "right": false,
+        "email": "dori@gmail.com",
+        "password": "mdp",
+        "job": "Développeur Kotlin",
+        "formstate": "ok"
       },
       {
         "id": 3,
-        "nom": "Erwan",
-        "poste": "Développeur PHP"
+        "lastname": "Jourdan",
+        "firstname": "Erwan",
+        "right": false,
+        "email": "erwan@gmail.com",
+        "password": "mdp",
+        "job": "Développeur PHP",
+        "formstate": "not"
       },
       {
         "id": 4,
-        "nom": "Nicolas",
-        "poste": "Développeur JS"
+        "lastname": "Sartelet",
+        "firstname": "Nicolas",
+        "right": false,
+        "email": "nico@gmail.com",
+        "password": "mdp",
+        "job": "Développeur JS",
+        "formstate": "ok"
+      },
+      {
+        "id": 5,
+        "lastname": "Ancel",
+        "firstname": "Valentin",
+        "right": false,
+        "email": "val@gmail.com",
+        "password": "mdp",
+        "job": "Développeur Java",
+        "formstate": "waiting"
+      },
+      {
+        "id": 6,
+        "lastname": "Narbeburu",
+        "firstname": "Doriane",
+        "right": false,
+        "email": "dori@gmail.com",
+        "password": "mdp",
+        "job": "Développeur Kotlin",
+        "formstate": "not"
+      },
+      {
+        "id": 7,
+        "lastname": "Jourdan",
+        "firstname": "Erwan",
+        "right": false,
+        "email": "erwan@gmail.com",
+        "password": "mdp",
+        "job": "Développeur PHP",
+        "formstate": "not"
+      },
+      {
+        "id": 8,
+        "lastname": "Sartelet",
+        "firstname": "Nicolas",
+        "right": false,
+        "email": "nico@gmail.com",
+        "password": "mdp",
+        "job": "Développeur JS",
+        "formstate": "ok"
       }
     ]
   }

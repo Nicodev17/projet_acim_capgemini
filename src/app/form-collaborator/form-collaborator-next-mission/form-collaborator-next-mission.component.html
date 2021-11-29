@@ -1,1 +1,42 @@
-<p>form-collaborator-next-mission works!</p>
+<div class="main">
+
+    <aside>
+
+      <a routerLink="/form">Votre situation</a>
+      <a routerLink="/form/latest">Votre précédente mission</a>
+      <a routerLink="#" id="active">Votre future mission</a>
+
+    </aside>
+
+    <section>
+      <h2>
+        Préparation de l'entretien avec le staffing partner
+      </h2>
+      <form action="">
+        <!-- <app-item-question *ngFor="let question of questions" [question]="question"></app-item-question> -->
+
+        <label for="question6">Quel est votre objectif pour votre prochain poste en terme de compétences (hard skills) ? Est-ce inscrit dans une démarche à long terme ?</label>
+
+        <textarea name="message" id="question6" rows="7" placeholder="Ecrivez votre réponse ici"></textarea>
+
+        <label for="question7">Quel est votre objectif pour votre prochain poste en terme de savoir-faire (soft skills) ? Est-ce inscrit dans une démarche à long terme ?</label>
+
+        <textarea name="message" id="question7" rows="7" placeholder="Ecrivez votre réponse ici"></textarea>
+
+        <label for="question8">Quelle modification / ajout supplémentaire aimeriez-vous indiquer sur vos attendus de prochaine mission ?</label>
+
+        <textarea name="message" id="question8" rows="7" placeholder="Ecrivez votre réponse ici"></textarea>
+
+        <div class="button">
+            <input type="submit" value="Envoyer">
+        </div>
+      </form>
+    </section>
+
+    <div class="arrows">
+      <a routerLink="/form/latest">
+        <div class="arrow-up"></div>
+      </a>
+    </div>
+
+  </div>

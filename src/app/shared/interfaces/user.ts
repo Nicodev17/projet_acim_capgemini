@@ -1,4 +1,4 @@
-export interface People {
+export interface User {
 
   id : number;
   lastname : string;
@@ -6,5 +6,5 @@ export interface People {
   right : boolean ;
   email : string;
   password : string;
-
+  formstate : string;
 }

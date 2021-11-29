@@ -1,0 +1,107 @@
+@import "../../../styles.scss";
+
+.grid-item {
+    position: relative;
+    border: 2px solid rgb(243, 243, 243);
+    color: rgb(94, 94, 94);
+    border-radius: 5px;
+    padding: 32px;
+}
+
+.content-top {/* 
+    border: 2px solid green; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.status-color {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 10px 0 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.circle-box {
+    width: 30%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px 0 0;
+}
+
+.circle-box img {
+    width: 25px;
+    height: auto;
+    border: 2px solid $main-blue;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.info-box {
+    width: 70%;/* 
+    border: 2px solid blue; */
+}
+
+.info-box p {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.info-box strong {
+    text-transform: uppercase;
+    color: rgb(141, 141, 141);
+}
+
+.button-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+    margin: 15px 0 -10px 0;
+}
+
+.button-box button:first-child {
+    @include button-secondary-action;
+    width: 110px;
+    height: 35px;
+    font-size: 0.7em;
+    font-weight: 500;
+    padding: 0;
+    margin-right: 15px;
+}
+
+.button-box button:nth-child(2) {
+    @include button-primary-action;
+    width: 110px;
+    height: 35px;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 0;
+}
+
+.button-box button:first-child:hover {
+    @include button-secondary-action-hover
+}
+
+.button-box button:nth-child(2):hover {
+    @include button-primary-action-hover
+}
+
+.button-box div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 35px;
+    font-size: 0.75em;
+    color: $text-grey;
+    border-radius: 5px;
+    background: rgb(244, 244, 244);
+    padding: 1px;
+}

@@ -1,5 +1,8 @@
 
 <header>
     <img src="../../../assets/logoCapgemini.png" alt="Logo Capgemini">
-    <h1>Outil d'Accompagnement des Collaborateurs en Intermission</h1>
+    <h1 *ngIf='this.isNotLogged()'>Outil d'Accompagnement des Collaborateurs en Intermission</h1>
+    <div class="navbar-active" *ngIf='this.isAdmin()'>
+        <app-navbar-admin></app-navbar-admin>
+    </div>
 </header>

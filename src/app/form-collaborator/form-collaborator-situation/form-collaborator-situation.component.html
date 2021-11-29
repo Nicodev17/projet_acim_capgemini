@@ -1,48 +1,52 @@
   <div class="main">
 
-  <aside class="titles">
+    <aside>
 
-    <p class="nav-item-active">| Votre situation</p>
-    <p>| Votre précédente mission</p>
-    <p>| Votre future mission</p>
+      <a routerLink="#" id="active">Votre situation</a>
+      <a routerLink="/form/latest">Votre précédente mission</a>
+      <a routerLink="/form/next">Votre future mission</a>
 
-  </aside>
+    </aside>
 
-  <section>
-    <h2>
-      Préparation de l'entretien avec le staffing partner
-    </h2>
-    <form action="">
-      <!-- <app-item-question *ngFor="let question of questions" [question]="question"></app-item-question> -->
+    <section>
+      <h2>
+        Préparation de l'entretien avec le staffing partner
+      </h2>
+      
+      <form action="">
+        <!-- <app-item-question *ngFor="let question of questions" [question]="question"></app-item-question> -->
 
-      <div class="first-intermission">
+        <div class="first-intermission">
 
-        <label for="question1">Est-ce votre premier passage en intermission ?</label>
+          <label for="question1">Est-ce votre premier passage en intermission ?</label>
 
-        <div>
-          <input type="radio" id="first_inter_yes" name="first_inter" value="yes" checked>
-          <label for="first_inter_yes">Oui</label>
+          <div>
+            <input type="radio" id="first_inter_yes" name="first_inter" value="yes" checked>
+            <label for="first_inter_yes">Oui</label>
 
-          <input type="radio" id="first_inter_no" name="first_inter" value="no">
-          <label for="first_inter_no">Non</label>
+            <input type="radio" id="first_inter_no" name="first_inter" value="no">
+            <label for="first_inter_no">Non</label>
+          </div>
+
         </div>
 
-      </div>
+        <!-- <question2 *ngIf question1="non"></question2> -->
+        <label for="question2">Comment exprimeriez-vous la relation que vous avez eue avec le management AMS sur votre
+          précédente période d’intermission ?</label>
 
+        <textarea name="message" id="question2" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
 
-      <label for="question2">Comment exprimeriez-vous la relation que vous avez eue avec le management AMS sur votre
-        précédente période d’intermission ?</label>
+        <label for="question3">Qu’attendez-vous de la période d’intermission ?</label>
 
-      <textarea name="message" id="question2" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+        <textarea name="message" id="question3" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
 
-      <label for="question3">Qu’attendez-vous de la période d’intermission ?</label>
+      </form>
+    </section>
 
-      <textarea name="message" id="question3" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
-
-    </form>
-  </section>
+    <div class="arrows">
+      <a routerLink="/form/latest">
+        <div class="arrow-down"></div>
+      </a>
+    </div>
 
   </div>
-
-
-  <!-- flèche en bas à droite -->

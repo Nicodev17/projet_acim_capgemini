@@ -1,1 +1,42 @@
-<p>form-collaborator-latest-mission works!</p>
+<div class="main">
+
+    <aside>
+
+      <a routerLink="/form">Votre situation</a>
+      <a routerLink="#" id="active">Votre précédente mission</a>
+      <a routerLink="/form/next">Votre future mission</a>
+
+    </aside>
+
+    <section>
+      <h2>
+        Préparation de l'entretien avec le staffing partner
+      </h2>
+      <form action="">
+        <!-- <app-item-question *ngFor="let question of questions" [question]="question"></app-item-question> -->
+
+        <label for="question4">Indiquez deux points positifs sur votre dernière mission :</label>
+
+        <textarea name="message" id="question4" rows="8" placeholder="Ecrivez votre réponse ici"></textarea>
+
+        <label for="question4">Indiquez deux points que vous auriez souhaité faire ou vivre différemment sur votre dernière mission :</label>
+
+        <textarea name="message" id="question4" rows="8" placeholder="Ecrivez votre réponse ici"></textarea>
+
+        <label for="question5">Auriez-vous une remarque particulière à nous communiquer sur votre dernier sujet ?</label>
+
+        <textarea name="message" id="question5" rows="8" placeholder="Ecrivez votre réponse ici"></textarea>
+
+      </form>
+    </section>
+
+    <div class="arrows">
+      <a routerLink="/form">
+        <div class="arrow-up"></div>
+      </a>
+      <a routerLink="/form/next">
+        <div class="arrow-down"></div>
+      </a>
+    </div>
+
+  </div>

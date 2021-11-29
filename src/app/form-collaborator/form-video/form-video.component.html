@@ -1,1 +1,54 @@
-<p>form-video works!</p>
+<div class="main">
+
+  <aside>
+
+    <a href="#" id="active">Votre vidéo</a>
+
+  </aside>
+
+  <section>
+    <h2>
+      Vidéo de présentation
+    </h2>
+
+    <form action="">
+
+      <h3>Parlez-nous de vous...</h3>
+
+      <p>Vous pouvez déposer ci-dessous une vidéo dans laquelle vous vous présentez : votre profil, vos connaissances,
+        vos attentes... Faites-vous plaisir !</p>
+
+      <p><em>Durée maximale : 3 minutes</em></p>
+
+      <div class="videoUpload">
+        <img src="../../../assets/glass-64.png"/>
+        <label for="videoUpload">Parcourir...</label>
+        <input type="file" id="videoUpload" accept="video/*" style="display: none">
+      </div>
+
+      <div class="videos">
+        <div>
+          <label for="question2">Votre chef-d'œuvre</label>
+          <embed src="https://www.youtube.com/embed/v4COA6vNKZ8" allowfullscreen="true" width="600" height="338">
+        </div>
+
+        <div>
+          <label for="question3">Besoin d'aide ? Voici un tuto !</label>
+          <embed src="https://www.youtube.com/embed/DOITze46lJE" allowfullscreen="true" width="600" height="338">
+        </div>
+      </div>
+
+      <div class="button">
+        <input type="submit" value="Envoyer">
+      </div>
+
+    </form>
+  </section>
+
+  <div class="arrows">
+    <a routerLink="/form/latest">
+      <div class="arrow-down"></div>
+    </a>
+  </div>
+
+</div>

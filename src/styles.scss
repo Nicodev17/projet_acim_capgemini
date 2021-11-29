@@ -39,7 +39,7 @@ $projet-capgemini-acim-theme: mat.define-light-theme((
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    height: auto;
     font-family: 'Open-sans', sans-serif;
 }
 
@@ -52,5 +52,49 @@ $text-darkgrey: #272936;
 
 /* FONTS */
 $main-font: 'Open-sans', sans-serif;
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* MIXINS BOUTONS GENERAUX */
+
+@mixin button-primary-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: auto;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: $main-blue;
+    color: white;
+    border: 1px solid $main-blue;
+}
+
+@mixin button-secondary-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: auto;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: $main-grey;
+    border: 2px solid $main-grey;
+    background: white;
+    color: $main-blue;
+}
+
+@mixin button-primary-action-hover {
+    background: $secondary-blue;
+    border: 1px solid $secondary-blue;
+    cursor: pointer;
+    transition: background .15s ease-in;
+}
+
+@mixin button-secondary-action-hover {
+    background: $main-grey;
+    cursor: pointer;
+    transition: background .15s ease-in;
+}

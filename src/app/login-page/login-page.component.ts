@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { GlobalService } from '../shared/services/global.service';
 
 @Component({
   selector: 'app-login-page',
@@ -12,18 +13,36 @@ export class LoginPageComponent implements OnInit {
     role: new FormControl('', Validators.required)
   });
 
-  constructor() { }
+  constructor(private globalService:GlobalService) { }
 
   // Traitement du formulaire de connexion à la soumission
   onSubmit() {
-    let roleChoice = this.authRole.value.role;    
+    let roleChoice = this.authRole.value.role;
+    let user = {
+      id : 1,
+      lastname : "Bouillon",
+      firstname : "Antoine",
+      right : true ,
+      email : "antoine@yopmail.com",
+      password : "password",
+      formstate : "ok"
+    };
+    let user2 = {
+      id : 2,
+      lastname : "Tulipe",
+      firstname : "Celine",
+      right : false,
+      email : "celine@yopmail.com",
+      password : "password",
+      formstate : "ok"
+    };
 
     if(roleChoice == "admin") {
       console.log('role admin choisi');
-      /* ROUTE VERS LE DASHBOARD ADMIN ICI */
+      this.globalService.login(user);
     } else if(roleChoice == "collab") {
       console.log('role collab choisi');
-      /* ROUTE VERS LE DASHBOARD COLLAB ICI */
+      this.globalService.login(user2);
     }
   }
 

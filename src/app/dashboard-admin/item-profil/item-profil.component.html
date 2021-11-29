@@ -1,2 +1,28 @@
 <!-- Enfant de list-profil -->
-<p>item-profil works!</p>
+<div class="grid-item">
+    <div class="status-color" [ngStyle]="{'background-color': getColor(profil.formstate)}" title="Etat du questionnaire">
+    </div>
+
+    <div class="content-top">
+        <div class="circle-box">
+            <img src="../../../assets/user.png" alt="Logo user">
+        </div>
+        <div class="info-box">
+            <p>
+                {{ profil.firstname }} <strong>{{ profil.lastname }}</strong>
+            </p>
+            <p>
+                {{ profil.job }}
+           </p>
+        </div>
+    </div>
+    <div class="button-box">
+        <button>Voir le profil</button>
+        <div *ngIf="profil.formstate === 'waiting';else notWaiting" title="Le formulaire n'a pas encore été rempli">
+           En attente ⌛️
+        </div>
+        <ng-template #notWaiting> 
+            <button>{{ buttonValue }}</button>
+        </ng-template>
+    </div>
+</div>

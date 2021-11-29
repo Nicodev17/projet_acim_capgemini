@@ -1,5 +1,24 @@
 <!-- liste des collaborateurs -->
-<h2>Dashboard</h2>
+<div class="list-profil-page">
+    <h2>Dashboard</h2>
 
-<!-- Enfant -->
-<app-item-profil></app-item-profil>
+    <button class="add-profil"> <strong>&#43;</strong> Ajouter un profil</button>
+
+    <!-- Filtrage de la liste de profils -->
+    <div class="filter-box">
+        <form [formGroup]="form">
+            <select formControlName="filter" (change)="filterList(form.value)">
+                <option *ngFor="let filter of filterOptions" [ngValue]="filter">{{filter.name}}</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- Enfant -->
+    <div class="grid">
+        <ng-container *ngFor="let $profil of arrayProfils">
+            <app-item-profil [profil]="$profil">
+            </app-item-profil>
+        </ng-container>
+    </div>
+
+</div>

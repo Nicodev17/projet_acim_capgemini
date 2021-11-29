@@ -1,5 +1,7 @@
 @import "../../../styles.scss";
 
+
+//pour le formulaire : display none et block(ou flex si en flex)
 p{
     font-size: 1.20em;
     color : $text-darkgrey;
@@ -68,3 +70,10 @@ form > div{
     margin-left: 10px;
 }
 
+.undoBtn{
+    @include button-secondary-action
+}
+
+.addBtn{
+    @include button-primary-action
+}

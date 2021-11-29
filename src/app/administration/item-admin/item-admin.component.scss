@@ -1,9 +1,5 @@
 @import "../../../styles.scss";
 
-* {
-  font-size: 1.0em;
-}
-
 .adminCard {
   display: grid;
   grid-template-rows: 2fr 0.5fr 3.5fr 4fr;
@@ -14,6 +10,7 @@
   background-color: #ffffff;
   color : $text-darkgrey;
   font-family: $main-font;
+  font-size: 1.0em;
 }
 
 .circle-profil {

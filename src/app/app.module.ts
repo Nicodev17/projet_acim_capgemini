@@ -32,7 +32,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalService } from './shared/services/global.service';
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
-import { SimpleModalModule } from 'ngx-simple-modal';
 
 @NgModule({
   declarations: [
@@ -68,7 +67,6 @@ import { SimpleModalModule } from 'ngx-simple-modal';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SimpleModalModule
   ],
   providers: [GlobalService, AccessGuardGuard, AdminGuard],
   bootstrap: [AppComponent]

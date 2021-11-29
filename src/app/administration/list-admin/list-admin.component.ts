@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormAddAdminComponent } from '../form-add-admin/form-add-admin.component';
 import { User } from 'src/app/shared/interfaces/user';
-import { SimpleModalComponent } from "ngx-simple-modal";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-admin',
@@ -11,11 +11,13 @@ import { SimpleModalComponent } from "ngx-simple-modal";
 export class ListAdminComponent implements OnInit {
 
   admins : User[] = [];
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     
   }
 
-
+  addBtnOnClick(){
+    this.router.navigateByUrl('/form-add-admin');
+  }
 }

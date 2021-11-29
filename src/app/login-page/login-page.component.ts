@@ -15,8 +15,6 @@ export class LoginPageComponent implements OnInit {
 
   constructor(private globalService:GlobalService) { }
 
-  
-
   // Traitement du formulaire de connexion à la soumission
   onSubmit() {
     let roleChoice = this.authRole.value.role;

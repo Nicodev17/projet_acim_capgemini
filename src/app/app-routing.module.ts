@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: "form", component: FormCollaboratorSituationComponent},
   {path: "form-editor", component: FormEditorComponent, canActivate:[AdminGuard]},
   {path: "list-admin", component: ListAdminComponent},
-  {path: "add-user", component: FormAddAdminComponent},
+  {path: "form-add-admin", component: FormAddAdminComponent},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
   {path: "profil-details-editor", component: ProfilDetailsEditorComponent, canActivate:[AdminGuard]},
   {path: "upload-video", component: FormVideoComponent}

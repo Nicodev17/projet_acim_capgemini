@@ -66,7 +66,7 @@ import { AdminGuard } from './shared/services/admin.guard';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [GlobalService, AccessGuardGuard, AdminGuard],
   bootstrap: [AppComponent]

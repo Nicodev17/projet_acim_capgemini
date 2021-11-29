@@ -70,3 +70,10 @@ form > div{
     margin-left: 10px;
 }
 
+.undoBtn{
+    @include button-secondary-action
+}
+
+.addBtn{
+    @include button-primary-action
+}

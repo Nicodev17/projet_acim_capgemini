@@ -65,14 +65,6 @@ form>label {
 }
 
 form .button {
-    text-align: center;
-}
-
-form button {
-    padding: 10px 15px;
-}
-
-form .button {
     margin: 10px 0 10px 0;
     display: flex;
     justify-content: center;
@@ -96,6 +88,55 @@ form input[type=submit]:hover {
     transition: background 0.2s ease-in;
 }
 
+/* -------- Sélection de la video -------- */
+
+.videoUpload {
+    width: 130px;
+    height: auto;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: $main-blue;
+    color: white;
+    border: 1px solid $main-blue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+  width:25px;
+  height:25px;
+  margin-right: 10px;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+}
+
+.videoUpload:hover {
+    background: $secondary-blue;
+    border: 1px solid $secondary-blue;
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    label {
+        cursor: pointer;
+    }
+}
+
+/* -------- Vidéos -------- */
+
+.videos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.videos label {
+    color: $secondary-blue;
+    font-weight: bold;
+}
+
+
 /* ================= FLECHES DE NAVIGATION SUR BORD DROIT ================= */
 
 .arrows {
@@ -118,9 +159,3 @@ form input[type=submit]:hover {
     border-bottom: 30px solid $main-blue;
 }
 
-/* ================= AUTRE ================= */
-
-.clear {
-    /*permet de stopper l'influence du float et remettre les éléments Html dans le flux normal */
-    clear: both;
-}

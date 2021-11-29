@@ -1,53 +1,54 @@
 <div class="main">
 
-    <aside>
+  <aside>
 
-      <a href="#" id="active">Votre vidéo</a>
+    <a href="#" id="active">Votre vidéo</a>
 
-    </aside>
+  </aside>
 
-    <section>
-      <h2>
-        Vidéo de présentation
-      </h2>
-      <form action="">
-        <!-- <app-item-question *ngFor="let question of questions" [question]="question"></app-item-question> -->
+  <section>
+    <h2>
+      Vidéo de présentation
+    </h2>
 
-        <div class="first-intermission">
+    <form action="">
 
-          <label for="question1">Est-ce votre premier passage en intermission ?</label>
+      <h3>Parlez-nous de vous...</h3>
 
-          <div>
-            <input type="radio" id="first_inter_yes" name="first_inter" value="yes" checked>
-            <label for="first_inter_yes">Oui</label>
+      <p>Vous pouvez déposer ci-dessous une vidéo dans laquelle vous vous présentez : votre profil, vos connaissances,
+        vos attentes... Faites-vous plaisir !</p>
 
-            <input type="radio" id="first_inter_no" name="first_inter" value="no">
-            <label for="first_inter_no">Non</label>
-          </div>
+      <p><em>Durée maximale : 3 minutes</em></p>
 
+      <div class="videoUpload">
+        <img src="../../../assets/glass-64.png"/>
+        <label for="videoUpload">Parcourir...</label>
+        <input type="file" id="videoUpload" accept="video/*" style="display: none">
+      </div>
+
+      <div class="videos">
+        <div>
+          <label for="question2">Votre chef-d'œuvre</label>
+          <embed src="https://www.youtube.com/embed/v4COA6vNKZ8" allowfullscreen="true" width="600" height="338">
         </div>
 
-        <!-- <question2 *ngIf question1="non"></question2> -->
-        <label for="question2">Comment exprimeriez-vous la relation que vous avez eue avec le management AMS sur votre
-          précédente période d’intermission ?</label>
-
-        <textarea name="message" id="question2" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
-
-        <label for="question3">Qu’attendez-vous de la période d’intermission ?</label>
-
-        <textarea name="message" id="question3" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
-
-        <div class="button">
-            <input type="submit" value="Envoyer">
+        <div>
+          <label for="question3">Besoin d'aide ? Voici un tuto !</label>
+          <embed src="https://www.youtube.com/embed/DOITze46lJE" allowfullscreen="true" width="600" height="338">
         </div>
+      </div>
 
-      </form>
-    </section>
+      <div class="button">
+        <input type="submit" value="Envoyer">
+      </div>
 
-    <div class="arrows">
-      <a routerLink="/form/latest">
-        <div class="arrow-down"></div>
-      </a>
-    </div>
+    </form>
+  </section>
 
+  <div class="arrows">
+    <a routerLink="/form/latest">
+      <div class="arrow-down"></div>
+    </a>
   </div>
+
+</div>

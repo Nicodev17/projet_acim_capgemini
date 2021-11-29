@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: "home", component:HomeComponent},
   {path: "form/latest", component: FormCollaboratorLatestMissionComponent},
   {path: "form/next", component: FormCollaboratorNextMissionComponent},
-  {path: "form", component: FormCollaboratorSituationComponent, canActivate:[AccessGuardGuard]},
+  {path: "form", component: FormCollaboratorSituationComponent},
   {path: "form-editor", component: FormEditorComponent, canActivate:[AdminGuard]},
   {path: "list-admin", component: ListAdminComponent, canActivate:[AdminGuard]},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},

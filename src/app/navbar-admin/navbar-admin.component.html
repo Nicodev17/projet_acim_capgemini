@@ -1,16 +1,15 @@
 
-<nav *ngIf="this.isLoggedIn()">
+<nav>
 
     <a *ngIf="this.isAdmin()" routerLink='/form-editor'>
         <img src="../../assets/list-plus.svg" alt="form logo">
         Gestion du formulaire
     </a>
-    <div *ngIf="this.isAdmin()" class="list-dropdown" (mouseover)="isHover=true" >
-        <img src="../../assets/key-bold.svg" alt="administration logo">
 
-        <div (mouseout)="isHover=false">
+    <nav role="navigation">
+          <div class="list-dropdown">
             <a>Liste de profils</a>
-            <ul *ngIf="isHover" >
+            <ul class="dropdown">
                 <li>
                     <a routerLink='/list-admin'>
                         - Administrateurs
@@ -23,8 +22,8 @@
                 </li>
             </ul>
         </div>
-        
-    </div>
+    </nav>
+
     <a *ngIf="this.isAdmin()" routerLink='/list-admin'>
         <img src="../../assets/list-plus.svg" alt="form logo">
         Ajout de profil

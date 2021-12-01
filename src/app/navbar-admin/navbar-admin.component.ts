@@ -8,7 +8,9 @@ import { GlobalService } from '../shared/services/global.service';
 })
 export class NavbarAdminComponent implements OnInit {
 
-  constructor(private globalService : GlobalService) { }
+  isHover: boolean = false;
+
+  constructor(private globalService : GlobalService) {  }
 
   isLoggedIn() : boolean {
     return this.globalService.isLoggedIn();

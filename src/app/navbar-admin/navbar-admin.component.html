@@ -1,5 +1,5 @@
 
-<nav *ngIf="this.isLoggedIn()">
+<!-- <nav *ngIf="this.isLoggedIn()">
 
     <a *ngIf="this.isAdmin()" routerLink='/form-editor'>
         <img src="../../assets/list-plus.svg" alt="form logo">
@@ -10,7 +10,7 @@
 
         <div (mouseout)="isHover=false">
             <a>Liste de profils</a>
-            <ul *ngIf="isHover" >
+            <ul *ngIf="isHover">
                 <li>
                     <a routerLink='/list-admin'>
                         - Administrateurs
@@ -34,4 +34,31 @@
         <img src="../../assets/cards-light.svg" alt="dashboard logo">
             Dashboard
     </button>
-</nav>
+</nav> -->
+
+<nav role="navigation" *ngIf="this.isLoggedIn()">
+    <ul>
+        <li *ngIf="this.isAdmin()">
+            <img src="../../assets/list-plus.svg" alt="form logo">
+            <a routerLink='/form-editor'>Gestion du formulaire</a>
+        </li>
+        <li *ngIf="this.isAdmin()">
+            <img src="../../assets/list-plus.svg" alt="form logo">
+            <a>Profils</a>
+            <ul class="dropdown">
+                <li><a routerLink='/list-admin'>Administrateurs</a></li>
+                <li><a routerLink='/list-admin'>Collaborateurs</a></li>
+            </ul>
+        </li>
+        <li *ngIf="this.isAdmin()">
+            <img src="../../assets/list-plus.svg" alt="form logo">
+            <a routerLink='/list-admin'>Ajout de profil</a>
+        </li>
+        <li class='button-li'>
+            <button routerLink='/home'>
+                <img src="../../assets/cards-light.svg" alt="dashboard logo">
+                    Dashboard
+            </button>
+        </li>
+    </ul>
+  </nav>

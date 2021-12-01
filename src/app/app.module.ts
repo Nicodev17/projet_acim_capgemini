@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -67,8 +66,7 @@ import { AdminGuard } from './shared/services/admin.guard';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatDialogModule, //Pour pouvoir faire un pop-up 
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [GlobalService, AccessGuardGuard, AdminGuard],
   bootstrap: [AppComponent]

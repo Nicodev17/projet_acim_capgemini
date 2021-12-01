@@ -2,8 +2,8 @@
   <div class="list-admin-box">
     <h2>Administration des profils admin</h2>
     <div class="ajout-admin">
-        <h3>Liste des amins</h3>
-        <input type='button' (click)="onClickOpenFormAddAdmin()" value='Ajouter'>
+        <h3>Liste des admins</h3>
+        <input type='button' value='Ajouter utilisateur' (click)='addBtnOnClick()'>
     </div>
     <div class="flex">
       <!-- Ici sont généré les cartes admin-->
@@ -23,8 +23,10 @@
       Sélection : 
       </div>
       <div>
-        <input type='button' value="Supprimer admin">
+        <input class="delBtn" type='button' value='Supprimer admin'>
       </div>
+      <div>
+    </div>
     </div>
   </div>
 </div>

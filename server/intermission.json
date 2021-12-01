@@ -1,0 +1,58 @@
+{
+    "intermission": [
+      {
+        "id": 1,
+        "id_staffing_partner": 1,
+        "id_collaborator": 4,
+        "last_mission_name": "Mission pourrie",
+        "begin_intermission": "2021-05-15",
+        "ending_intermission": null,
+        "send_date_form": null
+      },
+      {
+        "id": 2,
+        "id_staffing_partner": 1,
+        "id_collaborator": 5,
+        "last_mission_name": "Mission boooaf",
+        "begin_intermission": "2021-04-23",
+        "ending_intermission": null,
+        "send_date_form": "2021-04-28"
+      },
+      {
+        "id": 3,
+        "id_staffing_partner": 1,
+        "id_collaborator": 6,
+        "last_mission_name": "Chouette mission",
+        "begin_intermission": "2021-02-12",
+        "ending_intermission": "2021-03-12",
+        "send_date_form": "2021-02-16"
+      },
+      {
+        "id": 4,
+        "id_staffing_partner": 2,
+        "id_collaborator": 7,
+        "last_mission_name": "Mission pourrie",
+        "begin_intermission": "2021-06-12",
+        "ending_intermission": null,
+        "send_date_form": "2021-06-16"
+      },
+      {
+        "id": 5,
+        "id_staffing_partner": 2,
+        "id_collaborator": 8,
+        "last_mission_name": "Mission boooaf",
+        "begin_intermission": "2021-05-12",
+        "ending_intermission": null,
+        "send_date_form": null
+      },
+      {
+        "id": 6,
+        "id_staffing_partner": 2,
+        "id_collaborator": 9,
+        "last_mission_name": "Mission super !",
+        "begin_intermission": "2021-05-12",
+        "ending_intermission": null,
+        "send_date_form": "2021-06-12"
+      }
+    ]
+  }

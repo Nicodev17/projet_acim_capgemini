@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
-import { ListAdminComponent } from '../list-admin/list-admin.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-add-admin',
@@ -9,14 +8,14 @@ import { ListAdminComponent } from '../list-admin/list-admin.component';
 })
 export class FormAddAdminComponent implements OnInit {
 
-  constructor(private matDialogRef: MatDialogRef<ListAdminComponent>) { 
+  constructor(private router: Router) { 
     
   }
 
   ngOnInit(): void {
   }
 
-  onClickCloseWindow(){
-    this.matDialogRef.close();
+  undoBtnOnClick(){
+    this.router.navigateByUrl('/list-admin');
   }
 }

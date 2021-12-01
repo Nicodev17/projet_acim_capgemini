@@ -1,6 +1,5 @@
 @import "../../styles.scss";
 
-
 nav {
   display: flex;
   flex-direction: row;
@@ -14,63 +13,6 @@ li img {
   margin-right: 8px;
 }
 
-/*
-nav a, nav .list-dropdown, nav button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: $main-blue;
-  margin-right: 30px;
-}
-
-nav a img, nav div img, nav button img {
-  width: 25px;
-  height: auto;
-  margin-right: 7px;
-}
-
-nav button {
-  @include button-primary-action;
-  padding: 0;
-  padding: 5px;
-  color: white;
-  margin-top: 0;
-}
-
-nav button:hover {
-  @include button-primary-action-hover;
-}
-
-
-.list-dropdown {
-  cursor: pointer;
-  position: relative;
-  border: 2px solid blue;
-  height: auto;
-}
-
-.list-dropdown ul {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  left: 0;
-  list-style: none;
-  background: $main-grey;
-  opacity: 0.9;
-  padding: 20px 0 15px 20px;
-  font-size: 0.9em;
-  border: 2px solid blue;
-}
-
-.list-dropdown ul li{
-  margin-bottom: 15px;
-}
-
-*/
-
 ul:first-child {
   border-radius: 10px;
 }
@@ -79,7 +21,7 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-  background: rgb(233, 233, 233);
+  background: rgb(230, 230, 230);
 }
 
 li {

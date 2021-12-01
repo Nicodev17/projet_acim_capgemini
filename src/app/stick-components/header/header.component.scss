@@ -35,6 +35,13 @@ header img {
     width: 200px;
     height: auto;
     margin-left: 80px;
+    transition: transform 100ms ease-in;
+}
+
+header img:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+    transition: transform 100ms ease-in;
 }
 
 .navbar-active {

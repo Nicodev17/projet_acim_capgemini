@@ -1,28 +1,37 @@
 
-<div *ngIf="this.isLoggedIn()">
-    <!-- faire un ngIf admin/collabo pour affichage des deux premiers liens  -->
-    <div *ngIf="this.isAdmin()">
-        <a class="links" routerLink='/form-editor'>
-            <img src="../../assets/list-plus.svg" alt="form logo">
-            <span>
-                Gestion du formulaire
-            </span>
-        </a>
+<nav *ngIf="this.isLoggedIn()">
+
+    <a *ngIf="this.isAdmin()" routerLink='/form-editor'>
+        <img src="../../assets/list-plus.svg" alt="form logo">
+        Gestion du formulaire
+    </a>
+    <div *ngIf="this.isAdmin()" class="list-dropdown" (mouseover)="isHover=true" >
+        <img src="../../assets/key-bold.svg" alt="administration logo">
+
+        <div (mouseout)="isHover=false">
+            <a>Liste de profils</a>
+            <ul *ngIf="isHover" >
+                <li>
+                    <a routerLink='/list-admin'>
+                        - Administrateurs
+                    </a>  
+                </li>
+                <li>
+                    <a routerLink='/list-admin'>
+                        - Collaborateurs
+                    </a>  
+                </li>
+            </ul>
+        </div>
+        
     </div>
-    <div *ngIf="this.isAdmin()">
-        <a class="links" routerLink='/list-admin'>
-            <img src="../../assets/key-bold.svg" alt="administration logo">
-            <span>
-                Administration
-            </span>
-        </a>
-    </div>
-    <div>
-        <button class="links" routerLink='/home'>
-            <img src="../../assets/cards-light.svg" alt="dashboard logo">
-            <span>
-                Dashboard
-            </span>
-        </button>
-    </div>
-</div>
+    <a *ngIf="this.isAdmin()" routerLink='/list-admin'>
+        <img src="../../assets/list-plus.svg" alt="form logo">
+        Ajout de profil
+    </a>
+
+    <button class="links" routerLink='/home'>
+        <img src="../../assets/cards-light.svg" alt="dashboard logo">
+            Dashboard
+    </button>
+</nav>

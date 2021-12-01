@@ -1,28 +1,24 @@
-
-<div *ngIf="this.isLoggedIn()">
-    <!-- faire un ngIf admin/collabo pour affichage des deux premiers liens  -->
-    <div *ngIf="this.isAdmin()">
-        <a class="links" routerLink='/form-editor'>
+<nav role="navigation" *ngIf="this.isLoggedIn()">
+    <ul>
+        <li *ngIf="this.isAdmin()">
             <img src="../../assets/list-plus.svg" alt="form logo">
-            <span>
-                Gestion du formulaire
-            </span>
-        </a>
-    </div>
-    <div *ngIf="this.isAdmin()">
-        <a class="links" routerLink='/list-admin'>
-            <img src="../../assets/key-bold.svg" alt="administration logo">
-            <span>
-                Administration
-            </span>
-        </a>
-    </div>
-    <div>
-        <button class="links" routerLink='/home'>
-            <img src="../../assets/cards-light.svg" alt="dashboard logo">
-            <span>
-                Dashboard
-            </span>
-        </button>
-    </div>
-</div>
+            <a routerLink='/form-editor'>Gestion du formulaire</a>
+        </li>
+        <li *ngIf="this.isAdmin()">
+            <img src="../../assets/list-plus.svg" alt="form logo">
+            <a routerLink='/list-admin'>Administrateurs</a>
+        <li>
+            <a routerLink='/list-admin'>Collaborateurs</a>
+        </li>
+        <li *ngIf="this.isAdmin()">
+            <img src="../../assets/list-plus.svg" alt="form logo">
+            <a routerLink='/list-admin'>Ajout de profil</a>
+        </li>
+        <li class='button-li'>
+            <button routerLink='/home'>
+                <img src="../../assets/cards-light.svg" alt="dashboard logo">
+                    Dashboard
+            </button>
+        </li>
+    </ul>
+  </nav>

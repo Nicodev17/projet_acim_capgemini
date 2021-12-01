@@ -14,11 +14,19 @@
       </h2>
 
       <form action="">
+
         <p>test</p>
+
         <div *ngFor="let q of questions">
           <label for={{q.id}}>{{ q.question }}</label>
           <textarea name="message" id={{q.id}} rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
         </div>
+
+        <div *ngFor="let q of questions">
+          <label for={{q.id}}>{{ q.question }}</label>
+          <textarea name="message" id={{q.id}} rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+        </div>
+
         <p>test</p>
 
         <div class="first-intermission">

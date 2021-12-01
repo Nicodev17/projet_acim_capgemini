@@ -17,6 +17,7 @@ import {
 export class FormCollaboratorSituationComponent implements OnInit {
 
   questions: Question[] = [];
+  firstIntermission: boolean =true;
 
   constructor(private apiService: ApiService) {}
 

@@ -15,39 +15,25 @@
 
       <form action="">
 
-        <p>test</p>
-
-        <div *ngFor="let q of questions">
-          <label for={{q.id}}>{{ q.question }}</label>
-          <textarea name="message" id={{q.id}} rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
-        </div>
-
-        <div *ngFor="let q of questions">
-          <label for={{q.id}}>{{ q.question }}</label>
-          <textarea name="message" id={{q.id}} rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
-        </div>
-
-        <p>test</p>
-
         <div class="first-intermission">
 
-          <label for="question1">Est-ce votre premier passage en intermission ?</label>
+          <label for={{questions[0].id}}>{{questions[0].question }}</label>
 
           <div>
-            <input type="radio" id="first_inter_yes" name="first_inter" value="yes" checked>
-            <label for="first_inter_yes">Oui</label>
+            <input type="radio" id="first_inter_yes" name="firstinter" value="yes" (change)="firstIntermission=true">
+            <label class="radio" for="first_inter_yes">Oui</label>
 
-            <input type="radio" id="first_inter_no" name="first_inter" value="no">
-            <label for="first_inter_no">Non</label>
+            <input type="radio" id="first_inter_no" name="firstinter" value="no" (change)="firstIntermission=false">
+            <label class="radio" for="first_inter_no">Non</label>
           </div>
 
         </div>
 
-        <!-- <question2 *ngIf question1="non"></question2> -->
-        <label for="question2">Comment exprimeriez-vous la relation que vous avez eue avec le management AMS sur votre
-          précédente période d’intermission ?</label>
+        <div *ngIf="!firstIntermission">
+          <label for={{questions[1].id}}>{{questions[1].question }}</label>
 
-        <textarea name="message" id="question2" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+          <textarea name="message" id={{questions[1].id}} rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+        </div>
 
         <label for="question3">Qu’attendez-vous de la période d’intermission ?</label>
 

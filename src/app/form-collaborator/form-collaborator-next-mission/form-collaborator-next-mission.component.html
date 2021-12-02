@@ -13,7 +13,11 @@
         Préparation de l'entretien avec le staffing partner
       </h2>
       <form action="">
-        <!-- <app-item-question *ngFor="let question of questions" [question]="question"></app-item-question> -->
+
+        <!-- <div *ngFor="let q of questions">
+          <label for={{q.id}}>{{ q.question }}</label>
+          <textarea name="message" id={{q.id}} rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+        </div> -->
 
         <label for="question6">Quel est votre objectif pour votre prochain poste en terme de compétences (hard skills) ? Est-ce inscrit dans une démarche à long terme ?</label>
 

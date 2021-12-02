@@ -3,22 +3,14 @@
 /* ================= GLOBAL ================= */
 
 .main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    height: 100%;
+    @include form-main
+
 }
 
 /* ================= ASIDE = MENU NAVIGATION DE GAUCHE ================= */
 
 aside {
-    background-color: rgba(112, 204, 233, 1); //= secondary-blue avec transparence
-    display: flex;
-    flex-direction: column;
-    width: 17%;
-    color: #811B6F;
-    font-size: 1.1em;
-    padding: 30px 10px;
+    @include form-aside
 }
 
 aside a {
@@ -28,8 +20,7 @@ aside a {
     border-left: 3px solid #811B6F;
 }
 
-#active,
-aside a:focus {
+#active {
     color: white;
     font-weight: 600;
     border-color: white;
@@ -75,21 +66,11 @@ form .button {
 }
 
 form input[type=submit] {
-    width: 130px;
-    height: auto;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    background: $main-blue;
-    color: white;
-    border: 1px solid $main-blue;
+    @include button-primary-action
 }
 
 form input[type=submit]:hover {
-    background: $secondary-blue;
-    border: 1px solid $secondary-blue;
-    cursor: pointer;
-    transition: background 0.2s ease-in;
+    @include button-primary-action-hover
 }
 
 /* ================= FLECHES DE NAVIGATION SUR BORD DROIT ================= */
@@ -105,18 +86,5 @@ form input[type=submit]:hover {
 }
 
 .arrow-up {
-    //width: 0;
-    //height: 0;
-    border-bottom-right-radius: 10px 40px;
-    border-bottom-left-radius: 10px 40px;
-    border-right: 24px solid transparent;
-    border-left: 24px solid transparent;
-    border-bottom: 30px solid $main-blue;
-}
-
-/* ================= AUTRE ================= */
-
-.clear {
-    /*permet de stopper l'influence du float et remettre les éléments Html dans le flux normal */
-    clear: both;
+    @include form-arrow-up
 }

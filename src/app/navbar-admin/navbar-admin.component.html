@@ -1,18 +1,18 @@
 <nav role="navigation" *ngIf="this.isLoggedIn()">
     <ul>
-        <li *ngIf="this.isAdmin()">
+        <li *ngIf="this.isAdmin()" routerLink='/form-editor'>
             <img src="../../assets/list-plus.svg" alt="form logo">
-            <a routerLink='/form-editor'>Gestion du formulaire</a>
+            <a>Gestion du formulaire</a>
         </li>
-        <li *ngIf="this.isAdmin()">
+        <li *ngIf="this.isAdmin()" routerLink='/list-admin'>
             <img src="../../assets/list-plus.svg" alt="form logo">
-            <a routerLink='/list-admin'>Administrateurs</a>
-        <li>
-            <a routerLink='/list-admin'>Collaborateurs</a>
+            <a>Administrateurs</a>
+        <li *ngIf="this.isAdmin()" routerLink='/list-admin'>
+            <a>Collaborateurs</a>
         </li>
-        <li *ngIf="this.isAdmin()">
+        <li *ngIf="this.isAdmin()" routerLink='/form-add-user'>
             <img src="../../assets/list-plus.svg" alt="form logo">
-            <a routerLink='/list-admin'>Ajout de profil</a>
+            <a>Ajout de profil</a>
         </li>
         <li class='button-li'>
             <button routerLink='/home'>

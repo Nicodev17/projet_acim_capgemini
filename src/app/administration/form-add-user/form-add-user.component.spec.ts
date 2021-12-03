@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormAddAdminComponent } from './form-add-admin.component';
+import { FormAddAdminComponent } from './form-add-user.component';
 
 describe('FormAddAdminComponent', () => {
   let component: FormAddAdminComponent;

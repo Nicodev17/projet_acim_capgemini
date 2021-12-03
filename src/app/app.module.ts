@@ -12,7 +12,7 @@ import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { ProfilDetailsComponent } from './profil-details/profil-details.component';
 import { ListAdminComponent } from './administration/list-admin/list-admin.component';
 import { ItemAdminComponent } from './administration/item-admin/item-admin.component';
-import { FormAddAdminComponent } from './administration/form-add-admin/form-add-admin.component';
+import { FormAddUserComponent } from './administration/form-add-user/form-add-user.component';
 import { FormEditorSituationComponent } from './form-edition/form-editor-situation/form-editor-situation.component';
 import { FormEditorLatestMissionComponent } from './form-edition/form-editor-latest-mission/form-editor-latest-mission.component';
 import { FormEditorNextMissionComponent } from './form-edition/form-editor-next-mission/form-editor-next-mission.component';
@@ -47,7 +47,7 @@ import { ItemCollaboratorComponent } from './item-collaborator/item-collaborator
     ProfilDetailsComponent,
     ListAdminComponent,
     ItemAdminComponent,
-    FormAddAdminComponent,
+    FormAddUserComponent,
     FormEditorSituationComponent,
     FormEditorLatestMissionComponent,
     FormEditorNextMissionComponent,

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-form-add-admin',
-  templateUrl: './form-add-admin.component.html',
-  styleUrls: ['./form-add-admin.component.scss']
+  selector: 'app-form-add-user',
+  templateUrl: './form-add-user.component.html',
+  styleUrls: ['./form-add-user.component.scss']
 })
-export class FormAddAdminComponent implements OnInit {
+export class FormAddUserComponent implements OnInit {
 
   constructor(private router: Router) { 
     
@@ -15,7 +15,7 @@ export class FormAddAdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  undoBtnOnClick(){
+  undoBtnOnClick(){    
     this.router.navigateByUrl('/list-admin');
   }
 }

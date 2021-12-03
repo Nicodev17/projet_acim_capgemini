@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
   
 import { FormCollaboratorSituationComponent } from './form-collaborator/form-collaborator-situation/form-collaborator-situation.component';
 import { ListAdminComponent } from './administration/list-admin/list-admin.component';
-import { FormAddAdminComponent } from './administration/form-add-admin/form-add-admin.component';
+import { FormAddUserComponent } from './administration/form-add-user/form-add-user.component';
 import { ItemAdminComponent } from './administration/item-admin/item-admin.component';
 import { HomeComponent } from './home/home.component';
 import { FormEditorComponent } from './form-edition/form-editor/form-editor.component';
@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: "form", component: FormCollaboratorSituationComponent},
   {path: "form-editor", component: FormEditorComponent, canActivate:[AdminGuard]},
   {path: "list-admin", component: ListAdminComponent},
-  {path: "form-add-admin", component: FormAddAdminComponent},
+  {path: "form-add-user", component: FormAddUserComponent},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
   {path: "profil-details-editor", component: ProfilDetailsEditorComponent},
   {path: "upload-video", component: FormVideoComponent},

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormAddAdminComponent } from '../form-add-admin/form-add-admin.component';
+import { FormAddUserComponent } from '../form-add-user/form-add-user.component';
 import { User } from 'src/app/shared/interfaces/user';
 import { Router } from '@angular/router';
 
@@ -18,6 +18,6 @@ export class ListAdminComponent implements OnInit {
   }
 
   addBtnOnClick(){
-    this.router.navigateByUrl('/form-add-admin');
+    this.router.navigateByUrl('/form-add-user');
   }
 }

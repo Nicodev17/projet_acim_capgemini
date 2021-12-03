@@ -49,6 +49,7 @@ h2{
 
 .deletePart{
     display: flex;
+    text-align: center;
     justify-content: right;
     padding-top: 50px;
     color : $text-darkgrey;
@@ -60,11 +61,13 @@ h2{
 }
 
 input {
-    @include button-primary-action
+    @include button-primary-action;
+    padding: 0px;
+    justify-content: center;
 }
 
 .delBtn{
-    @include button-secondary-action
+    @include button-secondary-action;
 }
 
 //flex-center pour le titre !

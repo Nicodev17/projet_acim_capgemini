@@ -25,7 +25,8 @@ export class LoginPageComponent implements OnInit {
       right : true ,
       email : "antoine@yopmail.com",
       password : "password",
-      formstate : "ok"
+      formstate : "ok",
+      job : "avocat"
     };
     let user2 = {
       id : 2,
@@ -34,7 +35,8 @@ export class LoginPageComponent implements OnInit {
       right : false,
       email : "celine@yopmail.com",
       password : "password",
-      formstate : "ok"
+      formstate : "ok",
+      job : "jardinier"
     };
 
     if(roleChoice == "admin") {

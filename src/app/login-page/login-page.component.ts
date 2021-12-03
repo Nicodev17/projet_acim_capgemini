@@ -26,7 +26,6 @@ export class LoginPageComponent implements OnInit {
       email : "antoine@yopmail.com",
       password : "password",
       job : "dev",
-
       formstate : "ok"
     };
     let user2 = {

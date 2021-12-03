@@ -25,8 +25,8 @@ const routes: Routes = [
   {path: "list-admin", component: ListAdminComponent},
   {path: "form-add-admin", component: FormAddAdminComponent},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
-  {path: "profil-details-editor", component: ProfilDetailsEditorComponent, canActivate:[AdminGuard]},
-  {path: "upload-video", component: FormVideoComponent}
+  {path: "profil-details-editor", component: ProfilDetailsEditorComponent},
+  {path: "upload-video", component: FormVideoComponent},
 ];
 
 @NgModule({

@@ -1,0 +1,77 @@
+@import "../../styles.scss";
+
+.circle-profil{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid $main-blue;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.circle-profil > img{
+    width : 140px;
+    height: 140px;
+}
+
+.page-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.profil-details-editor{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content:center;
+    border: 2px solid red;
+    align-items:center;
+    width: 50%;
+}
+
+.formulaire{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    border: solid blue 2px;
+    justify-content: space-around;
+    //Font
+    font-size: 0.9em;
+    color : $text-darkgrey;
+    font-family: $main-font;
+}
+.leftFormulaire{
+    display: flex;
+    border : 2px solid yellow;
+    align-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.rightFormulaire{
+    display: flex;
+    border : 2px solid orange;
+    align-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.left{
+    display: flex;
+    text-align: left;
+    border: solid 2px green;
+}
+
+.right{
+    display: flex;
+    justify-content: right;
+    border: solid 2px purple;
+}
+
+.test{
+    fill : blue;
+}

@@ -1,34 +1,67 @@
-<div class="form-add-admin-page">
-    <p>Ajout d'un utilisateur</p>
-    <div class="content">
+<div class="pageCenter">
+    <div class="form-add-admin-page">
+        <div class="entete">
+            <p>Ajout d'un utilisateur</p>
+        </div>
         <form>
-            <div class="NomPrenomPart" >
-                <input class="test" type='textbox' placeholder='Nom'>
-                <input class="test" type='textbox' placeholder='Prénom'>
-            </div>
-            <div class="mailPart">
-                <input type='textbox' placeholder='Adresse Mail'>
-            </div>
-            <div>
-                <input type='password' placeholder='Mot de passe'>
-            </div>
-            <div class="postePart">
-                <input type='textbox' placeholder='Métier'>
-            </div>
-            <div>
-                <input type="radio" id="User"
-                name="droit" value="User" checked>
-               <label for="User">User</label>
-           
-               <input type="radio" id="Admin"
-                name="droit" value="Admin">
-               <label for="Admin">Admin</label>
+            <div class="content">
+                <div class="leftPart" >
+                    <div class="left">
+                        <label for="Nom"><p>Nom:</p></label>
+                    </div>
+                    <div class="left">
+                        <label for="Prénom"><p>Prénom:</p></label>
+                    </div>
+                    <div class="left">
+                        <label for="Mail"><p>Mail:</p></label>
+                    </div>
+                        <div class="left">
+                            <label for="Mot de passe"><p>Mot de passe:</p></label>
+                        </div>
+                    <div class="left">
+                        <label for="Métier"><p>Métier:</p></label>
+                    </div>
+                    <div class="left">
+                        <p>Rôle:</p>
+                    </div>
+                </div>
+
+                <div class=rightPart>
+                    <div class="left">
+                        <input class="largeurTextbox" type='textbox' placeholder='Nom' id="Nom">
+                    </div>
+                    <div class="left">
+                        <input class="largeurTextbox" type='textbox' placeholder='Prénom' id="Prénom">
+                    </div>
+                    <div class="left">
+                        <input class="largeurTextbox" type='textbox' placeholder='Adresse Mail' id="Mail">
+                    </div>
+                    <div>
+                        <div class="left">
+                            <input class="largeurTextbox" type='password' placeholder='Mot de passe' id='Mot de passe'>
+                        </div>
+                    </div>
+                    <div class="left">
+                        <input class="largeurTextbox" type='textbox' placeholder='Métier' id='Métier'>
+                    </div>
+                    <div class="radioPart">
+                        <div class="radioPartLeft">
+                            <input type="radio" id="User"
+                            name="droit" value="User" checked>
+                            <label for="User">Utilisateur</label>
+                        </div>
+                        <div class="radioPartRight">
+                            <input type="radio" id="Admin"
+                            name="droit" value="Admin">
+                            <label for="Admin">Staff Partner</label> 
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="buttonsPosition">
                 <input class="undoBtn"type='button' value='Annuler' (click)="undoBtnOnClick()">
                 <input class="addBtn" type='button' value='Ajouter'>
             </div>
-
         </form>
     </div>
 </div>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListProfilComponent } from './list-profil.component';
+import { ItemIntermissionComponent } from './item-intermission.component';
 
-describe('ListProfilComponent', () => {
-  let component: ListProfilComponent;
-  let fixture: ComponentFixture<ListProfilComponent>;
+describe('ItemProfilComponent', () => {
+  let component: ItemIntermissionComponent;
+  let fixture: ComponentFixture<ItemIntermissionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListProfilComponent ]
+      declarations: [ ItemIntermissionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListProfilComponent);
+    fixture = TestBed.createComponent(ItemIntermissionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

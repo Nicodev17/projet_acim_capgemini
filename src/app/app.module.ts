@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HeaderComponent } from './stick-components/header/header.component';
 import { FooterComponent } from './stick-components/footer/footer.component';
-import { ListProfilComponent } from './dashboard-admin/list-profil/list-profil.component';
-import { ItemProfilComponent } from './dashboard-admin/item-profil/item-profil.component';
+import { ListIntermissionComponent } from './dashboard-admin/list-intermission/list-intermission.component';
+import { ItemIntermissionComponent } from './dashboard-admin/item-intermission/item-intermission.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { ProfilDetailsComponent } from './profil-details/profil-details.component';
 import { ListAdminComponent } from './administration/list-admin/list-admin.component';
@@ -32,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalService } from './shared/services/global.service';
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
+import { ListCollaboratorComponent } from './administration/list-collaborator/list-collaborator.component';
+import { ItemCollaboratorComponent } from './item-collaborator/item-collaborator.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,8 @@ import { AdminGuard } from './shared/services/admin.guard';
     LoginPageComponent,
     HeaderComponent,
     FooterComponent,
-    ListProfilComponent,
-    ItemProfilComponent,
+    ListIntermissionComponent,
+    ItemIntermissionComponent,
     NavbarAdminComponent,
     ProfilDetailsComponent,
     ListAdminComponent,
@@ -59,6 +61,8 @@ import { AdminGuard } from './shared/services/admin.guard';
     FormVideoComponent,
     HomeComponent,
     ProfilDetailsEditorComponent,
+    ListCollaboratorComponent,
+    ItemCollaboratorComponent,
 
   ],
   imports: [

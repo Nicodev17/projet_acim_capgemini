@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  Question
+} from 'src/app/shared/interfaces/question';
+import {
+  ApiService
+} from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-form-collaborator-situation',
@@ -7,9 +16,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormCollaboratorSituationComponent implements OnInit {
 
-  constructor() { }
+  questions: Question[] = [];
+  firstIntermission: boolean =true;
+
+  constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
+    this.apiService.getQuestions().subscribe(resultFromAPI => this.questions = resultFromAPI);
   }
 
 }

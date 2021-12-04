@@ -20,21 +20,29 @@
 
       <p><em>Durée maximale : 3 minutes</em></p>
 
-      <div class="videoUpload">
-        <img src="../../../assets/glass-64.png"/>
-        <label for="videoUpload">Parcourir...</label>
-        <input type="file" id="videoUpload" accept="video/*" style="display: none">
-      </div>
+      <form class="form-group" [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+
+        <div class="videoUpload">
+          <img src="../../../assets/glass-64.png" />
+          <a href="https://www.google.com/intl/fr/drive/" target="_blank" class="button">Parcourir le cloud</a>
+        </div>
+
+        <input type="text" name="link" placeholder="Collez ici le lien de votre vidéo" formControlName="link">
+
+        <input class="validUpload" type="submit" value="Valider">
+
+      </form>
 
       <div class="videos">
         <div>
           <label for="votre-video">Votre chef-d'œuvre</label>
-          <embed id="votre-video" src="https://www.youtube.com/embed/v4COA6vNKZ8" allowfullscreen="true" width="600" height="338">
+          <embed id="votre-video" [src]='link' allowfullscreen="true" width="600" height="338">
         </div>
 
         <div>
           <label for="tuto">Besoin d'aide ? Voici un tuto !</label>
-          <embed id="tuto" src="https://www.youtube.com/embed/DOITze46lJE" allowfullscreen="true" width="600" height="338">
+          <embed id="tuto" src="https://www.youtube.com/embed/DOITze46lJE" allowfullscreen="true" width="600"
+            height="338">
         </div>
       </div>
 

@@ -17,7 +17,7 @@
 
         <div class="first-intermission">
 
-          <label for={{questions[0].id}}>{{questions[0].question }}</label>
+          <label for={{questions[0].id}}>{{questions[0].question}}</label>
 
           <div>
             <input type="radio" id="first_inter_yes" name="firstinter" value="yes" (change)="firstIntermission=true">
@@ -30,14 +30,18 @@
         </div>
 
         <div *ngIf="!firstIntermission">
-          <label for={{questions[1].id}}>{{questions[1].question }}</label>
+          <label for={{questions[1].id}}>{{questions[1].question}}</label>
 
           <textarea name="message" id={{questions[1].id}} rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
         </div>
 
-        <label for="question3">Qu’attendez-vous de la période d’intermission ?</label>
+        <div>
+          <label for={{questions[2].id}}>{{questions[2].question}}</label>
 
-        <textarea name="message" id="question3" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+          <textarea name="message" id="question3" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+        </div>
+
+
 
       </form>
     </section>

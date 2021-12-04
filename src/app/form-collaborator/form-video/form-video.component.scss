@@ -70,18 +70,32 @@ form input[type=submit]:hover {
 
 /* -------- Sélection de la video -------- */
 
-.videoUpload {
-    width: 130px;
-    height: auto;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background: $main-blue;
-    color: white;
-    border: 1px solid $main-blue;
+.form-group {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 0 0 15px 0;
+
+    input {
+        width: 600px;
+        height: 35px;
+        margin: 0;
+    }
+
+    .validUpload {
+        margin: 0 0 0 15px;
+    }
+}
+
+.videoUpload {
+    @include button-primary-action
+}
+
+.videoUpload {
+    width: fit-content;
+    padding: 5px 15px;
+    margin: 0 15px 0 0;
+    justify-content: flex-start;
 
     img {
         width: 25px;
@@ -89,20 +103,15 @@ form input[type=submit]:hover {
         margin-right: 10px;
     }
 
-    label {
-        font-size: 0.9em;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 0.8em;
     }
 }
 
 .videoUpload:hover {
-    background: $secondary-blue;
-    border: 1px solid $secondary-blue;
-    cursor: pointer;
-    transition: background 0.2s ease-in;
-
-    label {
-        cursor: pointer;
-    }
+    @include button-primary-action-hover
 }
 
 /* -------- Vidéos -------- */
@@ -113,6 +122,7 @@ form input[type=submit]:hover {
 }
 
 .videos label {
+    margin-top: 15px;
     color: $secondary-blue;
     font-weight: bold;
 }

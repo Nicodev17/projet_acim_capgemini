@@ -8,8 +8,9 @@ p{
     font-family: $main-font;
 }
 
-form{
+form {
     text-align: center;
+    position: relative;
 }
 
 input{
@@ -54,12 +55,11 @@ form > div{
 
 .content {
     display: flex;
-    //border: 2px solid purple;
     width: 550px;
     height: 400px;
     flex-direction: row;
     align-items: flex-start;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 .leftPart{
@@ -71,10 +71,26 @@ form > div{
     flex-direction: column;
 }
 
-.left{
+.left {
     display: flex;
     justify-content: left;
     //border: solid 2px green;
+}
+
+.rightPart .left:nth-child(4) {
+    align-items: center;
+}
+
+.button-password {
+    @include button-primary-action;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin: 0 0 0 15px;
+    padding: 8px;
+}
+
+.button-password:hover {
+    @include button-primary-action-hover;
 }
 
 .rightPart {
@@ -113,6 +129,16 @@ form > div{
     align-content: right;
     //border: solid salmon 2px;
     align-items: center;
+}
+
+.info-add {
+    width: 100%;
+    position: absolute;
+    display: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgb(123, 206, 123);
+    margin: -10px 0 0 0;
 }
 
 .buttonsPosition{

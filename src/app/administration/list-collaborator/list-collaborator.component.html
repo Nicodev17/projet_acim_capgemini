@@ -1,1 +1,21 @@
-<p>list-collaborator works!</p>
+<div class="list-collab-page">
+    <div class="list-collab-box">
+
+        <h2>Gestion des profils collaborateurs</h2>
+
+        <div class="title-list">
+            <h3>Liste des collaborateurs</h3>
+            <input class="add-btn" type='button' value='Ajouter un profil' (click)='addBtnOnClick()'>
+        </div>
+
+        <div class="list-collab">
+            <ng-container *ngFor="let $collab of arrayCollab">
+                <ul>
+                    <app-item-collaborator [collab]="$collab">
+                    </app-item-collaborator>
+                </ul>
+            </ng-container>
+        </div>
+
+    </div>
+</div>

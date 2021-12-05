@@ -5,7 +5,7 @@ h2, h3 {
     color: $main-blue;
 }
 
-h2{
+h2 {
     text-align: center;
     padding-top: 40px;
 }
@@ -15,20 +15,18 @@ h2{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 78vh;
-    //border: 2px solid red;
+    height: auto;
+    margin-bottom: 50px;
 }
 
 .list-admin-box {
     width: 50%;
     height: 100%;
-    //border: solid 5px blue;
     flex-direction: column;
 }
 
-.ajout-admin{
+.title-list {
     display: flex;
-    //border : 4px solid green;
     border-bottom: 2px solid $text-grey;
     width: 100%;
     justify-content: space-between;
@@ -36,18 +34,19 @@ h2{
     padding-bottom: 14px;
 }
 
-.flex{
+.flex {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
+    margin-top: 25px;
 }
 
-.flex > app-item-admin{
-    margin: 10px;
-    margin-top: 30px;
+.flex > app-item-admin {
+    margin: 15px;
 }
 
-.deletePart{
+.deletePart {
     display: flex;
     text-align: center;
     justify-content: right;
@@ -60,14 +59,21 @@ h2{
     padding-right: 20px;
 }
 
-input {
+.add-btn {
     @include button-primary-action;
     padding: 0px;
-    justify-content: center;
 }
 
-.delBtn{
+.add-btn:hover {
+    @include button-primary-action-hover;
+}
+
+.del-btn {
     @include button-secondary-action;
+    color: rgb(190, 92, 92);
+    font-weight: bold;
 }
 
-//flex-center pour le titre !
+.del-btn:hover {
+    @include button-secondary-action-hover;
+}

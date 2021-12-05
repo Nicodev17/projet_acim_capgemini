@@ -7,6 +7,7 @@
   width: 220px;
   height: 100px;
   border: 3px solid $main-grey;
+  border-radius: 5px;
   background-color: #ffffff;
   color : $text-darkgrey;
   font-family: $main-font;
@@ -38,24 +39,33 @@
   border-radius: 50%
 }
 
-.NameFirstname{
-  color : $text-darkgrey;
+.NameFirstname {
   grid-column-start: 3;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end:  span 2;
   padding-left: 10px;
+  margin-top: -10px;
 }
 
-.Poste{
-  color : $text-darkgrey;
-  color : $text-darkgrey;
+.poste {
   grid-column-start: 3;
   grid-column-end: 3;
   grid-row-start: 4;
   padding-left: 10px;
+  margin-top: -10px;
+  font-size: 0.8em;
 }
 
-.flex{
+.flex {
   display:flex
+}
+
+.check-admin {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.check-admin:checked + .adminCard {
+  border-color: rgb(224, 142, 142);
 }

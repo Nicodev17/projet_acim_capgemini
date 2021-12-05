@@ -77,7 +77,7 @@ form > div{
     //border: solid 2px green;
 }
 
-.rightPart{
+.rightPart {
     display: flex;
     height: 400px;
     width: 60%;
@@ -87,11 +87,11 @@ form > div{
     flex-direction: column;
 }
 
-.largeurTextbox{
+.largeurTextbox {
     width : 100%;
 }
 
-.radioPart{
+.radioPart {
     display: flex;
     font-size: 0.9em;
     color : $text-darkgrey;
@@ -117,19 +117,23 @@ form > div{
 
 .buttonsPosition{
     display: flex;
-    justify-content: space-around;
-    //border: 2px solid blue;
-}
-
-.btnAjouter{
-    display: flex;
-    //margin-left: 10px; //Ne décale pas 
+    justify-content: center;
 }
 
 .undoBtn{
-    @include button-secondary-action
+    @include button-secondary-action;
+    margin-right: 10px;
 }
 
 .addBtn{
-    @include button-primary-action
+    @include button-primary-action;
+    margin-left: 10px;
+}
+
+.undoBtn:hover {
+    @include button-secondary-action-hover
+}
+
+.addBtn:hover {
+    @include button-primary-action-hover
 }

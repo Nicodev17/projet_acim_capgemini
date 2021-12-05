@@ -1,0 +1,54 @@
+@import "../../../styles.scss";
+
+
+h2, h3 {
+    color: $main-blue;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.list-collab-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.list-collab-box {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.title-list {
+    display: flex;
+    //border : 4px solid green;
+    border-bottom: 2px solid $text-grey;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 14px;
+}
+
+.list-collab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 40px;
+}
+
+.add-btn {
+    @include button-primary-action;
+    padding: 0px;
+}
+
+.add-btn:hover {
+    @include button-primary-action-hover;
+}

@@ -33,7 +33,7 @@ import { GlobalService } from './shared/services/global.service';
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
 import { ListCollaboratorComponent } from './administration/list-collaborator/list-collaborator.component';
-import { ItemCollaboratorComponent } from './item-collaborator/item-collaborator.component';
+import { ItemCollaboratorComponent } from './administration/item-collaborator/item-collaborator.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +62,7 @@ import { ItemCollaboratorComponent } from './item-collaborator/item-collaborator
     HomeComponent,
     ProfilDetailsEditorComponent,
     ListCollaboratorComponent,
-    ItemCollaboratorComponent,
+    ItemCollaboratorComponent
 
   ],
   imports: [

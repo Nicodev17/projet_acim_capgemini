@@ -7,14 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ItemAdminComponent implements OnInit {
 
-  @Input() admin: any ={
-    "id": 2,
-    "lastname": "Bordra",
-    "firstname": "René",
-    "right": true,
-    "email": "rBordra@genial.fr",
-    "password": "yafaif"
-  }
+  @Input() admin : any;
 
   constructor() { }
 

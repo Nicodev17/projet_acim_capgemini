@@ -16,6 +16,6 @@ export class FormAddUserComponent implements OnInit {
   }
 
   undoBtnOnClick(){    
-    this.router.navigateByUrl('/list-admin');
+    this.router.navigateByUrl('/home');
   }
 }

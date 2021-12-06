@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormAddAdminComponent } from './form-add-admin.component';
+import { ItemIntermissionComponent } from './item-intermission.component';
 
-describe('FormAddAdminComponent', () => {
-  let component: FormAddAdminComponent;
-  let fixture: ComponentFixture<FormAddAdminComponent>;
+describe('ItemProfilComponent', () => {
+  let component: ItemIntermissionComponent;
+  let fixture: ComponentFixture<ItemIntermissionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormAddAdminComponent ]
+      declarations: [ ItemIntermissionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormAddAdminComponent);
+    fixture = TestBed.createComponent(ItemIntermissionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

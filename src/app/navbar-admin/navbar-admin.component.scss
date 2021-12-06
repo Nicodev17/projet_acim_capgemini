@@ -1,53 +1,94 @@
+@import "../../styles.scss";
 
-$color: #12ABDB ;
-
-div{
-
+nav {
   display: flex;
-  
-
-  height: 30px;
-
-  font-size: 1em;
-  div {
-
-    display: flex;
-    height: 30px;
-
-    img {
-      width: 20px;
-      height: 20px;
-      margin: 0 0.2em;
-    }
-
-    a {
-      text-decoration: none;
-      color: $color;
-      margin-right: 1em;
-
-      img {
-        filter: invert(56%) sepia(80%) saturate(2012%) hue-rotate(155deg) brightness(93%) contrast(86%);
-      }
-    }
-
-    button {
-      width: 130px;
-      height: 30px;
-      background-color: #590A42;
-      color : #FFFFFF;
-      font-size: 1em;
-      border-radius: 5px;
-      border-color: #590A42;
-      img {
-        filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(123deg) brightness(106%) contrast(100%);
-        margin-right: 0.4em;
-      }
-    }
-  }
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.links{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+li img {
+  width: 15px;
+  height: auto;
+  margin-right: 8px;
+}
+
+ul:first-child {
+  border-radius: 10px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+  background: rgb(230, 230, 230);
+}
+
+li {
+	display: block;
+	float: left;
+	padding: 15px 25px;
+	position: relative;
+	text-decoration: none;
+  transition-duration: 0.5s;
+}
+  
+li a {
+  color: $text-grey;
+  text-decoration: none;
+}
+
+li:hover:not(li:last-child) {
+	background: rgb(248, 248, 248);
+	cursor: pointer;
+}
+
+li:first-child:hover {
+  border-radius: 10px 0 0 10px;
+}
+
+.dropdown li:hover {
+  border-radius: 0;
+  padding: 15px 0px;
+}
+
+ul li ul {
+	visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+	position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 0.9rem;
+	left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+	clear: both;
+  width: 100%;
+}
+
+nav ul button {
+  @include button-primary-action;
+  font-size: 1em;
+  height: 30px;
+  padding: 0;
+  padding: 5px;
+  color: white;
+  margin: 0;
+}
+
+nav ul button:hover {
+  @include button-primary-action-hover;
+}
+
+.button-li {
+  padding: 10px 20px;
 }

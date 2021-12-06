@@ -1,32 +1,29 @@
 <div class="list-admin-page">
   <div class="list-admin-box">
-    <h2>Administration des profils admin</h2>
-    <div class="ajout-admin">
+
+    <h2>Gestion des profils administrateurs</h2>
+
+    <div class="title-list">
         <h3>Liste des admins</h3>
-        <input type='button' value='Ajouter utilisateur' (click)='addBtnOnClick()'>
+        <input class="add-btn" type='button' value='Ajouter un profil' (click)='addBtnOnClick()'>
     </div>
+
     <div class="flex">
-      <!-- Ici sont généré les cartes admin-->
-      <app-item-admin></app-item-admin>
-      <app-item-admin></app-item-admin>
-      <app-item-admin></app-item-admin>
-      <app-item-admin></app-item-admin>
-      <app-item-admin></app-item-admin>
+      <ng-container *ngFor="let $admin of arrayAdmin">
+        <app-item-admin [admin]="$admin"></app-item-admin>
+      </ng-container>
     </div>
-    <!--
-    <ng-container *ngFor="let admin of admins">
-      <app-item-admin [admin]="admin"></app-item-admin>
-    </ng-container>
-    -->
+
     <div class="deletePart">
       <div>
-      Sélection : 
+        Sélection : 
       </div>
+
       <div>
-        <input class="delBtn" type='button' value='Supprimer admin'>
+        <input class="del-btn" type='button' value='Supprimer' (click)="deleteAdmin()">
       </div>
-      <div>
+
     </div>
-    </div>
+
   </div>
 </div>

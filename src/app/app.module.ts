@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HeaderComponent } from './stick-components/header/header.component';
 import { FooterComponent } from './stick-components/footer/footer.component';
-import { ListProfilComponent } from './dashboard-admin/list-profil/list-profil.component';
-import { ItemProfilComponent } from './dashboard-admin/item-profil/item-profil.component';
+import { ListIntermissionComponent } from './dashboard-admin/list-intermission/list-intermission.component';
+import { ItemIntermissionComponent } from './dashboard-admin/item-intermission/item-intermission.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { ProfilDetailsComponent } from './profil-details/profil-details.component';
 import { ListAdminComponent } from './administration/list-admin/list-admin.component';
 import { ItemAdminComponent } from './administration/item-admin/item-admin.component';
-import { FormAddAdminComponent } from './administration/form-add-admin/form-add-admin.component';
+import { FormAddUserComponent } from './administration/form-add-user/form-add-user.component';
 import { FormEditorSituationComponent } from './form-edition/form-editor-situation/form-editor-situation.component';
 import { FormEditorLatestMissionComponent } from './form-edition/form-editor-latest-mission/form-editor-latest-mission.component';
 import { FormEditorNextMissionComponent } from './form-edition/form-editor-next-mission/form-editor-next-mission.component';
@@ -32,6 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalService } from './shared/services/global.service';
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
+import { ListCollaboratorComponent } from './administration/list-collaborator/list-collaborator.component';
+import { ItemCollaboratorComponent } from './administration/item-collaborator/item-collaborator.component';
+import { FormAddIntermissionComponent } from './form-add-intermission/form-add-intermission.component';
 import { TokenStorageService } from './shared/services/token-storage.service';
 import { authInterceptorProviders } from './shared/interceptors/auth.interceptor';
 
@@ -41,13 +44,13 @@ import { authInterceptorProviders } from './shared/interceptors/auth.interceptor
     LoginPageComponent,
     HeaderComponent,
     FooterComponent,
-    ListProfilComponent,
-    ItemProfilComponent,
+    ListIntermissionComponent,
+    ItemIntermissionComponent,
     NavbarAdminComponent,
     ProfilDetailsComponent,
     ListAdminComponent,
     ItemAdminComponent,
-    FormAddAdminComponent,
+    FormAddUserComponent,
     FormEditorSituationComponent,
     FormEditorLatestMissionComponent,
     FormEditorNextMissionComponent,
@@ -61,6 +64,9 @@ import { authInterceptorProviders } from './shared/interceptors/auth.interceptor
     FormVideoComponent,
     HomeComponent,
     ProfilDetailsEditorComponent,
+    ListCollaboratorComponent,
+    ItemCollaboratorComponent,
+    FormAddIntermissionComponent
 
   ],
   imports: [
@@ -71,7 +77,8 @@ import { authInterceptorProviders } from './shared/interceptors/auth.interceptor
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [GlobalService, TokenStorageService, AccessGuardGuard, AdminGuard, authInterceptorProviders],
+  providers: [GlobalService, TokenStorageService, AccessGuardGuard, AdminGuard,
+    authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

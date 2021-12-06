@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ItemProfilComponent } from './item-profil.component';
+import { ItemCollaboratorComponent } from './item-collaborator.component';
 
-describe('ItemProfilComponent', () => {
-  let component: ItemProfilComponent;
-  let fixture: ComponentFixture<ItemProfilComponent>;
+describe('ItemCollaboratorComponent', () => {
+  let component: ItemCollaboratorComponent;
+  let fixture: ComponentFixture<ItemCollaboratorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ItemProfilComponent ]
+      declarations: [ ItemCollaboratorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ItemProfilComponent);
+    fixture = TestBed.createComponent(ItemCollaboratorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

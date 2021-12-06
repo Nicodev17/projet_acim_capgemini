@@ -1,9 +1,7 @@
 <!-- liste des collaborateurs -->
 <div class="list-profil-page">
     <h2>Dashboard</h2>
-
-    <button class="add-profil"> <strong>&#43;</strong> Ajouter un profil</button>
-
+    
     <!-- Filtrage de la liste de profils -->
     <div class="filter-box">
         <form [formGroup]="form">
@@ -15,9 +13,9 @@
 
     <!-- Enfant -->
     <div class="grid">
-        <ng-container *ngFor="let $profil of arrayProfils">
-            <app-item-profil [profil]="$profil">
-            </app-item-profil>
+        <ng-container *ngFor="let $intermission of arrayIntermission">
+            <app-item-intermission [intermission]="$intermission">
+            </app-item-intermission>
         </ng-container>
     </div>
 

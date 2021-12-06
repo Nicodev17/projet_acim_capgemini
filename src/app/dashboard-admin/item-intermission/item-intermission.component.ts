@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-item-profil',
-  templateUrl: './item-profil.component.html',
-  styleUrls: ['./item-profil.component.scss']
+  selector: 'app-item-intermission',
+  templateUrl: './item-intermission.component.html',
+  styleUrls: ['./item-intermission.component.scss']
 })
-export class ItemProfilComponent implements OnInit {
+export class ItemIntermissionComponent implements OnInit {
 
-  @Input() profil: any;
+  @Input() intermission: any;
   buttonValue: String = "Envoyer le quiz";
 
   constructor() { }
@@ -26,10 +26,10 @@ export class ItemProfilComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.profil.formstate === "ok") {
+    if(this.intermission.formstate === "ok") {
       this.buttonValue = "Voir les réponses";
-    } else if (this.profil.formstate === "waiting") {
-      this.buttonValue = "En attente..."
+    } else if (this.intermission.formstate === "waiting") {
+      this.buttonValue = "En attente...";
     }
   }
 

@@ -12,41 +12,40 @@
       <h2>
         Préparation de l'entretien avec le staffing partner
       </h2>
-      
-      <form action="">
-        <!-- <app-item-question *ngFor="let question of questions" [question]="question"></app-item-question> -->
+
+      <form class="form-group" id="sForm" [formGroup]="situationForm" (ngSubmit)="onSubmit()">
 
         <div class="first-intermission">
 
-          <label for="question1">Est-ce votre premier passage en intermission ?</label>
+          <label for={{questions[0].id}}>{{questions[0].question}}</label>
 
           <div>
-            <input type="radio" id="first_inter_yes" name="first_inter" value="yes" checked>
-            <label for="first_inter_yes">Oui</label>
+            <input type="radio" id="first_inter_yes" name="firstinter" value="yes" (change)="firstIntermission=true">
+            <label class="radio" for="first_inter_yes">Oui</label>
 
-            <input type="radio" id="first_inter_no" name="first_inter" value="no">
-            <label for="first_inter_no">Non</label>
+            <input type="radio" id="first_inter_no" name="firstinter" value="no" (change)="firstIntermission=false">
+            <label class="radio" for="first_inter_no">Non</label>
           </div>
 
         </div>
 
-        <!-- <question2 *ngIf question1="non"></question2> -->
-        <label for="question2">Comment exprimeriez-vous la relation que vous avez eue avec le management AMS sur votre
-          précédente période d’intermission ?</label>
+        <div *ngIf="!firstIntermission">
+          <label for={{questions[1].id}}>{{questions[1].question}}</label>
 
-        <textarea name="message" id="question2" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+          <textarea name="message" id={{questions[1].id}} rows="10" placeholder="Ecrivez votre réponse ici" formControlName="rep2text"></textarea>
+        </div>
 
-        <label for="question3">Qu’attendez-vous de la période d’intermission ?</label>
+        <div>
+          <label for={{questions[2].id}}>{{questions[2].question}}</label>
 
-        <textarea name="message" id="question3" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+          <textarea name="message" id={{questions[2].id}} rows="10" placeholder="Ecrivez votre réponse ici" formControlName="rep3text"></textarea>
+        </div>
 
       </form>
     </section>
 
     <div class="arrows">
-      <a routerLink="/form/latest">
-        <div class="arrow-down"></div>
-      </a>
+      <button form="sForm" class="arrow-down" type="submit"></button>
     </div>
 
   </div>

@@ -1,0 +1,34 @@
+@import "../../../styles.scss";
+
+li {
+
+    list-style-type: circle;
+}
+
+li div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    color: $text-darkgrey;
+    border-bottom: 2px solid $main-grey;
+    border-right: 2px solid $main-grey;
+    border-radius: 0 0 5px 0;
+}
+
+div button {
+    @include button-secondary-action;
+    width: auto;
+    padding: 8px;
+}
+
+div button:hover {
+    @include button-secondary-action-hover;
+}
+
+button strong {
+    color: $main-blue;
+    margin-right: 5px;
+    font-size: 1.3em;
+}

@@ -86,11 +86,11 @@
 }
 
 .button-box button:first-child:hover {
-    @include button-secondary-action-hover
+    @include button-secondary-action-hover;
 }
 
 .button-box button:nth-child(2):hover {
-    @include button-primary-action-hover
+    @include button-primary-action-hover;
 }
 
 .button-box div {

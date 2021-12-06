@@ -10,19 +10,19 @@ h2 {
     padding-top: 40px;
 }
 
-.list-admin-page {
+.list-collab-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: auto;
+    margin-bottom: 50px;
 }
 
-.list-admin-box {
+.list-collab-box {
     width: 50%;
     height: 100%;
     flex-direction: column;
-    margin-bottom: 80px;
 }
 
 .title-list {
@@ -35,29 +35,13 @@ h2 {
     margin-top: 30px;
 }
 
-.flex {
+.list-collab {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 25px;
-}
-
-.flex > app-item-admin {
-    margin: 15px;
-}
-
-.deletePart {
-    display: flex;
-    text-align: center;
-    justify-content: right;
-    padding-top: 50px;
-    color : $text-darkgrey;
-    font-size: 1.0em;
-}
-
-.deletePart > div {
-    padding-right: 20px;
+    height: auto;
+    margin-top: 40px;
 }
 
 .add-btn {
@@ -67,14 +51,4 @@ h2 {
 
 .add-btn:hover {
     @include button-primary-action-hover;
-}
-
-.del-btn {
-    @include button-secondary-action;
-    color: rgb(190, 92, 92);
-    font-weight: bold;
-}
-
-.del-btn:hover {
-    @include button-secondary-action-hover;
 }

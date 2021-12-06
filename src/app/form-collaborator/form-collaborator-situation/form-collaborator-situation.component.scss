@@ -3,22 +3,14 @@
 /* ================= GLOBAL ================= */
 
 .main {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  height: 100%;
+  @include form-main
+
 }
 
 /* ================= ASIDE = MENU NAVIGATION DE GAUCHE ================= */
 
 aside {
-  background-color: rgba(112, 204, 233, 1); //= secondary-blue avec transparence
-  display: flex;
-  flex-direction: column;
-  width: 17%;
-  color: #811B6F;
-  font-size: 1.1em;
-  padding: 30px 10px;
+  @include form-aside
 }
 
 aside a {
@@ -28,7 +20,7 @@ aside a {
   border-left: 3px solid #811B6F;
 }
 
-#active, aside a:focus {
+#active {
   color: white;
   font-weight:600;
   border-color: white;
@@ -59,7 +51,7 @@ form textarea {
   width: 100%;
 }
 
-form > label {
+form label {
   margin: 30px 0 10px 0;
 }
 
@@ -80,7 +72,7 @@ form > label {
 }
 
 .first-intermission input {
-  margin: 0 5px 0 70px;
+  margin: 30px 5px 10px 70px;
 }
 
 /* ================= FLECHES DE NAVIGATION SUR BORD DROIT ================= */
@@ -89,25 +81,15 @@ form > label {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
+  margin: 40px;
+  background: none;
 
-.arrows a {
-  margin: 20px;
+  button {
+    @include arrow;
+  }
 }
 
 .arrow-down {
-  //width: 0;
-  //height: 0;
-  border-top-right-radius: 10px 40px;
-  border-top-left-radius: 10px 40px;
-  border-right: 24px solid transparent;
-  border-left: 24px solid transparent;
-  border-top: 30px solid $main-blue;
-}
-
-/* ================= AUTRE ================= */
-
-.clear {
-  /*permet de stopper l'influence du float et remettre les éléments Html dans le flux normal */
-  clear: both;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }

@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { User} from 'src/app/shared/interfaces/user';
+import { User } from 'src/app/shared/interfaces/user';
 import { GlobalService } from 'src/app/shared/services/global.service';
 import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
-  selector: 'app-list-profil',
-  templateUrl: './list-profil.component.html',
-  styleUrls: ['./list-profil.component.scss']
+  selector: 'app-list-intermission',
+  templateUrl: './list-intermission.component.html',
+  styleUrls: ['./list-intermission.component.scss']
 })
-export class ListProfilComponent implements OnInit {
+export class ListIntermissionComponent implements OnInit {
 
   calledArrayProfils: User[] = [];
-  arrayProfils: User[] = [];
+  arrayIntermission: User[] = [];
 
   filterOptions: any[] = [
     { id: 0, name: '-- Filtrer par statut --' },
@@ -27,13 +27,13 @@ export class ListProfilComponent implements OnInit {
   });
 
   filterList(value: any) {
-    this.arrayProfils = this.calledArrayProfils;
+    this.arrayIntermission = this.calledArrayProfils;
     let filter = value.filter.state;
     
-    let arrayfilter = this.arrayProfils.filter(profil => profil.formstate === filter);
+    let arrayfilter = this.arrayIntermission.filter(profil => profil.formstate === filter);
 
     if(filter != undefined) {
-      this.arrayProfils = arrayfilter;
+      this.arrayIntermission = arrayfilter;
     }
   }
   

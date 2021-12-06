@@ -63,3 +63,33 @@ $main-font: 'Open-sans', sans-serif;
     cursor: pointer;
     transition: background .15s ease-in;
 }
+
+/* MIXINS STYLE FORM */
+@mixin form-main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 80vh;
+}
+
+@mixin form-aside {
+    background-color: rgba(112, 204, 233, 1); //= secondary-blue avec transparence
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    color: #811B6F;
+    font-size: 1.1em;
+    padding: 30px 10px;
+}
+
+@mixin arrow {
+    width: 40px;
+    height: 40px;
+    border: solid $main-blue;
+    border-width: 0 12px 12px 0;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px;
+    background: none;
+    cursor: pointer;
+}

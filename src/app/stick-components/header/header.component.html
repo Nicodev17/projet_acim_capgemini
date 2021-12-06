@@ -1,6 +1,6 @@
 
 <header>
-    <img src="../../../assets/logoCapgemini.png" alt="Logo Capgemini">
+    <img src="../../../assets/logoCapgemini.png" alt="Logo Capgemini" routerLink='/home'>
     <h1 *ngIf='this.isNotLogged()'>Outil d'Accompagnement des Collaborateurs en Intermission</h1>
     <div class="navbar-active" *ngIf='!this.isNotLogged()'>
         <app-navbar-admin></app-navbar-admin>

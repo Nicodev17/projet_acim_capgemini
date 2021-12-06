@@ -8,6 +8,8 @@ export interface Intermission {
     lastMissionName: string,
     beginIntermission: Date,
     endingIntermission: Date,
-    sendDateForm: Date
+    sendDateForm: Date,
+    responseSend: boolean
+    
   }
   

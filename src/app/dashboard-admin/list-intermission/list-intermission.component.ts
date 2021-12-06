@@ -38,13 +38,13 @@ export class ListIntermissionComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.service.getProfils().subscribe(resultFromAPI => {
-      this.calledArrayProfils = resultFromAPI;
+    // this.service.getProfils().subscribe(resultFromAPI => {
+    //   this.calledArrayProfils = resultFromAPI;
 
-      this.arrayIntermission = this.calledArrayProfils;
+    //   this.arrayProfils = this.calledArrayProfils;
   
-      console.log(this.arrayIntermission);
-    });
+    //   console.log(this.arrayProfils);
+    // });
   }
 
 }

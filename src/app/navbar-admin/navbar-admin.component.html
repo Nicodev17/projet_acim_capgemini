@@ -1,44 +1,34 @@
-
-<div 
-    *ngIf="this.isLoggedIn()"
->
-    
-    <div 
-        *ngIf="this.isAdmin()"
-    >
-        <a class="links" routerLink='/form-editor'>
+<nav role="navigation" *ngIf="this.isLoggedIn()">
+    <ul>
+        <li *ngIf="this.isAdmin()" routerLink='/form-editor'>
             <img src="../../assets/list-plus.svg" alt="form logo">
-            <span>
-                Gestion du formulaire
-            </span>
-        </a>
-    </div>
-    <div 
-        *ngIf="this.isAdmin()"
-    >
-        <a class="links" routerLink='/list-admin'>
-            <img src="../../assets/key-bold.svg" alt="administration logo">
-            <span>
-                Administration
-            </span>
-        </a>
-    </div>
-    <div>
-        <button class="links" routerLink='/home'>
-            <img src="../../assets/cards-light.svg" alt="dashboard logo">
-            <span>
-                Dashboard
-            </span>
-        </button>
-    </div>
-    <div>
-        <button (click)="logOut()">
-            <span>
-                LogOut
-            </span>
-        </button>
-    </div>
-</div>
+            <a>Gestion du formulaire</a>
+        </li>
+        <li *ngIf="this.isAdmin()" routerLink='/list-admin'>
+            <img src="../../assets/list-plus.svg" alt="form logo">
+            <a>Administrateurs</a>
+        <li *ngIf="this.isAdmin()" routerLink='/list-collaborator'>
+            <a>Collaborateurs</a>
+        </li>
+        <li *ngIf="this.isAdmin()" routerLink='/form-add-user'>
+            <img src="../../assets/list-plus.svg" alt="form logo">
+            <a>Ajout de profil</a>
+        </li>
+        <li class='button-li'>
+            <button routerLink='/home'>
+                <img src="../../assets/cards-light.svg" alt="dashboard logo">
+                    Dashboard
+            </button>
+        </li>
+        <div>
+            <button (click)="logOut()">
+                <span>
+                    LogOut
+                </span>
+            </button>
+        </div>
+    </ul>
+  </nav>
 
 
 

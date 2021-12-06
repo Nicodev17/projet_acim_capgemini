@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormAddUserComponent } from '../form-add-user/form-add-user.component';
 import { User } from 'src/app/shared/interfaces/user';
 import { Router } from '@angular/router';
 import { GlobalService } from 'src/app/shared/services/global.service';

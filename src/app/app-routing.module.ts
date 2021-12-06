@@ -15,6 +15,7 @@ import { FormCollaboratorNextMissionComponent } from './form-collaborator/form-c
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
 import { ListCollaboratorComponent } from './administration/list-collaborator/list-collaborator.component';
+import { FormAddIntermissionComponent } from './form-add-intermission/form-add-intermission.component';
 
 const routes: Routes = [
   {path: "", redirectTo: 'home', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: "form-editor", component: FormEditorComponent, canActivate:[AdminGuard]},
   {path: "list-admin", component: ListAdminComponent},
   {path: "list-collaborator", component: ListCollaboratorComponent},
+  {path: "form-add-intermission", component: FormAddIntermissionComponent},
   {path: "form-add-user", component: FormAddUserComponent},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
   {path: "profil-details-editor", component: ProfilDetailsEditorComponent},

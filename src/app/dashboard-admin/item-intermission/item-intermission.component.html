@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="button-box">
-        <button>Voir le profil</button>
+        <button routerLink='/profil-details-editor'>Voir le profil</button>
         <div *ngIf="intermission.formstate === 'waiting';else notWaiting" title="Le formulaire n'a pas encore été rempli">
            En attente ⌛️
         </div>

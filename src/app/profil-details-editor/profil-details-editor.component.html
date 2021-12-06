@@ -1,49 +1,78 @@
 <div class = "page-container">
     <div class="profil-details-editor">
-        <div class="circle-profil">
-            <img src="../../../assets/user.png" alt="Silhouette de personne">
-            <!-- input type file, limiter aux images-->
+        <div class="head-form">
+            <div class="circle-profil">
+                <img src="../../../assets/user.png" alt="Silhouette de personne">
+            </div>
+    
+            <h2>Profil collaborateur</h2>
+
+            <div class="modif-button-box">
+                <button (click)="modifToggle()" *ngIf="!isModified">
+                    <img src="../../assets/pen.png" alt="icon crayon">
+                    Modifier
+                </button>
+                <button (click)="cancelToggle()" *ngIf="isModified" class="button-bis">
+                    <img id="img-cross" src="../../assets/cancel-icon.png" alt="icon croix">
+                    Annuler
+                </button>
+            </div>
         </div>
-        <h3>Modification du profil</h3>
+        
         <form>
             <div class="formulaire">
                 <div class="leftFormulaire">
                     <div class="left">
-                        <p>Nom: </p>
+                        <label for="lastname">
+                            <p>Nom :</p>
+                        </label>
                     </div>
+
                     <div class="left">
-                        <p>Prénom: </p>
+                        <label for="fisrtname">
+                            <p>Prénom :</p>
+                        </label>
                     </div>
+
                     <div class="left">
-                        <p>Mail: </p>
+                        <label for="mail">
+                            <p>Mail :</p>
+                        </label>
                     </div>
+
                     <div class="left">
-                        <p>Mot de passe: </p>
-                    </div>
-                    <div class="left">
-                        <p>Métier: </p>
+                        <label for="job">
+                            <p>Métier :</p>
+                        </label>
                     </div>
                 </div>
+
                 <div class = rightFormulaire>
                     <div class ="right">
-                        <input type="text" value="Duck">
+                        <input *ngIf="isModified" type="text" id="lastname" value="Duck">
+                        <p *ngIf="!isModified">Duck</p>
                     </div>
+
                     <div class="right">
-                        <input type="text" value="Donald">
+                        <input *ngIf="isModified" type="text" id="fisrtname" value="Donald">
+                        <p *ngIf="!isModified">Donald</p>
                     </div>
+
                     <div class="right">
-                        <input type="text" value="IHateMickey@waltdisney.fr">
+                        <input *ngIf="isModified" type="mail" id="mail" value="IHateMickey@waltdisney.fr">
+                        <p *ngIf="!isModified">IHateMickey@waltdisney.fr</p>
                     </div>
+
                     <div class="right">
-                        <input type="password" value="GoofyMyLove">
-                    </div>
-                    <div class="right">
-                        <input type="text" value="Mascotte dans un parc">
+                        <input *ngIf="isModified" type="text" id="job" value="Mascotte dans un parc">
+                        <p *ngIf="!isModified">Mascotte dans un parc</p>
                     </div>
                 </div>
             </div>
-            <div class="btnRetour">
-                <input class="retourBtnVisual" type="button" value="Retour">
+
+            <div class="btn-box">
+                <input class="cancel-btn" type="reset" value="Retour" routerLink='/home'>
+                <input *ngIf="isModified" class="submit-btn" type="submit" value="Valider">
             </div>
         </form>
     </div>

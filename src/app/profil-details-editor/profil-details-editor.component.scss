@@ -1,94 +1,156 @@
 @import "../../styles.scss";
 
-.page-container{
+.page-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    //border: solid black 4px;
 }
 
-.profil-details-editor{
+.profil-details-editor {
     display: flex;
     flex-direction: column;
     align-content: center;
-    //border: 2px solid red;
     align-items:center;
     width: 800px;
     height: 700px;
+    margin: 30px 0 120px 0;
 }
 
-.circle-profil{
+.head-form {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.circle-profil {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 40px;
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     justify-content: center;
     align-items: center;
-    border: 8px solid $main-blue;
+    border: 6px solid $main-blue;
     border-radius: 50%;
     align-items: center;
 }
 
-.circle-profil > img{
-    width : 100px;
-    height: 100px;
+.circle-profil > img {
+    width : 70px;
+    height: auto;
 }
 
-.formulaire{
+h2 {
+    color: $main-blue;
+}
+
+.modif-button-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 15px -15px 0;
+}
+
+.modif-button-box button {
+    @include button-secondary-action;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.modif-button-box button:hover {
+    @include button-secondary-action-hover;
+}
+
+.modif-button-box .button-bis {
+    border-color: rgb(79, 161, 185);
+}
+
+.modif-button-box button img {
+    width: 23px;
+    height: auto;
+    opacity: 0.8;
+    margin-right: 8px;
+}
+
+.formulaire {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 600px;
-    //border: solid blue 2px;
-    justify-content: space-around;
+    height: auto;
     border-top : solid 1px $main-blue;
     border-bottom : solid 1px $main-blue;
+    padding: 50px 0 40px 0;
     //Font
     font-size: 0.9em;
     color : $text-darkgrey;
     font-family: $main-font;
 }
-.leftFormulaire{
+
+.leftFormulaire {
     display: flex;
-    //border : 2px solid yellow;
-    align-content: space-between;
-    justify-content: space-evenly;
     flex-direction: column;
-    width : 50%;
+    //border : 2px solid yellow;
 }
 
-.rightFormulaire{
+.rightFormulaire {
     display: flex;
     //border : 2px solid orange;
-    align-content: space-between;
-    justify-content: space-evenly;
     flex-direction: column;
-    width : 50%;
+    margin-left: 50px;
 }
 
-.left{
+.left {
     display: flex;
-    justify-content: left;
-    text-align: left;
-    padding: 6px;
+    justify-content: flex-start;
+    align-items: center;
     //border: solid 2px green;
+    height: 40px;
+    margin-bottom: 20px;
 }
 
-.right{
+.right {
     display: flex;
-    justify-content: right;
-    padding: 10px;
-    //border: solid 2px purple;
+    justify-content: flex-start;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
 }
 
-.btnRetour{
+.right input {
+    width: 100%;
+    border: 2px solid $main-grey;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-box {
     display: flex;
     justify-content: center;
-    padding-top: 40px;
-    //border : yellow 2px solid;
+    margin-top: 20px;
 }
 
-.retourBtnVisual{
-    @include button-secondary-action
+.cancel-btn {
+    @include button-secondary-action;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    @include button-primary-action;
+    margin-left: 10px;
+}
+
+.cancel-btn:hover {
+    @include button-secondary-action-hover
+}
+
+.submit-btn:hover {
+    @include button-primary-action-hover
 }

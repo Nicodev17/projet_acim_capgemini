@@ -1,10 +1,29 @@
 @import "../../styles.scss";
 
+.page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //border: solid black 4px;
+}
+
+.profil-details-editor{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    //border: 2px solid red;
+    align-items:center;
+    width: 800px;
+    height: 700px;
+}
+
 .circle-profil{
     display: flex;
     justify-content: center;
-    width: 200px;
-    height: 200px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    width: 160px;
+    height: 160px;
     justify-content: center;
     align-items: center;
     border: 8px solid $main-blue;
@@ -13,32 +32,18 @@
 }
 
 .circle-profil > img{
-    width : 140px;
-    height: 140px;
-}
-
-.page-container{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-.profil-details-editor{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content:center;
-    border: 2px solid red;
-    align-items:center;
-    width: 50%;
+    width : 100px;
+    height: 100px;
 }
 
 .formulaire{
     display: flex;
     flex-direction: row;
-    width: 400px;
-    border: solid blue 2px;
+    width: 600px;
+    //border: solid blue 2px;
     justify-content: space-around;
+    border-top : solid 1px $main-blue;
+    border-bottom : solid 1px $main-blue;
     //Font
     font-size: 0.9em;
     color : $text-darkgrey;
@@ -46,32 +51,44 @@
 }
 .leftFormulaire{
     display: flex;
-    border : 2px solid yellow;
+    //border : 2px solid yellow;
     align-content: space-between;
     justify-content: space-evenly;
     flex-direction: column;
+    width : 50%;
 }
 
 .rightFormulaire{
     display: flex;
-    border : 2px solid orange;
+    //border : 2px solid orange;
     align-content: space-between;
     justify-content: space-evenly;
     flex-direction: column;
+    width : 50%;
 }
 
 .left{
     display: flex;
+    justify-content: left;
     text-align: left;
-    border: solid 2px green;
+    padding: 6px;
+    //border: solid 2px green;
 }
 
 .right{
     display: flex;
     justify-content: right;
-    border: solid 2px purple;
+    padding: 10px;
+    //border: solid 2px purple;
 }
 
-.test{
-    fill : blue;
+.btnRetour{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    //border : yellow 2px solid;
+}
+
+.retourBtnVisual{
+    @include button-secondary-action
 }

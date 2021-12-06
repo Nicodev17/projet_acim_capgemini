@@ -1,37 +1,35 @@
 <div class="main">
 
-    <aside>
+  <aside>
 
-      <a routerLink="/form">Votre situation</a>
-      <a routerLink="#" id="active">Votre précédente mission</a>
-      <a routerLink="/form/next">Votre future mission</a>
+    <a routerLink="/form">Votre situation</a>
+    <a routerLink="#" id="active">Votre précédente mission</a>
+    <a routerLink="/form/next">Votre future mission</a>
 
-    </aside>
+  </aside>
 
-    <section>
-      <h2>
-        Préparation de l'entretien avec le staffing partner
-      </h2>
-      <form action="">
+  <section>
+    <h2>
+      Préparation de l'entretien avec le staffing partner
+    </h2>
 
-        <!-- Questions 4 à 6 -->
-        <div *ngFor="let q of questions">
-          <div *ngIf="q.id >= 4 && q.id <= 6">
-            <label for={{q.id}}>{{q.question}}</label>
-            <textarea name="message" id={{q.id}} rows="8" placeholder="Ecrivez votre réponse ici"></textarea>
-          </div>
+    <form class="form-group" id="lForm" [formGroup]="latestForm" (ngSubmit)="onSubmit()">
+
+      <!-- Questions 4 à 6 -->
+      <div *ngFor="let q of questions">
+        <div *ngIf="q.id >= 4 && q.id <= 6">
+          <label for={{q.id}}>{{q.question}}</label>
+          <textarea name="message" id={{q.id}} rows="8" placeholder="Ecrivez votre réponse ici"
+            formControlName={{q.id}}></textarea>
         </div>
+      </div>
 
-      </form>
-    </section>
+    </form>
+  </section>
 
-    <div class="arrows">
-      <a routerLink="/form">
-        <div class="arrow-up"></div>
-      </a>
-      <a routerLink="/form/next">
-        <div class="arrow-down"></div>
-      </a>
-    </div>
-
+  <div class="arrows">
+    <button class="arrow-up" routerLink="/form"></button>
+    <button form="lForm" class="arrow-down" type="submit"></button>
   </div>
+
+</div>

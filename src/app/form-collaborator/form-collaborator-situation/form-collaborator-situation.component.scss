@@ -81,12 +81,15 @@ form label {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
+  margin: 40px;
+  background: none;
 
-.arrows a {
-  margin: 20px;
+  button {
+    @include arrow;
+  }
 }
 
 .arrow-down {
-  @include form-arrow-down;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }

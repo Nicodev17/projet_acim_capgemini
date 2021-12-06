@@ -78,13 +78,13 @@ form input[type=submit]:hover {
 .arrows {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.arrows a {
-    margin: 20px;
+    justify-content: flex-start;
+    margin: 40px;
+    background: none;
 }
 
 .arrow-up {
-    @include form-arrow-up
-}
+    @include arrow;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+  }

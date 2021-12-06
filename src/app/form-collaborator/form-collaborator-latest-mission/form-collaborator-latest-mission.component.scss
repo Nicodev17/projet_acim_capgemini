@@ -61,16 +61,18 @@ form label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.arrows a {
-  margin: 20px;
+  margin: 40px;
+  background: none;
 }
 
 .arrow-up {
-  @include form-arrow-up
+  @include arrow;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
 }
 
 .arrow-down {
-  @include form-arrow-down
+  @include arrow;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }

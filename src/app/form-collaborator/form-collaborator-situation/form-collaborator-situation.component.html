@@ -13,7 +13,7 @@
         Préparation de l'entretien avec le staffing partner
       </h2>
 
-      <form action="">
+      <form class="form-group" id="sForm" [formGroup]="situationForm" (ngSubmit)="onSubmit()">
 
         <div class="first-intermission">
 
@@ -32,24 +32,20 @@
         <div *ngIf="!firstIntermission">
           <label for={{questions[1].id}}>{{questions[1].question}}</label>
 
-          <textarea name="message" id={{questions[1].id}} rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+          <textarea name="message" id={{questions[1].id}} rows="10" placeholder="Ecrivez votre réponse ici" formControlName="rep2text"></textarea>
         </div>
 
         <div>
           <label for={{questions[2].id}}>{{questions[2].question}}</label>
 
-          <textarea name="message" id="question3" rows="10" placeholder="Ecrivez votre réponse ici"></textarea>
+          <textarea name="message" id={{questions[2].id}} rows="10" placeholder="Ecrivez votre réponse ici" formControlName="rep3text"></textarea>
         </div>
-
-
 
       </form>
     </section>
 
     <div class="arrows">
-      <a routerLink="/form/latest">
-        <div class="arrow-down"></div>
-      </a>
+      <button form="sForm" class="arrow-down" type="submit"></button>
     </div>
 
   </div>

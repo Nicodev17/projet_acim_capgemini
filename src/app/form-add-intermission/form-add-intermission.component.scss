@@ -1,0 +1,93 @@
+@import "../../styles.scss";
+
+.add-intermission-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 120px 120px 120px;
+    margin-top: 80px;
+    border-radius: 50px;
+    background: rgb(240, 240, 240);
+}
+
+h2 {
+    font-size: 1.4em;
+    color: $main-blue;
+}
+
+strong {
+    font-size: 1.3em;
+    font-weight: 900;
+}
+
+form {
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+
+form div:not(.button-box) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form div label {
+    color: $text-darkgrey;
+    margin-bottom: 10px;
+}
+
+form div input[type="text"], form div input[type="date"]  {
+    padding: 10px;
+    border: 2px solid rgb(207, 207, 207);
+    border-radius: 5px;
+}
+
+form div input[type="date"] {
+    width: 50%;
+    cursor: pointer;
+}
+
+.info-add {
+    width: 100%;
+    position: absolute;
+    display: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgb(123, 206, 123);
+    margin: -5px 0 0 0;
+    text-align: center;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.undoBtn {
+    @include button-secondary-action;
+    margin-right: 10px;
+}
+
+.addBtn {
+    @include button-primary-action;
+    margin-left: 10px;
+}
+
+.undoBtn:hover {
+    @include button-secondary-action-hover
+}
+
+.addBtn:hover {
+    @include button-primary-action-hover
+}

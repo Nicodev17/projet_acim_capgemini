@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormAddAdminComponent } from './form-add-user.component';
+import { FormAddUserComponent } from './form-add-user.component';
 
-describe('FormAddAdminComponent', () => {
-  let component: FormAddAdminComponent;
-  let fixture: ComponentFixture<FormAddAdminComponent>;
+describe('FormAddUserComponent', () => {
+  let component: FormAddUserComponent;
+  let fixture: ComponentFixture<FormAddUserComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormAddAdminComponent ]
+      declarations: [ FormAddUserComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormAddAdminComponent);
+    fixture = TestBed.createComponent(FormAddUserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

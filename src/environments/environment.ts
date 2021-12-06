@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   serverUrlProfils: 'http://localhost:3000/user_account',
-  serverUrlAdmins: 'http://localhost:3000/admins',
   serveurUrlIntermissions: 'http://localhost:3000/intermission',
   serveurUrlAuthorities: 'http://localhost:3000/authorities'
 };

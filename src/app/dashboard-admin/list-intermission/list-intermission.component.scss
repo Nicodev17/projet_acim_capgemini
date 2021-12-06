@@ -14,27 +14,6 @@ h2 {
     text-transform: uppercase;
 }
 
-.add-profil {
-    @include button-primary-action;
-    width: 180px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 30px 80px 0 0;
-    padding: 6px;
-    font-weight: bold;
-}
-
-.add-profil:hover {
-    @include button-primary-action-hover;
-}
-
-strong {
-    color: white;
-    margin-right: 5px;
-    font-size: 1.6em;
-}
-
 .filter-box {
     margin: 15px 0 40px 0;
 }

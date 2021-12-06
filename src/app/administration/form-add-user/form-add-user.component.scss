@@ -8,8 +8,9 @@ p{
     font-family: $main-font;
 }
 
-form{
+form {
     text-align: center;
+    position: relative;
 }
 
 input{
@@ -29,7 +30,7 @@ input{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: $text-grey;;
+    background-color: $main-grey;
     height: 80vh;
     //border: solid orange 2px;
     justify-content: center;
@@ -43,7 +44,7 @@ input{
     width: 550px;
     background-color: white;
     height: 600px;
-    //border: 2px solid red;
+    border-radius: 5px;
     align-items:center;
 }
 
@@ -54,12 +55,11 @@ form > div{
 
 .content {
     display: flex;
-    //border: 2px solid purple;
     width: 550px;
     height: 400px;
     flex-direction: row;
     align-items: flex-start;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 .leftPart{
@@ -71,13 +71,29 @@ form > div{
     flex-direction: column;
 }
 
-.left{
+.left {
     display: flex;
     justify-content: left;
     //border: solid 2px green;
 }
 
-.rightPart{
+.rightPart .left:nth-child(4) {
+    align-items: center;
+}
+
+.button-password {
+    @include button-primary-action;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin: 0 0 0 15px;
+    padding: 8px;
+}
+
+.button-password:hover {
+    @include button-primary-action-hover;
+}
+
+.rightPart {
     display: flex;
     height: 400px;
     width: 60%;
@@ -87,49 +103,64 @@ form > div{
     flex-direction: column;
 }
 
-.largeurTextbox{
+.largeurTextbox {
     width : 100%;
 }
 
-.radioPart{
+.radioPart {
     display: flex;
     font-size: 0.9em;
     color : $text-darkgrey;
     font-family: $main-font;
     justify-content: space-evenly;
-    //border: solid gray 2px;
     flex-direction: row;
 }
 
 .radioPartLeft{
     display: flex;
     align-content: left;
-    //border: solid green 2px;
     align-items: center;
 }
 
 .radioPartRight{
     display: flex;
     align-content: right;
-    //border: solid salmon 2px;
     align-items: center;
+}
+
+input[type=radio] {
+    cursor: pointer;
+}
+
+.info-add {
+    width: 100%;
+    position: absolute;
+    display: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgb(123, 206, 123);
+    margin: -10px 0 0 0;
 }
 
 .buttonsPosition{
     display: flex;
-    justify-content: space-around;
-    //border: 2px solid blue;
-}
-
-.btnAjouter{
-    display: flex;
-    //margin-left: 10px; //Ne décale pas 
+    justify-content: center;
 }
 
 .undoBtn{
-    @include button-secondary-action
+    @include button-secondary-action;
+    margin-right: 10px;
 }
 
 .addBtn{
-    @include button-primary-action
+    @include button-primary-action;
+    margin-left: 10px;
+}
+
+.undoBtn:hover {
+    @include button-secondary-action-hover
+}
+
+.addBtn:hover {
+    @include button-primary-action-hover
 }

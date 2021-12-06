@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User} from 'src/app/shared/interfaces/user';
+import { User } from 'src/app/shared/interfaces/user';
 import { GlobalService } from 'src/app/shared/services/global.service';
 import {FormControl, FormGroup} from '@angular/forms';
 

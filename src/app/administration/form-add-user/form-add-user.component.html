@@ -3,64 +3,72 @@
         <div class="entete">
             <p>Ajout d'un utilisateur</p>
         </div>
-        <form>
+        <form action="post" [formGroup]="addUser" (ngSubmit)="onSubmit()">
             <div class="content">
-                <div class="leftPart" >
+                <div class="leftPart">
                     <div class="left">
-                        <label for="Nom"><p>Nom:</p></label>
+                        <label for="Nom">
+                            <p>Nom:</p>
+                        </label>
                     </div>
                     <div class="left">
-                        <label for="Prénom"><p>Prénom:</p></label>
+                        <label for="Prénom">
+                            <p>Prénom:</p>
+                        </label>
                     </div>
                     <div class="left">
-                        <label for="Mail"><p>Mail:</p></label>
+                        <label for="Mail">
+                            <p>Mail:</p>
+                        </label>
                     </div>
-                        <div class="left">
-                            <label for="Mot de passe"><p>Mot de passe:</p></label>
-                        </div>
                     <div class="left">
-                        <label for="Métier"><p>Métier:</p></label>
+                        <label for="Métier">
+                            <p>Métier:</p>
+                        </label>
                     </div>
                     <div class="left">
                         <p>Rôle:</p>
                     </div>
+                    <div class="left">
+                        <label for="Mot de passe">
+                            <p>Mot de passe:</p>
+                        </label>
+                    </div>                  
                 </div>
 
                 <div class=rightPart>
                     <div class="left">
-                        <input class="largeurTextbox" type='textbox' placeholder='Nom' id="Nom">
+                        <input class="largeurTextbox" type='text' placeholder='Nom' id="Nom" formControlName="lastname" required>
                     </div>
                     <div class="left">
-                        <input class="largeurTextbox" type='textbox' placeholder='Prénom' id="Prénom">
+                        <input class="largeurTextbox" type='text' placeholder='Prénom' id="Prénom" formControlName="firstname" required>
                     </div>
                     <div class="left">
-                        <input class="largeurTextbox" type='textbox' placeholder='Adresse Mail' id="Mail">
-                    </div>
-                    <div>
-                        <div class="left">
-                            <input class="largeurTextbox" type='password' placeholder='Mot de passe' id='Mot de passe'>
-                        </div>
+                        <input class="largeurTextbox" type='email' placeholder='Adresse Mail' id="Mail" formControlName="mail" required>
                     </div>
                     <div class="left">
-                        <input class="largeurTextbox" type='textbox' placeholder='Métier' id='Métier'>
+                        <input class="largeurTextbox" type='text' placeholder='Métier' id='Métier' formControlName="job" required>
                     </div>
                     <div class="radioPart">
                         <div class="radioPartLeft">
-                            <input type="radio" id="User"
-                            name="droit" value="User" checked>
+                            <input type="radio" id="User" name="userRole" value="User" formControlName="userRole" checked>
                             <label for="User">Utilisateur</label>
                         </div>
                         <div class="radioPartRight">
-                            <input type="radio" id="Admin"
-                            name="droit" value="Admin">
-                            <label for="Admin">Staff Partner</label> 
+                            <input type="radio" id="Admin" name="userRole" value="Admin" formControlName="userRole">
+                            <label for="Admin">Staff Partner</label>
                         </div>
+                    </div>
+                    <div class="left">
+                        <input class="largeurTextbox" type='text' placeholder='Mot de passe' id='Mot de passe' formControlName="password" [value]="randomPassword" required>
+                        <input class="button-password" type="button" (click)="generatePassword()" value="Aléatoire">
                     </div>
                 </div>
             </div>
+            <p class="info-add" [style.display]="display">Utilisateur ajouté &#10004;</p>
             <div class="buttonsPosition">
-                <input class="undoBtn"type='button' value='Annuler' (click)="undoBtnOnClick()">
-                <input class="addBtn" type='button' value='Ajouter'>
+                <input class="undoBtn" type='reset' value='Annuler' (click)="undoBtnOnClick()">
+                <input class="addBtn" type='submit' value='Ajouter'>
             </div>
         </form>
     </div>

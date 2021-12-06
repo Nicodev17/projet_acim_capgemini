@@ -12,15 +12,16 @@ export class FormVideoComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private sanitizer: DomSanitizer) { }
 
-  todoForm = this.fb.group({link: []});
+  videoForm = this.fb.group({link: []});
   link: SafeHtml = '';
 
   onSubmit() {
-    console.log(this.todoForm.value['link']);
-    this.link = this.sanitizer.bypassSecurityTrustResourceUrl(this.todoForm.value['link']);
+    console.log(this.videoForm.value['link']);
+    this.link = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoForm.value['link']);
   }
 
   ngOnInit(): void {
+  
   }
 
 }

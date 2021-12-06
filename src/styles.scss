@@ -82,18 +82,14 @@ $main-font: 'Open-sans', sans-serif;
     padding: 30px 10px;
 }
 
-@mixin form-arrow-down {
-    border-top-right-radius: 10px 40px;
-    border-top-left-radius: 10px 40px;
-    border-right: 24px solid transparent;
-    border-left: 24px solid transparent;
-    border-top: 30px solid $main-blue;
-}
-
-@mixin form-arrow-up {
-    border-bottom-right-radius: 10px 40px;
-    border-bottom-left-radius: 10px 40px;
-    border-right: 24px solid transparent;
-    border-left: 24px solid transparent;
-    border-bottom: 30px solid $main-blue;
+@mixin arrow {
+    width: 40px;
+    height: 40px;
+    border: solid $main-blue;
+    border-width: 0 12px 12px 0;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px;
+    background: none;
+    cursor: pointer;
 }

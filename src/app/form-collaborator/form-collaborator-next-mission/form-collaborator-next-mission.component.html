@@ -12,26 +12,26 @@
       <h2>
         Préparation de l'entretien avec le staffing partner
       </h2>
-      <form action="">
+
+      <form class="form-group" id="nForm" [formGroup]="nextForm" (ngSubmit)="onSubmit()">
 
         <!-- Questions 7 à 9 -->
         <div *ngFor="let q of questions">
           <div *ngIf="q.id >= 7 && q.id <= 9">
             <label for={{q.id}}>{{q.question}}</label>
-            <textarea name="message" id={{q.id}} rows="7" placeholder="Ecrivez votre réponse ici"></textarea>
+            <textarea name="message" id={{q.id}} rows="7" placeholder="Ecrivez votre réponse ici"
+            formControlName={{q.id}}></textarea>
           </div>
         </div>
 
         <div class="button">
-            <input type="submit" value="Envoyer">
+            <input form="nForm" type="submit" value="Envoyer">
         </div>
       </form>
     </section>
 
     <div class="arrows">
-      <a routerLink="/form/latest">
-        <div class="arrow-up"></div>
-      </a>
+      <button class="arrow-up" routerLink="/form/latest"></button>
     </div>
 
   </div>

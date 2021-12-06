@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilDetailsEditorComponent implements OnInit {
 
+  isModified: Boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  modifToggle() {
+    this.isModified = true;    
+  }
+
+  cancelToggle() {
+    this.isModified = false;    
+  }
 }

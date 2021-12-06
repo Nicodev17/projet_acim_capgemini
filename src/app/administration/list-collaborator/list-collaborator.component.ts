@@ -13,16 +13,16 @@ export class ListCollaboratorComponent implements OnInit {
 
   arrayCollab: User[] = [];
 
-  constructor(private router: Router, private service : GlobalService) { }
+  constructor(private router: Router, private globalService : GlobalService) { }
 
   addBtnOnClick(){
     this.router.navigateByUrl('/form-add-user');
   }
 
   ngOnInit(): void {
-    this.service.getProfils().subscribe(resultFromAPI => {
-      this.arrayCollab = resultFromAPI;
-    });
+    // this.globalService.getProfils().subscribe(resultFromAPI => {
+    //   this.arrayCollab = resultFromAPI;
+    // });
   }
 
 }

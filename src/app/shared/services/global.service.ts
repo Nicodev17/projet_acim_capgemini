@@ -32,6 +32,12 @@ export class GlobalService {
       return false;
     }else{return true;}
   }
+
+  getIntermission (): Observable<any> {
+    
+    return this.http.get(AUTH_API + 'home', httpOptions);
+  }
+
 }
 
 

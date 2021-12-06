@@ -29,10 +29,10 @@ export class ListAdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getProfils().subscribe(resultFromAPI => {
-      // Ici il faudra mappé sur la table authorities ne prendre que les user avec le admin_right true. (a faire dans la requete du service)
-      this.arrayAdmin = resultFromAPI;
-    });
+    // this.service.getProfils().subscribe(resultFromAPI => {
+    //   // Ici il faudra mappé sur la table authorities ne prendre que les user avec le admin_right true. (a faire dans la requete du service)
+    //   this.arrayAdmin = resultFromAPI;
+    // });
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../shared/services/global.service';
+import { TokenStorageService } from '../shared/services/token-storage.service';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +9,14 @@ import { GlobalService } from '../shared/services/global.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private globalService : GlobalService) { }
+  constructor(private globalService : GlobalService, private tokenStorageService : TokenStorageService) { }
 
   isNotLogged() : boolean {
     return !this.globalService.isLoggedIn();
   }
 
   isAdmin () : boolean {
-    return this.globalService.isAdmin();
-  }
-
-  isUser() : boolean {
-    return this.globalService.isAdmin()==false && this.globalService.isLoggedIn();
+    return this.tokenStorageService.getUser().adminRight;
   }
 
   ngOnInit(): void {

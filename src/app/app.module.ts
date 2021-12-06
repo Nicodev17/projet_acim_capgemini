@@ -24,7 +24,7 @@ import { FormCollaboratorSituationComponent } from './form-collaborator/form-col
 import { FormCollaboratorLatestMissionComponent } from './form-collaborator/form-collaborator-latest-mission/form-collaborator-latest-mission.component';
 import { FormCollaboratorNextMissionComponent } from './form-collaborator/form-collaborator-next-mission/form-collaborator-next-mission.component';
 import { FormVideoComponent } from './form-collaborator/form-video/form-video.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ProfilDetailsEditorComponent } from './profil-details-editor/profil-details-editor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalService } from './shared/services/global.service';
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
+import { TokenStorageService } from './shared/services/token-storage.service';
+import { authInterceptorProviders } from './shared/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -64,11 +66,12 @@ import { AdminGuard } from './shared/services/admin.guard';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [GlobalService, AccessGuardGuard, AdminGuard],
+  providers: [GlobalService, TokenStorageService, AccessGuardGuard, AdminGuard, authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

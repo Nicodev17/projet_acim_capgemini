@@ -3,46 +3,34 @@ import { Observable, Subject } from 'rxjs';
 import { User } from '../interfaces/user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { TokenStorageService } from './token-storage.service';
+
+const AUTH_API = 'http://localhost:8080/';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class GlobalService {
-  constructor(private http: HttpClient) { 
-    this.user=undefined
+  constructor(private http: HttpClient, private tokenStorageService : TokenStorageService) { }
+
+  login (username : string, password: string): Observable<any> {
+    
+    return this.http.post(AUTH_API + 'login', {
+      username,
+      password
+    }, httpOptions);
   }
 
-  serverUrlProfils = environment.serverUrlProfils;
-  userSubject = new Subject<User>();
-  arrayProfils: User[] = [];
-  user ?: User
-
-  getProfils(): Observable<User[]> {
-    return this.http.get<User[]>(this.serverUrlProfils)
-  }
-
-  login (user : User){
-    this.user = user
-    // hhtpClient
-  }
 
   isLoggedIn () : boolean {
-    if(this.user===undefined){
+    if(this.tokenStorageService.getToken()==null){
       return false;
     }else{return true;}
-  }
-
-  isAdmin () : boolean {
-    if (this.user!== undefined){
-      return this.user.right;
-    }else{return false;}
-  }
-
-  isUser () : boolean {
-    if (this.user!== undefined){
-      return !this.user.right;
-    }else{return false;}
   }
 }
 

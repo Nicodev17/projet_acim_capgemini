@@ -38,13 +38,13 @@ export class ListProfilComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.service.getProfils().subscribe(resultFromAPI => {
-      this.calledArrayProfils = resultFromAPI;
+    // this.service.getProfils().subscribe(resultFromAPI => {
+    //   this.calledArrayProfils = resultFromAPI;
 
-      this.arrayProfils = this.calledArrayProfils;
+    //   this.arrayProfils = this.calledArrayProfils;
   
-      console.log(this.arrayProfils);
-    });
+    //   console.log(this.arrayProfils);
+    // });
   }
 
 }

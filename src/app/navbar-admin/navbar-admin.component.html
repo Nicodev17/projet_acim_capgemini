@@ -1,7 +1,11 @@
 
-<div *ngIf="this.isLoggedIn()">
+<div 
+    *ngIf="this.isLoggedIn()"
+>
     
-    <div *ngIf="this.isAdmin()">
+    <div 
+        *ngIf="this.isAdmin()"
+    >
         <a class="links" routerLink='/form-editor'>
             <img src="../../assets/list-plus.svg" alt="form logo">
             <span>
@@ -9,7 +13,9 @@
             </span>
         </a>
     </div>
-    <div *ngIf="this.isAdmin()">
+    <div 
+        *ngIf="this.isAdmin()"
+    >
         <a class="links" routerLink='/list-admin'>
             <img src="../../assets/key-bold.svg" alt="administration logo">
             <span>
@@ -25,4 +31,14 @@
             </span>
         </button>
     </div>
+    <div>
+        <button (click)="logOut()">
+            <span>
+                LogOut
+            </span>
+        </button>
+    </div>
 </div>
+
+
+

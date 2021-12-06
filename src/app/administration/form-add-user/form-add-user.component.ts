@@ -14,7 +14,7 @@ export class FormAddUserComponent implements OnInit {
   display: String = 'none';
 
   addUser = new FormGroup({
-    lastname: new FormControl('', Validators.required),
+    lastname: new FormControl('', [Validators.required, ]),
     firstname: new FormControl('', Validators.required),
     mail: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),

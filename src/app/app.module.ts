@@ -34,6 +34,7 @@ import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
 import { ListCollaboratorComponent } from './administration/list-collaborator/list-collaborator.component';
 import { ItemCollaboratorComponent } from './administration/item-collaborator/item-collaborator.component';
+import { FormAddIntermissionComponent } from './form-add-intermission/form-add-intermission.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ItemCollaboratorComponent } from './administration/item-collaborator/it
     HomeComponent,
     ProfilDetailsEditorComponent,
     ListCollaboratorComponent,
-    ItemCollaboratorComponent
+    ItemCollaboratorComponent,
+    FormAddIntermissionComponent
 
   ],
   imports: [

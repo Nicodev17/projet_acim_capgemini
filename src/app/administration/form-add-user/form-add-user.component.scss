@@ -30,7 +30,7 @@ input{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: $text-grey;;
+    background-color: $main-grey;
     height: 80vh;
     //border: solid orange 2px;
     justify-content: center;
@@ -44,7 +44,7 @@ input{
     width: 550px;
     background-color: white;
     height: 600px;
-    //border: 2px solid red;
+    border-radius: 5px;
     align-items:center;
 }
 
@@ -113,22 +113,23 @@ form > div{
     color : $text-darkgrey;
     font-family: $main-font;
     justify-content: space-evenly;
-    //border: solid gray 2px;
     flex-direction: row;
 }
 
 .radioPartLeft{
     display: flex;
     align-content: left;
-    //border: solid green 2px;
     align-items: center;
 }
 
 .radioPartRight{
     display: flex;
     align-content: right;
-    //border: solid salmon 2px;
     align-items: center;
+}
+
+input[type=radio] {
+    cursor: pointer;
 }
 
 .info-add {

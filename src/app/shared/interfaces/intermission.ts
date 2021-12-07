@@ -10,6 +10,5 @@ export interface Intermission {
     endingIntermission: Date,
     sendDateForm: Date,
     responseSend: boolean
-    
   }
   

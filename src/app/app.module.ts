@@ -34,7 +34,7 @@ import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
 import { ListCollaboratorComponent } from './administration/list-collaborator/list-collaborator.component';
 import { ItemCollaboratorComponent } from './administration/item-collaborator/item-collaborator.component';
-import { FormAddIntermissionComponent } from './form-add-intermission/form-add-intermission.component';
+import { FormAddIntermissionComponent } from './administration/form-add-intermission/form-add-intermission.component';
 import { TokenStorageService } from './shared/services/token-storage.service';
 import { authInterceptorProviders } from './shared/interceptors/auth.interceptor';
 

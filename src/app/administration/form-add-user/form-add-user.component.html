@@ -3,7 +3,11 @@
         <div class="entete">
             <p>Ajout d'un utilisateur</p>
         </div>
-        <form action="post" [formGroup]="addUser" (ngSubmit)="onSubmit()">
+        <form   
+            novalidate 
+            name="form" 
+            (ngSubmit)="onSubmit()"
+        >
             <div class="content">
                 <div class="leftPart">
                     <div class="left">
@@ -38,30 +42,87 @@
 
                 <div class=rightPart>
                     <div class="left">
-                        <input class="largeurTextbox" type='text' placeholder='Nom' id="Nom" formControlName="lastname" required>
+                        <input 
+                            class="largeurTextbox"
+                            type="text" 
+                            name="lastname" 
+                            placeholder="Nom" 
+                            [(ngModel)]="form.lastname"
+                            required
+                            #lastname="ngModel"               
+                        >
                     </div>
                     <div class="left">
-                        <input class="largeurTextbox" type='text' placeholder='Prénom' id="Prénom" formControlName="firstname" required>
+                        <input 
+                            class="largeurTextbox"
+                            type="text" 
+                            name="firstname" 
+                            placeholder="Prénom" 
+                            [(ngModel)]="form.firstname"
+                            required
+                            #firstname="ngModel"
+                        >
                     </div>
                     <div class="left">
-                        <input class="largeurTextbox" type='email' placeholder='Adresse Mail' id="Mail" formControlName="mail" required>
+                        <input 
+                            class="largeurTextbox"
+                            type="email" 
+                            name="email" 
+                            placeholder="Adresse Mail" 
+                            [(ngModel)]="form.email"
+                            required
+                            #email="ngModel"
+                        >
                     </div>
                     <div class="left">
-                        <input class="largeurTextbox" type='text' placeholder='Métier' id='Métier' formControlName="job" required>
+                        <input 
+                            class="largeurTextbox"
+                            type="text" 
+                            name="job" 
+                            placeholder="Métier" 
+                            [(ngModel)]="form.job"
+                            required
+                            #job="ngModel"
+                        >
                     </div>
                     <div class="radioPart">
                         <div class="radioPartLeft">
-                            <input type="radio" id="User" name="userRole" value="User" formControlName="userRole" checked>
+                            <input                           
+                                type="radio" 
+                                name="authorities.id"
+                                [(ngModel)]="form.authorities.id"
+                                checked
+                                #authorities.id="ngModel"
+                                [value]="2"
+                                id="User"
+                            >
                             <label for="User">Utilisateur</label>
                         </div>
                         <div class="radioPartRight">
-                            <input type="radio" id="Admin" name="userRole" value="Admin" formControlName="userRole">
+                            <input 
+                                type="radio" 
+                                name="authorities.id"
+                                [(ngModel)]="form.authorities.id"
+                                checked
+                                #authorities.id="ngModel"
+                                [value]="1" 
+                                id="Admin"                           
+                            >
                             <label for="Admin">Staff Partner</label>
                         </div>
                     </div>
                     <div class="left">
-                        <input class="largeurTextbox" type='text' placeholder='Mot de passe' id='Mot de passe' formControlName="password" [value]="randomPassword" required>
-                        <input class="button-password" type="button" (click)="generatePassword()" value="Aléatoire">
+                        <input 
+                            class="largeurTextbox"
+                            type="text" 
+                            name="password" 
+                            placeholder="Mot de passe" 
+                            [(ngModel)]="form.password"
+                            required
+                            #password="ngModel"
+                            [value]="randomPassword" required
+                        >
+                        <!-- <input class="button-password" type="button" (click)="generatePassword()" value="Aléatoire"> -->
                     </div>
                 </div>
             </div>

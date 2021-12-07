@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'src/app/shared/interfaces/user';
+import { GlobalService } from 'src/app/shared/services/global.service';
 
 @Component({
   selector: 'app-item-collaborator',
@@ -7,12 +10,22 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ItemCollaboratorComponent implements OnInit {
 
-  @Input() collab : any;
+  @Input() collab : User | undefined;
+  @Output() collabId : number | undefined;
 
-  constructor() { }
+  constructor(private router:Router, private globalService:GlobalService) { }
 
   ngOnInit(): void {
+    // console.log(this.collab?.id);   
 
   }
-
+  
+  getColloboratorId(){
+    if(this.collab){
+      this.router.navigate(["/form-add-intermission", this.collab.id])
+    } 
+    
+        
+  }
+  
 }

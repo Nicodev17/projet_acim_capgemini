@@ -26,6 +26,7 @@ export class NavbarAdminComponent implements OnInit {
 
   logOut():void{
     this.tokenStorageService.signOut();
+    window.location.reload();
   }
 
 }

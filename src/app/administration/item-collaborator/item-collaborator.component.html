@@ -1,12 +1,12 @@
 <li>
     <div>
         <span>
-            {{collab.firstname}} 
-            {{collab.lastname}}
+            {{collab?.firstname}} 
+            {{collab?.lastname}}
             - 
-            {{ collab.job }}
+            {{ collab?.job }}
         </span>
     
-        <button routerLink='/form-add-intermission'> <strong>&#43;</strong> Ajouter intermission</button>
+        <button (click)="getColloboratorId()"> <strong>&#43;</strong> Ajouter intermission</button>
     </div>
 </li>

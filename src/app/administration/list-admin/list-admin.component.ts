@@ -13,7 +13,7 @@ export class ListAdminComponent implements OnInit {
 
   arrayAdmin : User[] = [];
 
-  constructor(private router: Router, private service : GlobalService) { }
+  constructor(private router: Router, private globalService : GlobalService) { }
   
   addBtnOnClick(){
     this.router.navigateByUrl('/form-add-user');
@@ -29,10 +29,12 @@ export class ListAdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.service.getProfils().subscribe(resultFromAPI => {
-    //   // Ici il faudra mappé sur la table authorities ne prendre que les user avec le admin_right true. (a faire dans la requete du service)
-    //   this.arrayAdmin = resultFromAPI;
-    // });
+    this.globalService.getAdmin().subscribe(
+      data=> {
+        this.arrayAdmin=data;
+        // console.log(data)
+      });
   }
+  
 
 }

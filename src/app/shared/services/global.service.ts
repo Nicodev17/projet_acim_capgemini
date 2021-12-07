@@ -16,6 +16,9 @@ const httpOptions = {
 })
 
 export class GlobalService {
+
+  subjectCollabId= new Subject<number>();
+
   constructor(private http: HttpClient, private tokenStorageService : TokenStorageService) { }
 
   login (username : string, password: string): Observable<any> {
@@ -25,6 +28,23 @@ export class GlobalService {
       password
     }, httpOptions);
   }
+
+  createUser(user:string): Observable<any> {
+    return this.http.post(AUTH_API + 'create-user',user, httpOptions);
+  }
+
+  createIntermission(intermission:string): Observable<any>{
+    return this.http.post(AUTH_API + 'create-intermission',intermission , httpOptions);
+  }
+
+
+  getCollabo (): Observable<any> {
+        return this.http.get(AUTH_API + 'get-all-collabo', httpOptions);
+  }
+
+  getAdmin (): Observable<any> {
+    return this.http.get(AUTH_API + 'get-all-admin', httpOptions);
+  }  
 
 
   isLoggedIn () : boolean {
@@ -37,6 +57,8 @@ export class GlobalService {
     
     return this.http.get(AUTH_API + 'home', httpOptions);
   }
+
+  
 
 }
 

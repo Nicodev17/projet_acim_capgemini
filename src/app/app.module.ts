@@ -24,7 +24,7 @@ import { FormCollaboratorSituationComponent } from './form-collaborator/form-col
 import { FormCollaboratorLatestMissionComponent } from './form-collaborator/form-collaborator-latest-mission/form-collaborator-latest-mission.component';
 import { FormCollaboratorNextMissionComponent } from './form-collaborator/form-collaborator-next-mission/form-collaborator-next-mission.component';
 import { FormVideoComponent } from './form-collaborator/form-video/form-video.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ProfilDetailsEditorComponent } from './profil-details-editor/profil-details-editor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,7 +34,9 @@ import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
 import { ListCollaboratorComponent } from './administration/list-collaborator/list-collaborator.component';
 import { ItemCollaboratorComponent } from './administration/item-collaborator/item-collaborator.component';
-import { FormAddIntermissionComponent } from './form-add-intermission/form-add-intermission.component';
+import { FormAddIntermissionComponent } from './administration/form-add-intermission/form-add-intermission.component';
+import { TokenStorageService } from './shared/services/token-storage.service';
+import { authInterceptorProviders } from './shared/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -70,11 +72,13 @@ import { FormAddIntermissionComponent } from './form-add-intermission/form-add-i
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [GlobalService, AccessGuardGuard, AdminGuard],
+  providers: [GlobalService, TokenStorageService, AccessGuardGuard, AdminGuard,
+    authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

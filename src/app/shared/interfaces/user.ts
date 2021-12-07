@@ -1,11 +1,12 @@
+import { Authorities } from "./authorities";
+
 export interface User {
 
-  id : number;
-  lastname : string;
+  id : number;  
   firstname : string;
-  right : boolean ; //référence la table Authorities dans la bdd
+  lastname : string;
   email : string;
   password : string;
   job : string;
-  formstate : string;
+  authorities : Authorities;
 }

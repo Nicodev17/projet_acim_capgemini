@@ -1,5 +1,3 @@
-
-<app-login-page *ngIf="this.isNotLogged()"></app-login-page>
-<app-list-intermission *ngIf='this.isAdmin()'></app-list-intermission>
-
-<app-dashboard-collaborator *ngIf="this.isUser()"></app-dashboard-collaborator>
+<app-login-page *ngIf="this.isNotLogged()" ></app-login-page>
+<app-list-intermission *ngIf="this.isAdmin()"></app-list-intermission>
+<app-dashboard-collaborator *ngIf="!this.isAdmin && !this.isNotLogged()"></app-dashboard-collaborator>

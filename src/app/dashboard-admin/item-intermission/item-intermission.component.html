@@ -1,6 +1,6 @@
 <!-- Enfant de list-intermission -->
 <div class="grid-item">
-    <div class="status-color" [ngStyle]="{'background-color': getColor(intermission.formstate)}" title="Etat du questionnaire">
+    <div class="status-color" [ngStyle]="{'background-color': getColor(intermission)}" title="Etat du questionnaire">
     </div>
 
     <div class="content-top">
@@ -9,16 +9,19 @@
         </div>
         <div class="info-box">
             <p>
-                {{ intermission.firstname }} <strong>{{ intermission.lastname }}</strong>
+                {{ intermission.collaborator.firstname }} <strong>{{ intermission.collaborator.lastname }}</strong>
             </p>
             <p>
-                {{ intermission.job }}
+                {{ intermission.collaborator.job }}
            </p>
+           <p>
+            {{ intermission.lastMissionName }}
+            </p>
         </div>
     </div>
     <div class="button-box">
         <button routerLink='/profil-details-editor'>Voir le profil</button>
-        <div *ngIf="intermission.formstate === 'waiting';else notWaiting" title="Le formulaire n'a pas encore été rempli">
+        <div *ngIf="intermission.sendDateForm != null && !intermission.responseSend; else notWaiting" title="Le formulaire n'a pas encore été rempli">
            En attente ⌛️
         </div>
         <ng-template #notWaiting> 

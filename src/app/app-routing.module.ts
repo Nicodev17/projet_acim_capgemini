@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormCollaboratorSituationComponent } from './form-collaborator/form-collaborator-situation/form-collaborator-situation.component';
 import { ListAdminComponent } from './administration/list-admin/list-admin.component';
 import { FormAddUserComponent } from './administration/form-add-user/form-add-user.component';
-import { ItemAdminComponent } from './administration/item-admin/item-admin.component';
 import { HomeComponent } from './home/home.component';
 import { FormEditorComponent } from './form-edition/form-editor/form-editor.component';
 import { ProfilDetailsComponent } from './profil-details/profil-details.component';
@@ -15,7 +14,7 @@ import { FormCollaboratorNextMissionComponent } from './form-collaborator/form-c
 import { AccessGuardGuard } from './shared/services/access-guard.guard';
 import { AdminGuard } from './shared/services/admin.guard';
 import { ListCollaboratorComponent } from './administration/list-collaborator/list-collaborator.component';
-import { FormAddIntermissionComponent } from './form-add-intermission/form-add-intermission.component';
+import { FormAddIntermissionComponent } from './administration/form-add-intermission/form-add-intermission.component';
 
 const routes: Routes = [
   {path: "", redirectTo: 'home', pathMatch: 'full'},
@@ -26,8 +25,8 @@ const routes: Routes = [
   {path: "form-editor", component: FormEditorComponent, canActivate:[AdminGuard]},
   {path: "list-admin", component: ListAdminComponent},
   {path: "list-collaborator", component: ListCollaboratorComponent},
-  {path: "form-add-intermission", component: FormAddIntermissionComponent},
-  {path: "form-add-user", component: FormAddUserComponent},
+  {path: "form-add-intermission/:collabId", component: FormAddIntermissionComponent},
+  {path: "form-add-user", component: FormAddUserComponent, canActivate:[AdminGuard]},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
   {path: "profil-details-editor", component: ProfilDetailsEditorComponent},
   {path: "upload-video", component: FormVideoComponent},

@@ -4,7 +4,7 @@ export interface Intermission {
 
     id : number;
     staffingPartner: User,
-    collaborator: number,
+    collaborator: User,
     lastMissionName: string,
     beginIntermission: Date,
     endingIntermission: Date,

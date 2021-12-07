@@ -32,8 +32,8 @@ export class FormCollaboratorNextMissionComponent implements OnInit {
         intermission: this.intermission,
         question: this.questions[i-1]
       };
-      console.log(response.response);
       this.apiService.postResponse(response).subscribe();
+      this.intermission.responseSend = true;
     }
 
     this.router.navigate(['/home'])

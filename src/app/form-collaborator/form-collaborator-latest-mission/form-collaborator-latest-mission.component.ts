@@ -32,7 +32,6 @@ export class FormCollaboratorLatestMissionComponent implements OnInit {
         intermission: this.intermission,
         question: this.questions[i-1]
       };
-      console.log(response.response);
       this.apiService.postResponse(response).subscribe();
     }
 

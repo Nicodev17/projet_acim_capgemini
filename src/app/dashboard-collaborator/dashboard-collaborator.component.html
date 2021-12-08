@@ -71,8 +71,9 @@
             </div>
 
             <div class="btn-box">
-                <input class="cancel-btn" type="reset" value="Retour" routerLink='/home'>
-                <input *ngIf="isModified" class="submit-btn" type="submit" value="Valider">
+                <input *ngIf="isModified" (click)="cancelToggle()" class="submit-btn" type="button" value="Valider">
+                <input class="go-to-form-btn" type="reset" value="Répondre au formulaire" routerLink='/form'>
+                <!-- <input class="cancel-btn" type="reset" value="Voir ma réponse au formulaire" routerLink='/form'> -->
             </div>
         </form>
     </div>

@@ -19,9 +19,9 @@ import { FormAddIntermissionComponent } from './administration/form-add-intermis
 const routes: Routes = [
   {path: "", redirectTo: 'home', pathMatch: 'full'},
   {path: "home", component:HomeComponent},
-  {path: "form/latest", component: FormCollaboratorLatestMissionComponent},
-  {path: "form/next", component: FormCollaboratorNextMissionComponent},
-  {path: "form", component: FormCollaboratorSituationComponent},
+  {path: "form/latest", component: FormCollaboratorLatestMissionComponent, canActivate:[AccessGuardGuard]},
+  {path: "form/next", component: FormCollaboratorNextMissionComponent, canActivate:[AccessGuardGuard]},
+  {path: "form", component: FormCollaboratorSituationComponent, canActivate:[AccessGuardGuard]},
   {path: "form-editor", component: FormEditorComponent, canActivate:[AdminGuard]},
   {path: "list-admin", component: ListAdminComponent, canActivate:[AdminGuard]},
   {path: "list-collaborator", component: ListCollaboratorComponent, canActivate:[AdminGuard]},
@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: "form-add-user", component: FormAddUserComponent, canActivate:[AdminGuard]},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
   {path: "profil-details-editor/:collabId", component: ProfilDetailsEditorComponent, canActivate:[AccessGuardGuard]},
-  {path: "upload-video", component: FormVideoComponent},
+  {path: "upload-video", component: FormVideoComponent, canActivate:[AccessGuardGuard]},
 ];
 
 @NgModule({

@@ -34,6 +34,8 @@ export class FormCollaboratorNextMissionComponent implements OnInit {
       };
       this.apiService.postResponse(response).subscribe();
       this.intermission.responseSend = true;
+      console.log(response);
+      
     }
 
     this.router.navigate(['/home'])

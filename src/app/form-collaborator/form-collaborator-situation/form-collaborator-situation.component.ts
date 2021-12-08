@@ -6,6 +6,7 @@ import { FormBuilder} from '@angular/forms';
 import { Router} from '@angular/router';
 import { Intermission } from 'src/app/shared/interfaces/intermission';
 import { User } from 'src/app/shared/interfaces/user';
+import { GlobalService } from 'src/app/shared/services/global.service';
 
 @Component({
   selector: 'app-form-collaborator-situation',
@@ -18,27 +19,7 @@ export class FormCollaboratorSituationComponent implements OnInit {
   firstIntermission: boolean = true;
   intermission: Intermission = {} as Intermission;
 
-  // user: User = {
-  // id : 1,
-  //   lastname : "Toto",
-  //   firstname : "Titi",
-  //   right : false , //référence la table Authorities dans la bdd
-  //   email : "mail@mail",
-  //   password : "mdp",
-  //   job : "string",
-  //   formstate : "string",
-  // }
-  // intermission: Intermission = {
-  //   id : 2,
-  //   staffingPartner: this.user,
-  //   collaborator: 1,
-  //   lastMissionName: "",
-  //   beginIntermission: new Date(),
-  //   endingIntermission: new Date(),
-  //   sendDateForm: new Date()
-  // }
-
-  constructor(private apiService: ApiService, private router: Router, private fb: FormBuilder) {}
+  constructor(private globalService : GlobalService, private apiService: ApiService, private router: Router, private fb: FormBuilder) {}
 
   situationForm = this.fb.group({
     rep2text: [], rep3text: [],
@@ -63,15 +44,15 @@ export class FormCollaboratorSituationComponent implements OnInit {
     };
 
     if(response2.response != null) {
-      this.apiService.postResponse(response2).subscribe();
+      this.globalService.postResponse(JSON.stringify(response2)).subscribe();
     }
-    this.apiService.postResponse(response3).subscribe();
+    this.globalService.postResponse(JSON.stringify(response3)).subscribe();
 
     this.router.navigate(['/form/latest'])
   }
 
   ngOnInit(): void {
-    this.apiService.getQuestions().subscribe(resultFromAPI => this.questions = resultFromAPI);
-    this.apiService.getIntermission(2).subscribe(intermissionFromApi => this.intermission = intermissionFromApi); }
+    this.globalService.getQuestions().subscribe(resultFromAPI => this.questions = resultFromAPI);
+    this.globalService.getIntermission().subscribe(intermissionFromApi => this.intermission = intermissionFromApi); }
 
 }

@@ -14,7 +14,7 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getQuestions(): Observable<Question[]> {
+  /* getQuestions(): Observable<Question[]> {
     return this.httpClient.get<Question[]>(`${this.serverURL}/question/all`);
   }
   
@@ -24,5 +24,5 @@ export class ApiService {
 
   getIntermission(id: Number): Observable<Intermission> {
     return this.httpClient.get<Intermission>(`${this.serverURL}/intermission/${id}`);
-  }
+  } */
 }

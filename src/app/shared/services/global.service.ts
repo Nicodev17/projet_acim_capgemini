@@ -4,6 +4,7 @@ import { User } from '../interfaces/user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { TokenStorageService } from './token-storage.service';
+import { Question } from '../interfaces/question';
 
 const AUTH_API = 'http://localhost:8080/';
 
@@ -58,10 +59,20 @@ export class GlobalService {
   }
 
   getIntermission (): Observable<any> {
-    
     return this.http.get(AUTH_API + 'home', httpOptions);
   }
 
+  getQuestions(): Observable<Question[]> {
+    return this.http.get<Question[]>(AUTH_API + `question/all`);
+  }
+  
+  postResponse(response: string): Observable<Response> {
+    return this.http.post<Response>(AUTH_API + `response`, response, httpOptions);
+  }
+
+  videoAdded() {
+    
+  }
   
 
 }

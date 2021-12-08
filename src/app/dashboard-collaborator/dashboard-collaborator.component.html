@@ -49,23 +49,23 @@
 
                 <div class = rightFormulaire>
                     <div class ="right">
-                        <input *ngIf="isModified" type="text" id="lastname" value="blaba">
-                        <p *ngIf="!isModified">blaba</p>
+                        <input *ngIf="isModified" type="text" id="lastname" value="Mnesique">
+                        <p *ngIf="!isModified">Mnesique</p>
                     </div>
 
                     <div class="right">
-                        <input *ngIf="isModified" type="text" id="fisrtname" value="blaba">
-                        <p *ngIf="!isModified">blaba</p>
+                        <input *ngIf="isModified" type="text" id="fisrtname" value="Doriane">
+                        <p *ngIf="!isModified">Doriane</p>
                     </div>
 
                     <div class="right">
-                        <input *ngIf="isModified" type="mail" id="mail" value="blaba">
-                        <p *ngIf="!isModified">blaba</p>
+                        <input *ngIf="isModified" type="mail" id="mail" value="doriane@gmail.com">
+                        <p *ngIf="!isModified">doriane@gmail.com</p>
                     </div>
 
                     <div class="right">
-                        <input *ngIf="isModified" type="text" id="job" value="blaba">
-                        <p *ngIf="!isModified">blaba</p>
+                        <input *ngIf="isModified" type="text" id="job" value="Développeur C#">
+                        <p *ngIf="!isModified">Développeur C#</p>
                     </div>
                 </div>
             </div>
@@ -73,6 +73,7 @@
             <div class="btn-box">
                 <input *ngIf="isModified" (click)="cancelToggle()" class="submit-btn" type="button" value="Valider">
                 <input class="go-to-form-btn" type="reset" value="Répondre au formulaire" routerLink='/form'>
+                <input class="go-to-form-btn" type="button" value="Modifier ma vidéo" routerLink='/upload-video'>
                 <!-- <input class="cancel-btn" type="reset" value="Voir ma réponse au formulaire" routerLink='/form'> -->
             </div>
         </form>

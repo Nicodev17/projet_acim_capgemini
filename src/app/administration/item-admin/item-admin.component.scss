@@ -4,14 +4,14 @@
   display: grid;
   grid-template-rows: 2fr 0.5fr 3.5fr 4fr;
   grid-template-columns: 0.4fr 2.2fr 7.4fr;
-  width: 220px;
+  width: 225px;
   height: 100px;
   border: 3px solid $main-grey;
   border-radius: 5px;
   background-color: #ffffff;
   color : $text-darkgrey;
   font-family: $main-font;
-  font-size: 1.0em;
+  font-size: 0.95em;
 }
 
 .circle-profil {

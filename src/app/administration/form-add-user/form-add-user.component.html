@@ -3,11 +3,7 @@
         <div class="entete">
             <p>Ajout d'un utilisateur</p>
         </div>
-        <form   
-            novalidate 
-            name="form" 
-            (ngSubmit)="onSubmit()"
-        >
+        <form novalidate name="form" (ngSubmit)="onSubmit()">
             <div class="content">
                 <div class="leftPart">
                     <div class="left">
@@ -37,92 +33,42 @@
                         <label for="Mot de passe">
                             <p>Mot de passe:</p>
                         </label>
-                    </div>                  
+                    </div>
                 </div>
 
                 <div class=rightPart>
                     <div class="left">
-                        <input 
-                            class="largeurTextbox"
-                            type="text" 
-                            name="lastname" 
-                            placeholder="Nom" 
-                            [(ngModel)]="form.lastname"
-                            required
-                            #lastname="ngModel"               
-                        >
+                        <input class="largeurTextbox" type="text" name="lastname" placeholder="Nom"
+                            [(ngModel)]="form.lastname" required #lastname="ngModel">
                     </div>
                     <div class="left">
-                        <input 
-                            class="largeurTextbox"
-                            type="text" 
-                            name="firstname" 
-                            placeholder="Prénom" 
-                            [(ngModel)]="form.firstname"
-                            required
-                            #firstname="ngModel"
-                        >
+                        <input class="largeurTextbox" type="text" name="firstname" placeholder="Prénom"
+                            [(ngModel)]="form.firstname" required #firstname="ngModel">
                     </div>
                     <div class="left">
-                        <input 
-                            class="largeurTextbox"
-                            type="email" 
-                            name="email" 
-                            placeholder="Adresse Mail" 
-                            [(ngModel)]="form.email"
-                            required
-                            #email="ngModel"
-                        >
+                        <input class="largeurTextbox" type="email" name="email" placeholder="Adresse Mail"
+                            [(ngModel)]="form.email" required #email="ngModel">
                     </div>
                     <div class="left">
-                        <input 
-                            class="largeurTextbox"
-                            type="text" 
-                            name="job" 
-                            placeholder="Métier" 
-                            [(ngModel)]="form.job"
-                            required
-                            #job="ngModel"
-                        >
+                        <input class="largeurTextbox" type="text" name="job" placeholder="Métier" [(ngModel)]="form.job"
+                            required #job="ngModel">
                     </div>
                     <div class="radioPart">
                         <div class="radioPartLeft">
-                            <input                           
-                                type="radio" 
-                                name="authorities.id"
-                                [(ngModel)]="form.authorities.id"
-                                checked
-                                #authorities.id="ngModel"
-                                [value]="2"
-                                id="User"
-                            >
+                            <input type="radio" name="authorities.id" [(ngModel)]="form.authorities.id"
+                                #authorities.id="ngModel" [value]="2" id="User">
                             <label for="User">Utilisateur</label>
                         </div>
                         <div class="radioPartRight">
-                            <input 
-                                type="radio" 
-                                name="authorities.id"
-                                [(ngModel)]="form.authorities.id"
-                                checked
-                                #authorities.id="ngModel"
-                                [value]="1" 
-                                id="Admin"                           
-                            >
+                            <input type="radio" name="authorities.id" [(ngModel)]="form.authorities.id"
+                                #authorities.id="ngModel" [value]="1" id="Admin">
                             <label for="Admin">Staff Partner</label>
                         </div>
                     </div>
                     <div class="left">
-                        <input 
-                            class="largeurTextbox"
-                            type="text" 
-                            name="password" 
-                            placeholder="Mot de passe" 
-                            [(ngModel)]="form.password"
-                            required
-                            #password="ngModel"
-                            [value]="randomPassword" required
-                        >
-                        <!-- <input class="button-password" type="button" (click)="generatePassword()" value="Aléatoire"> -->
+                        <input class="largeurTextbox" type="text" name="password" placeholder="Mot de passe"
+                            [(ngModel)]="form.password" required #password="ngModel" [value]="randomPassword" required>
+                        <input class="button-password" type="button" (click)="generatePassword()" value="Aléatoire">
                     </div>
                 </div>
             </div>

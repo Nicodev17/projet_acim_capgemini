@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Intermission } from 'src/app/shared/interfaces/intermission';
 
 @Component({
@@ -9,9 +10,10 @@ import { Intermission } from 'src/app/shared/interfaces/intermission';
 export class ItemIntermissionComponent implements OnInit {
 
   @Input() intermission: Intermission = {} as Intermission;
+
   buttonValue: String = "Envoyer le quiz";
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   getColor(intermission: Intermission) {
 
@@ -21,23 +23,10 @@ export class ItemIntermissionComponent implements OnInit {
       return 'rgb(255, 159, 70)';
     } return 'rgb(233, 91, 91)';
     }
+  }
 
-
-
-
-
-
-
-    // switch (intermission.responseSend, intermission.sendDateForm) {
-    //   case "ok": 
-    //     return 'rgb(166, 214, 95)';
-    //   case "not": 
-    //     return 'rgb(233, 91, 91)';
-    //   case "waiting": 
-    //     return 'rgb(255, 159, 70)';
-    //   default: 
-    //     return;
-    // }
+  seeProfil(collabId: Number) {
+    this.router.navigate(['/profil-details-editor', collabId]);
   }
 
   ngOnInit(): void {

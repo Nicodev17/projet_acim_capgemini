@@ -1,30 +1,25 @@
 <nav role="navigation" *ngIf="this.isLoggedIn()">
     <ul>
-        <li *ngIf="this.isAdmin()" routerLink='/form-editor'>
+        <!-- <li *ngIf="this.isAdmin()" routerLink='/form-editor'>
             <img src="../../assets/list-plus.svg" alt="form logo">
             <a>Gestion du formulaire</a>
-        </li>
+        </li> -->
         <li *ngIf="this.isAdmin()" routerLink='/list-admin'>
-            <img src="../../assets/list-plus.svg" alt="form logo">
-            <a>Administrateurs</a>
+            <a>🔧 Administrateurs</a>
         <li *ngIf="this.isAdmin()" routerLink='/list-collaborator'>
-            <a>Collaborateurs</a>
+            <a>👁️‍🗨️ Collaborateurs</a>
         </li>
         <li *ngIf="this.isAdmin()" routerLink='/form-add-user'>
-            <img src="../../assets/list-plus.svg" alt="form logo">
-            <a>Ajout de profil</a>
+            <a>➕ Ajout de profil</a>
         </li>
-        <li class='button-li'>
-            <button routerLink='/home'>
-                <img src="../../assets/cards-light.svg" alt="dashboard logo">
-                    Dashboard
+        <li class='button-li-1'>
+            <button routerLink='/home' class="button-home" title="Dashboard des intermissions en cours">
+                <img src="../../assets/home-icon.png" alt="home logo">
             </button>
         </li>
-        <li>
-            <button (click)="logOut()">
-                <span>
-                    LogOut
-                </span>
+        <li class='button-li-2'>
+            <button (click)="logOut()" class="button-logout" title="Se déconnecter">
+                <img src="../../assets/logout.png" alt="icon logout">
             </button>
         </li>
     </ul>

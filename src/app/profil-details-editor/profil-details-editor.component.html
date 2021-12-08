@@ -49,23 +49,23 @@
 
                 <div class = rightFormulaire>
                     <div class ="right">
-                        <input *ngIf="isModified" type="text" id="lastname" value="Duck">
-                        <p *ngIf="!isModified">Duck</p>
+                        <input *ngIf="isModified" type="text" id="lastname" value="{{collab?.lastname}}">
+                        <p *ngIf="!isModified">{{collab?.lastname}}</p>
                     </div>
 
                     <div class="right">
-                        <input *ngIf="isModified" type="text" id="fisrtname" value="Donald">
-                        <p *ngIf="!isModified">Donald</p>
+                        <input *ngIf="isModified" type="text" id="fisrtname" value="{{collab?.firstname}}">
+                        <p *ngIf="!isModified">{{collab?.firstname}}</p>
                     </div>
 
                     <div class="right">
-                        <input *ngIf="isModified" type="mail" id="mail" value="IHateMickey@waltdisney.fr">
-                        <p *ngIf="!isModified">IHateMickey@waltdisney.fr</p>
+                        <input *ngIf="isModified" type="mail" id="mail" value="{{collab?.email}}">
+                        <p *ngIf="!isModified">{{collab?.email}}</p>
                     </div>
 
                     <div class="right">
-                        <input *ngIf="isModified" type="text" id="job" value="Mascotte dans un parc">
-                        <p *ngIf="!isModified">Mascotte dans un parc</p>
+                        <input *ngIf="isModified" type="text" id="job" value="{{collab?.job}}">
+                        <p *ngIf="!isModified">{{collab?.job}}</p>
                     </div>
                 </div>
             </div>
@@ -77,14 +77,3 @@
         </form>
     </div>
 </div>
-
-<!--
-"id": 1,
-"lastname": "Ancel",
-"firstname": "Valentin",
-"right": false,
-"email": "val@gmail.com",
-"password": "mdp",
-"job": "Développeur Java",
-"formstate": "waiting"
--->

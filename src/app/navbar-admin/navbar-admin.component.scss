@@ -13,23 +13,20 @@ li img {
   margin-right: 8px;
 }
 
-ul:first-child {
-  border-radius: 10px;
-}
-
 ul {
-	list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
 	margin: 0;
-	padding-left: 0;
+	padding: 0;
+  border-radius: 10px;
   background: rgb(230, 230, 230);
 }
 
 li {
-	display: block;
-	float: left;
-	padding: 15px 25px;
-	position: relative;
-	text-decoration: none;
+	padding: 17px 22px;
   transition-duration: 0.5s;
 }
   
@@ -38,57 +35,49 @@ li a {
   text-decoration: none;
 }
 
-li:hover:not(li:last-child) {
+li:hover:not(.button-li-1, .button-li-2) {
 	background: rgb(248, 248, 248);
 	cursor: pointer;
+}
+
+li:first-child {
+  padding: 17px 22px 17px 30px;
 }
 
 li:first-child:hover {
   border-radius: 10px 0 0 10px;
 }
 
-.dropdown li:hover {
-  border-radius: 0;
-  padding: 15px 0px;
+.button-li-1 {
+  padding: 9px 10px 9px 15px;
 }
 
-ul li ul {
-	visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-	position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 0.9rem;
-	left: 0;
-  display: none;
+.button-li-2 {
+  padding: 9px 25px 9px 10px;
 }
 
-ul li:hover > ul,
-ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-
-ul li ul li {
-	clear: both;
-  width: 100%;
-}
-
-nav ul button {
+.button-home, .button-logout {
   @include button-primary-action;
-  font-size: 1em;
-  height: 30px;
-  padding: 0;
-  padding: 5px;
-  color: white;
+  width: 45px;
+  height: 35px;
+  padding: 0px;
   margin: 0;
 }
 
-nav ul button:hover {
+.button-logout img {
+  width: 25px;
+  height: auto;
+  margin-left: 6px;
+}
+
+.button-home img {
+  width: 18px;
+  height: auto;
+  margin-left: 6px;
+}
+
+.button-home:hover, .button-logout:hover {
   @include button-primary-action-hover;
 }
 
-.button-li {
-  padding: 10px 20px;
-}
+

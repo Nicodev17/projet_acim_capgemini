@@ -5,6 +5,7 @@ import { Intermission } from 'src/app/shared/interfaces/intermission';
 import { Question } from 'src/app/shared/interfaces/question';
 import { Response} from 'src/app/shared/interfaces/response';
 import { ApiService } from 'src/app/shared/services/api.service';
+import { GlobalService } from 'src/app/shared/services/global.service';
 
 @Component({
   selector: 'app-form-collaborator-next-mission',
@@ -16,7 +17,7 @@ export class FormCollaboratorNextMissionComponent implements OnInit {
   questions: Question[] = [];
   intermission: Intermission = {} as Intermission;
 
-  constructor(private apiService: ApiService, private router: Router, private fb: FormBuilder) {}
+  constructor(private globalService : GlobalService, private apiService: ApiService, private router: Router, private fb: FormBuilder) {}
 
   nextForm = this.fb.group({
     7: [], 8: [], 9: []
@@ -32,7 +33,7 @@ export class FormCollaboratorNextMissionComponent implements OnInit {
         intermission: this.intermission,
         question: this.questions[i-1]
       };
-      this.apiService.postResponse(response).subscribe();
+      this.globalService.postResponse(JSON.stringify(response)).subscribe();
       this.intermission.responseSend = true;
       console.log(response);
       
@@ -42,8 +43,8 @@ export class FormCollaboratorNextMissionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.apiService.getQuestions().subscribe(resultFromAPI => this.questions = resultFromAPI);
-    this.apiService.getIntermission(2).subscribe(intermissionFromApi => this.intermission = intermissionFromApi);
+    this.globalService.getQuestions().subscribe(resultFromAPI => this.questions = resultFromAPI);
+    this.globalService.getIntermission().subscribe(intermissionFromApi => this.intermission = intermissionFromApi);
   }
 
 }

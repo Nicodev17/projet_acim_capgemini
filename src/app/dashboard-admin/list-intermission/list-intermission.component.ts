@@ -31,18 +31,25 @@ export class ListIntermissionComponent implements OnInit {
     this.arrayIntermission = this.calledArrayIntermission;
     let filter = value.filter.state;
 
-    let arrayFilter;
+    let arrayfilter = this.arrayIntermission.filter(inter => inter.responseSend === true);
 
-    if(filter === 'ok' ) {
-      arrayFilter = this.arrayIntermission.filter(inter => {
-        inter.responseSend === filter && inter.sendDateForm === filter
+    /* if(filter === 'ok') {
+      this.arrayFilter = this.arrayIntermission.filter(inter => {
+        inter.responseSend != true;
       });
+      console.log(this.arrayFilter);
     } else if (filter === 'waiting') {
 
     } else if (filter === 'not') {
 
+    } */
+
+    
+
+    if(filter != undefined) {
+      this.arrayIntermission = arrayfilter;
     }
-    console.log(filter);
+
     //console.log(this.arrayIntermission);
 
     /* this.arrayIntermission.forEach(element => {
@@ -61,9 +68,6 @@ export class ListIntermissionComponent implements OnInit {
 
     //console.log(arrayfilter);
 
-    /* if(filter != undefined) {
-      this.arrayIntermission = arrayFilter;
-    } */
   }
   
   ngOnInit(): void {

@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: "form-add-intermission/:collabId", component: FormAddIntermissionComponent, canActivate:[AdminGuard]},
   {path: "form-add-user", component: FormAddUserComponent, canActivate:[AdminGuard]},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
-  {path: "profil-details-editor/:collabId", component: ProfilDetailsEditorComponent, canActivate:[AccessGuardGuard]},
+  {path: "profil-details-editor/:collabId", component: ProfilDetailsEditorComponent},
   {path: "upload-video", component: FormVideoComponent, canActivate:[AccessGuardGuard]},
 ];
 

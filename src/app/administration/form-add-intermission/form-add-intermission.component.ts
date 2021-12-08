@@ -56,7 +56,7 @@ export class FormAddIntermissionComponent implements OnInit {
     // this.addIntermission.reset();
     
     setTimeout(() => {
-      this.router.navigateByUrl('/list-collaborator');
+      this.router.navigateByUrl('/home');
     }, 1500)
   }
 

@@ -35,7 +35,6 @@ export class FormAddUserComponent implements OnInit {
 
     // Affichage du message d'ajout
     this.display = 'block';
-    this.form.reset();
     
     setTimeout(() => {
       this.display = 'none';

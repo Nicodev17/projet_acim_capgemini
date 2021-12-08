@@ -25,8 +25,13 @@ export class ItemIntermissionComponent implements OnInit {
     }
   }
 
-  seeProfil(collabId: Number) {
-    this.router.navigate(['/profil-details-editor', collabId]);
+  seeProfil(collabId: number) {
+    console.log(collabId);
+    let id =collabId.toString()
+    console.log(this.router.navigateByUrl('/profil-details-editor/'+ id));
+    
+    
+    this.router.navigateByUrl('/profil-details-editor/'+ id)
   }
 
   ngOnInit(): void {

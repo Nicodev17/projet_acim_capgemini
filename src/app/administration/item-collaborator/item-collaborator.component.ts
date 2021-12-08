@@ -9,20 +9,17 @@ import { GlobalService } from 'src/app/shared/services/global.service';
   styleUrls: ['./item-collaborator.component.scss']
 })
 export class ItemCollaboratorComponent implements OnInit {
-
+  
   @Input() collab : User | undefined;
   @Output() collabId : number | undefined;
 
   constructor(private router:Router, private globalService:GlobalService) { }
 
-  ngOnInit(): void {
-    // console.log(this.collab?.id);   
-
-  }
+  ngOnInit(): void {  }
   
   getColloboratorId(){
     if(this.collab){
-      this.router.navigate(["/form-add-intermission", this.collab.id])
+      this.router.navigate(["/form-add-intermission", this.collab.id]);
     } 
     
         

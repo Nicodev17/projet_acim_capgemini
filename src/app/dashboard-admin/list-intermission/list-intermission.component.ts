@@ -11,7 +11,7 @@ import { Intermission } from 'src/app/shared/interfaces/intermission';
 })
 export class ListIntermissionComponent implements OnInit {
 
-  calledArrayProfils: Intermission[] = [];
+  calledArrayIntermission: Intermission[] = [];
   arrayIntermission: Intermission[] = [];
 
   filterOptions: any[] = [
@@ -27,25 +27,57 @@ export class ListIntermissionComponent implements OnInit {
     filter: new FormControl(this.filterOptions[0]),
   });
 
-  // filterList(value: any) {
-  //   this.arrayIntermission = this.calledArrayProfils;
-  //   let filter = value.filter.state;
-    
-  //   let arrayfilter = this.arrayIntermission.filter(profil => profil.formstate === filter);
+  filterList(value: any) {
+    this.arrayIntermission = this.calledArrayIntermission;
+    let filter = value.filter.state;
 
-  //   if(filter != undefined) {
-  //     this.arrayIntermission = arrayfilter;
-  //   }
-  // }
+    let arrayFilter;
+
+    if(filter === 'ok' ) {
+      arrayFilter = this.arrayIntermission.filter(inter => {
+        inter.responseSend === filter && inter.sendDateForm === filter
+      });
+    } else if (filter === 'waiting') {
+
+    } else if (filter === 'not') {
+
+    }
+    console.log(filter);
+    //console.log(this.arrayIntermission);
+
+    /* this.arrayIntermission.forEach(element => {
+      let respState = element.responseSend;
+      let sendState = element.sendDateForm;
+
+      if(respState) {
+        //form repondu
+      } else if(sendState && !respState) {
+        //form envoyé mais non repondu
+      } else if (!sendState) {
+        //form pas envoyé
+      }
+    }); */
+      
+
+    //console.log(arrayfilter);
+
+    /* if(filter != undefined) {
+      this.arrayIntermission = arrayFilter;
+    } */
+  }
   
   ngOnInit(): void {
 
-    this.globalService.getIntermission().subscribe(
-      data=> {
-        this.arrayIntermission=data;
-        console.log(data)
-      }
-    )
+    this.globalService.getIntermission().subscribe( data=> {
+      this.calledArrayIntermission = data;
+
+      this.arrayIntermission = this.calledArrayIntermission;
+      console.log(this.arrayIntermission);
+    });
+
+    //------------
+
+
     // this.service.getProfils().subscribe(resultFromAPI => {
     //   this.calledArrayProfils = resultFromAPI;
 

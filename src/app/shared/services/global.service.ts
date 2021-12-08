@@ -46,6 +46,10 @@ export class GlobalService {
     return this.http.get(AUTH_API + 'get-all-admin', httpOptions);
   }  
 
+  getUserById(id:number): Observable<any>{
+    return this.http.get(AUTH_API + 'get-user-by-id/'+id);
+  }
+
 
   isLoggedIn () : boolean {
     if(this.tokenStorageService.getToken()==null){

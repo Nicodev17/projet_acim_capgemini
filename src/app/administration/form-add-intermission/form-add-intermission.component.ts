@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GlobalService } from 'src/app/shared/services/global.service';
 import { TokenStorageService } from 'src/app/shared/services/token-storage.service';
 
@@ -18,8 +17,6 @@ export class FormAddIntermissionComponent implements OnInit {
     beginIntermission:null,
   };
 
-     
-
   form2: any= {
     staffingPartner:{
       id:null
@@ -33,39 +30,26 @@ export class FormAddIntermissionComponent implements OnInit {
   
   display: String = 'none';
 
-  // addIntermission = new FormGroup({
-  //   nameLastMission: new FormControl('', Validators.required),
-  //   dateLastMission: new FormControl('', Validators.required),
-  // });
-
   constructor(private router: Router, private globalService:GlobalService, private route:ActivatedRoute, private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {}
 
   onSubmit() {
     const lastMissionName=this.form.lastMissionName;
-    const beginIntermission=this.form.beginIntermission;
-    // const staffingPartner=this.tokenStorage.getUser().id;
-    
-    
-
-    
-    
+    const beginIntermission=this.form.beginIntermission;    
 
     const paramCollabId = this.route.snapshot.paramMap.get('collabId');
     if(paramCollabId != null) {
       this.collabId=parseInt(paramCollabId)
 
-      this.form2.collaborator.id=this.collabId;
-      this.form2.staffingPartner.id=this.tokenStorage.getUser().id;
-      this.form2.lastMissionName=lastMissionName;
-      this.form2.beginIntermission=beginIntermission;
+      this.form2.collaborator.id = this.collabId;
+      this.form2.staffingPartner.id = this.tokenStorage.getUser().id;
+      this.form2.lastMissionName = lastMissionName;
+      this.form2.beginIntermission = beginIntermission;
 
-      console.log(JSON.stringify(this.form2));
-      this.globalService.createIntermission(JSON.stringify(this.form2)).subscribe()
-      
+      //console.log(JSON.stringify(this.form2));
+      this.globalService.createIntermission(JSON.stringify(this.form2)).subscribe();
     }
-
 
     // Affichage du message d'ajout
     this.display = 'block';

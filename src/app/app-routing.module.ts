@@ -23,12 +23,12 @@ const routes: Routes = [
   {path: "form/next", component: FormCollaboratorNextMissionComponent},
   {path: "form", component: FormCollaboratorSituationComponent},
   {path: "form-editor", component: FormEditorComponent, canActivate:[AdminGuard]},
-  {path: "list-admin", component: ListAdminComponent},
-  {path: "list-collaborator", component: ListCollaboratorComponent},
-  {path: "form-add-intermission/:collabId", component: FormAddIntermissionComponent},
+  {path: "list-admin", component: ListAdminComponent, canActivate:[AdminGuard]},
+  {path: "list-collaborator", component: ListCollaboratorComponent, canActivate:[AdminGuard]},
+  {path: "form-add-intermission/:collabId", component: FormAddIntermissionComponent, canActivate:[AdminGuard]},
   {path: "form-add-user", component: FormAddUserComponent, canActivate:[AdminGuard]},
   {path: "profil-details", component: ProfilDetailsComponent, canActivate:[AccessGuardGuard]},
-  {path: "profil-details-editor", component: ProfilDetailsEditorComponent},
+  {path: "profil-details-editor/:collabId", component: ProfilDetailsEditorComponent, canActivate:[AccessGuardGuard]},
   {path: "upload-video", component: FormVideoComponent},
 ];
 
